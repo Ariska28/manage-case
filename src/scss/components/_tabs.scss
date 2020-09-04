@@ -1,0 +1,35 @@
+.tab {
+  cursor: pointer;
+  &:after {
+    opacity: 0;
+    content: '';
+    transition: opacity $t-time1;
+  }
+  &.active {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      border: 7px solid transparent;
+      border-bottom-color: currentColor;
+      opacity: 1;
+    }
+  }
+
+  &-panel {
+    position: relative;
+  }
+
+  &-text {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity $t-time1;
+    &.active {
+      opacity: 1;
+    }
+  }
+}

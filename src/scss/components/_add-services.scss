@@ -1,0 +1,79 @@
+.c-addServices {
+  overflow: hidden;
+
+  &__list {
+    @include listUnstyled;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 13px;
+    color: $c-white;
+    font-family: $font-base;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  &__text {
+    color: rgba($c-white, 0.85);
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-up (lg) {
+    &__list {
+      margin-left: -33px;
+      margin-right: -33px;
+      font-size: 0;
+    }
+
+    &__item {
+      padding-left: 33px;
+      padding-right: 33px;
+      min-height: 162px;
+      vertical-align: top;
+      display: inline-block;
+      width: 33.33%;
+
+      &:nth-of-type(3) {
+        float: right;
+      }
+    }
+  }
+
+  @include media-breakpoint-down (sm) {
+    &__item {
+      text-align: center;
+      margin-bottom: 27px;
+      max-width: 284px;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-only (md) {
+    &__list {
+      padding-left: 16px;
+      padding-right: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      // min-height: 162px;
+      margin-bottom: 43px;
+      width: 46.875%;
+      max-width: 330px;
+
+      &:nth-of-type(3) {
+        order: 100;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

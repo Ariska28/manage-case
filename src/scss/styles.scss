@@ -1,0 +1,730 @@
+@import "normalize";
+@import "functions";
+@import "variables";
+@import "mixins/breakpoints";
+@import "mixins/mixins";
+@import "extends";
+@import "customFont";
+
+// * {
+//   outline: 1px dashed gray !important;
+
+//   &:focus {
+//     outline: 2px solid red !important;
+//   }
+// }
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+
+  &.modal-video-open {
+    height: auto;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  // max-width: 1280px;
+  // min-width: $mainWidth+$gap;
+  font-family: $font-base, "sans-serif";
+  font-size: $fs-base;
+  line-height: 24px;
+  color: $c-text;
+  font-weight: 500;
+
+  &.modal-video-open {
+    overflow: hidden;
+  }
+}
+
+p {
+  margin: 0 0 1.5em;
+}
+
+video {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+.el-videoBox {
+  display: none;
+}
+
+.el-videoBox_opened {
+  display: block;
+}
+
+// .container removed to utilities
+
+.unstyled {
+  @include listUnstyled;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.list {
+  // used with extend
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 24px;
+    color: $c-text;
+    font-family: $font-base;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+
+    &:before {
+      content: "•";
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &_security {
+    padding-left: 0;
+
+    li {
+      padding-left: 0;
+
+      &:before {
+        position: relative;
+        display: inline-block;
+        padding-right: 10px;
+      }
+    }
+
+    // tablet + desktop
+    @media (min-width: ($md + 1)) {
+      column-count: 2;
+      column-gap: 48px;
+    }
+    // desktop
+    @media (min-width: ($lg + 1)) {
+      margin-bottom: -12px;
+    }
+
+    // mobile
+    @media (max-width: $md) {
+      margin-bottom: -24px;
+    }
+
+    // tablet
+    @media (min-width: ($md + 1)) and (max-width: $lg) {
+      margin-bottom: -24px;
+    }
+  }
+}
+
+.loader {
+  // height: 1000px !important;
+  // width: 1000px !important;
+  // background-color: red;
+  
+}
+
+.hs-form-iframe {
+  width: 100% !important;
+}
+
+.get-started-list {
+  @extend .list;
+  counter-reset: get-start-counter;
+  margin-left: 16px;
+
+  li {
+    counter-increment: get-start-counter;
+    position: relative;
+    padding-left: 55px;
+    padding-top: 9px;
+    height: 72px;
+    overflow: auto;
+    margin-bottom: 0;
+
+    &:before {
+      content: counter(get-start-counter);
+      color: $c-cream-bg;
+      font-family: $font-base;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+
+      width: 40px;
+      height: 40px;
+      background-color: $c-red;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  // mobile
+  @media (max-width: $md) {
+    margin-left: 0;
+  }
+}
+
+.btn {
+  @include btn;
+}
+
+.btn_link,
+.btn--link {
+  @include btn--link;
+}
+
+.btn_lg,
+.btn--lg {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 11px 23px;
+}
+
+.ref {
+  @include ref;
+}
+
+.ref-gray {
+  @include ref;
+  color: $c-text;
+
+  &:hover {
+    color: $c-text-blue;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: $c-text-gray;
+    border-color: $c-text-blue;
+    background-color: rgba(70, 187, 196, 0.16);
+  }
+
+  &:active {
+    color: $c-text;
+    background-color: rgba(70, 187, 196, 0.16);
+  }
+}
+
+.ref-arrow {
+  @include ref;
+
+  &:after {
+    @include customFont;
+    @include inheritFontParam;
+    content: "\e905";
+    display: inline-block;
+    margin-left: 4px;
+  }
+}
+
+.link {
+  @include link;
+}
+
+.link_arrow {
+  &:after {
+    @include customFont;
+    @include inheritFontParam;
+    content: "\e905";
+    display: inline-block;
+    margin-left: 4px;
+  }
+}
+
+.link_more-tweets {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  &:before {
+    content: "\ea96";
+    display: inline-block;
+    padding-right: 12px;
+    @include customFont;
+    @include inheritFontParam;
+    margin-left: auto;
+  }
+}
+
+.link_go-back {
+  &:before {
+    content: "\e903";
+    display: inline-block;
+    padding-right: 12px;
+    @include customFont;
+    @include inheritFontParam;
+    margin-left: auto;
+  }
+}
+
+.pseudo-link {
+  @include link;
+
+  &:hover {
+    color: $c-text-blue;
+  }
+}
+
+.text {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: $c-text;
+  font-family: $font-base;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.note {
+  color: $c-brand-gray;
+  font-family: $font-base;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+p.note {
+  @extend .note;
+}
+
+.section {
+  p {
+    @extend .text;
+
+    & > .link {
+      font-size: inherit;
+    }
+  }
+}
+
+.section-title-prim,
+.el-title {
+  margin-top: 0;
+  margin-bottom: 21px;
+  color: $c-text-gray;
+  font-family: $font-base;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 32px;
+  transition: font-size $t-time1;
+
+  .section_header & {
+    max-width: $sectionFullWidthHeader;
+    @include marginLRA;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.section-title-sec,
+.el-subtitle {
+  margin-top: 0;
+  margin-bottom: 22px;
+  color: $c-text-blue;
+  font-family: $font-base;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+
+  .section_header & {
+    max-width: $sectionFullWidthHeader;
+    @include marginLRA;
+    color: $c-red;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.section-page-title {
+  text-align: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  margin: 0;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #e6e6e6;
+    content: "";
+  }
+
+  &--pt-94 {
+    padding-top: 94px;
+  }
+}
+
+.watch-video {
+  font-family: inherit;
+  // height: 24px;
+  color: #46bbc4;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 48px;
+  background: transparent;
+  border: none;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+
+  &:after {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: url("../images/play.svg");
+    content: "";
+    top: 0;
+    left: 0;
+  }
+}
+
+// mobile
+@media (max-width: $md) {
+  .section-page-title {
+    &--pt-94 {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+  }
+}
+
+.section-divider {
+  padding-bottom: 91px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #e6e6e6;
+    content: "";
+  }
+}
+
+.section-subtitle {
+  margin-top: 0;
+  margin-bottom: 11px;
+  color: $c-text-gray;
+  font-family: $font-base;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+/* ! REFACTOR IS NEEDED HERE ! */
+.contact-info,
+.footer__address {
+  color: $c-text;
+  font-family: $font-base;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  font-style: normal;
+}
+
+.b-delimiter {
+  border-bottom: 1px solid $c-separator;
+}
+
+.coming-soon {
+  color: $c-yellow;
+  font-family: $font-base;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-left: 5px;
+}
+
+.admin-bar .select2-dropdown {
+  margin-top: 32px !important;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar .select2-dropdown {
+    margin-top: 46px;
+  }
+}
+
+// tablet + desktop
+@media (min-width: ($md + 1)) {
+  .section-title-prim,
+  .el-title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+// desktop
+@media (min-width: ($lg + 1)) {
+  .section-title-prim,
+  .el-title {
+    font-size: 38px;
+    line-height: 44px;
+  }
+  .section-title-sec,
+  .el-subtitle {
+    margin-bottom: 21px;
+  }
+}
+
+// mobile + tablet
+@media (max-width: $lg) {
+  .section-title-sec,
+  .el-subtitle {
+    margin-bottom: 10px;
+  }
+}
+
+// mobile
+@media (max-width: $md) {
+  body {
+    &.menu-open {
+      overflow: hidden;
+    }
+  }
+  .hide-mob {
+    display: none;
+  }
+
+  .btn_mobile-hidden {
+    display: none;
+  }
+  .section-title-sec,
+  .el-subtitle {
+    .section_header & {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.error {
+  color: red;
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.page-title {
+  max-width: 630px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 90px;
+}
+
+// mobile
+@media (max-width: $md) {
+  .page-title {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+}
+
+// Elements
+@import "elements/chess-list";
+@import "elements/checkbox";
+@import "elements/social-box";
+@import "elements/review";
+@import "elements/titles";
+@import "elements/wysiwyg";
+@import "elements/inview-controlled-link";
+@import "elements/meta";
+@import "elements/advisor";
+@import "elements/topics";
+@import "elements/trends";
+@import "elements/account-box";
+@import "elements/pictureTitle";
+@import "elements/sidebarMenu";
+@import "elements/facebook-box";
+@import "elements/group-list";
+@import "elements/blog-subscribe";
+@import "elements/value";
+@import "elements/location";
+@import "elements/contact";
+@import "elements/story";
+@import "elements/engage-label";
+@import "elements/list";
+@import "elements/featureSynopsis";
+@import "elements/video";
+@import "elements/subtext";
+@import "elements/buttons";
+@import "elements/blog-success";
+
+// Components
+@import "components/preview";
+@import "components/connect";
+@import "components/check-list";
+@import "components/tabs";
+@import "components/stepper";
+@import "components/flow";
+@import "components/form-box";
+@import "components/headlines";
+@import "components/reviews";
+@import "components/testimonial";
+@import "components/capabilities";
+@import "components/text-slider";
+@import "components/masonry";
+@import "components/video-thumbnail";
+@import "components/table";
+@import "components/plan-card";
+@import "components/questions";
+@import "components/add-services";
+@import "components/rivals-compare";
+@import "components/website";
+@import "components/modal";
+
+@import "partials/header";
+@import "partials/headerMenu";
+@import "partials/langSwitcher";
+@import "partials/authMenu";
+@import "partials/dropdown";
+@import "partials/iam";
+@import "partials/big-menu";
+
+
+@import "partials/row2-asym";
+
+@import "base/footer";
+
+@import "partials/specific";
+@import "partials/linkedList";
+@import "partials/rangeSliderRedefine";
+@import "partials/compareTable";
+@import "partials/faqs";
+@import "partials/topBar";
+@import "partials/half";
+@import "partials/quote";
+@import "partials/elementum";
+@import "partials/advantages";
+@import "partials/increases";
+@import "partials/form-success";
+@import "partials/loader";
+@import "partials/chooser";
+@import "partials/usage";
+@import "partials/provide";
+@import "partials/about-you";
+
+// sections
+@import "sections/asym";
+@import "sections/advisors";
+@import "sections/benefits";
+@import "sections/choose-plan";
+@import "sections/available";
+@import "sections/form-shift";
+@import "sections/grow";
+@import "sections/hero";
+@import "sections/memberships";
+@import "sections/sync";
+@import "sections/aside-grid";
+@import "sections/dive";
+@import "sections/sign-up";
+@import "sections/base";
+@import "sections/blog";
+@import "sections/video";
+@import "sections/instruments";
+@import "sections/offer";
+@import "sections/features";
+@import "sections/diffs";
+@import "sections/stories";
+@import "sections/regular";
+@import "sections/storytelling";
+@import "sections/started";
+@import "sections/sidebar";
+@import "sections/greeting";
+@import "sections/supporting";
+@import "sections/advantages";
+@import "sections/expert";
+@import "sections/topics";
+@import "sections/sitemap";
+@import "sections/terms-privacy-wysiwyg";
+@import "sections/compare";
+@import "sections/trust";
+@import "sections/standard";
+@import "sections/terms-privacy-wysiwyg";
+@import "sections/request-demo";
+@import "sections/faq";
+@import "sections/services";
+@import "sections/rivals";
+@import "sections/board";
+@import "sections/units";
+@import "sections/traits";
+@import "sections/events";
+@import "sections/properties";
+@import "sections/preview";
+@import "sections/lookbook";
+@import "sections/lights";
+@import "sections/row2";
+@import "sections/gains";
+
+// @import 'pages/article'; // instead of this used file styles-articles.scss which importing direct in css later
+@import "pages/about-page";
+@import "pages/values";
+@import "pages/contact";
+@import "pages/support";
+@import "pages/termsPrivacy";
+@import "pages/pricing";
+@import "pages/comparison";
+@import "pages/requestDemo";
+@import "pages/customerStories";
+@import "pages/single";
+
+@import "wordpress";
+
+// block articles styles
+//@import 'styles-article.css';
+
+@import "utilities";

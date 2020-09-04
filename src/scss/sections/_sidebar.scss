@@ -1,0 +1,87 @@
+.s-features-sidebar {
+  &__container {
+    @include container;
+    overflow: hidden;
+  }
+
+  &__testimonials {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity $t-time1, visibility $t-time1;
+
+    &_hide {
+      visibility: hidden;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    padding-top: 80px;
+
+    &__container {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    &__content {
+      width: 24%;
+      padding-right: 16px;
+    }
+
+    &__testimonials {
+      position: relative;
+      width: 100%;
+      padding-top: 52vh;
+      opacity: 0;
+      transition: opacity $t-time1;
+
+      &.testimonial1_show {
+        .c-testimonial--1 {
+          opacity: 1;
+        }
+      }
+      
+      &.testimonial2_show {
+        .c-testimonial--2 {
+          opacity: 1;
+        }
+      }
+
+      &.testimonial3_show {
+        .c-testimonial--3 {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 75px;
+
+    &__content {
+      padding-right: 57px;
+
+      &.is_stuck {
+        .s-features-sidebar__testimonials {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__container {
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        opacity: 0;
+      }
+    }
+  }
+}

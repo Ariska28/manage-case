@@ -1,0 +1,47 @@
+.h-auth-menu-box {
+  margin-left: auto;
+  .btn {
+    margin-right: 22px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+// tablet + desktop
+@media (min-width: ($md + 1)) {
+  .h-auth-menu-box {
+    font-size: 0;
+  }
+}
+
+@media (max-width: $md) {
+  .h-auth-menu-box {
+    margin: 0;
+    padding: 0 16px;
+    .btn {
+      margin-right: 0;
+    }
+  }
+  .h-auth-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    padding-bottom: 31px;
+    .btn:nth-child(1) {
+      order: 2;
+    }
+    .btn:nth-child(2) {
+      order: 1;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (min-width: ($md + 1)) and (max-width: $lg) {
+  .h-auth-menu-box {
+    .btn {
+      margin-right: 14px;
+    }
+  }
+}

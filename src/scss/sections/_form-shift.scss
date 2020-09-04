@@ -1,0 +1,50 @@
+$formWrapperTopOffset: $heroBlockHeightDesk - 23px + 48px;
+.s-formShift {
+  @extend %sectionStandardPadding;
+  padding-top: 48px;
+
+  &__left {
+    @include media-breakpoint-up (lg) {
+      width: 59.46%;
+    }
+  }
+
+  &__right {
+    @include media-breakpoint-up (lg) {
+      width: 360px;
+      position: absolute;
+      z-index: 1;
+      top: - $formWrapperTopOffset;
+      right: $gap/2;
+
+      height: calc(100% + #{$formWrapperTopOffset});
+    }
+
+    @include media-breakpoint-down (md) {
+      margin-left: - $gap/2;
+      margin-right: - $gap/2;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      background-color: $c-blue-bg;
+    }
+
+    @include media-breakpoint-down (sm) {
+      margin-left: - $gap/2;
+      margin-right: - $gap/2;
+    }
+  }
+
+  &__container {
+    @include container;
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+
+    @include media-breakpoint-down (sm) {
+      max-width: 242px;
+      margin-bottom: 18px;
+    }
+  }
+}

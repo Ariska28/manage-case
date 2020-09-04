@@ -1,0 +1,39 @@
+.s-video {
+  position: relative;
+  height: 670px;
+  margin: auto;
+  border-bottom: 4px solid #85d2d8;
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    min-width: 1280px;
+    width: 100%;
+  }
+
+  &__video {
+    width: 686px;
+    height: 466px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    border: 4px solid #f57361;
+    background-color: #fff;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.08), 0 16px 32px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: 332px;
+
+    &__video {
+      width: 88.64%;
+      max-width: 283.66px;
+      height: 59.47%;
+      background-size: 41.35px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.c-connect {
+  padding: 31px 15px 37px;
+  border: 1px solid $c-border;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+
+  &:last-of-type {
+    margin-bottom: 48px;
+  }
+
+  &__form-box {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &.form-active {
+    .el-contact--form {
+      display: none;
+    }
+
+    .c-connect__form-box {
+      display: block;
+      margin-top: 45px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $c-title;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 21px;
+  }
+
+  @include media-breakpoint-down (md) {
+    background-color: $c-white;
+  }
+}

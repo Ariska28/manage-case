@@ -1,0 +1,27 @@
+.c-checkList {
+  @include listUnstyled;
+  color: $c-text;
+  &__item {
+    padding: 12px 0;
+    border-bottom: 1px solid $c-separator;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:first-child {
+      border-top: 1px solid $c-separator;
+    }
+    &:after {
+      @include customFont;
+      content: '\e908';
+      color: $c-white;
+      font-size: 12px;
+      width: 32px;
+      height: 32px;
+      background-color: $c-text-blue;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

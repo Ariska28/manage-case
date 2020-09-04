@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="css/vendors.css" /> -->
+  <link rel="stylesheet" href="../css/styles.css" />
+
+</head>
+<body>
+
+  <!-- header, menu -->
+  <header class="header"><!-- add .menu-open -->
+    <!-- .header_market, .header_manage, .header_connect -->
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo-box">
+          <a href="/" class="logo-link">
+            <img src="../images/logo.svg" alt="ManageCasa" class="logo">
+          </a>
+        </div>
+        <!-- main menu -->
+        <div class="h-menu-box"><!-- add .open -->
+            <nav class="h-main-menu-box">
+                <ul class="h-main-menu unstyled">
+                    <li class="h-main-menu__item">
+                        <a href="pages/benefits.html" class="h-main-menu__link">Benefits</a>
+                    </li>
+        
+                    <li class="h-main-menu__item">
+                        <a href="#" id="features" data-toggle="dropdown" class="h-main-menu__link dropdown">
+                            <span>Features</span>
+                            <i class="dropdown__icon"></i>
+                        </a>
+                        <div class="dropdown-menu" data-dropdown="features"> <!-- add .open -->
+                            <div class="dropdown__list">
+                                <div class="big-menu">
+                                    <div class="big-menu__row big-menu__row--col">
+                                        <div class="big-menu__icon">
+                                            <a href="#" class="big-menu__link big-menu__link--no-padding big-menu__link--bold">All-in-one
+                                                Solution</a>
+                                            <p class="big-menu__description">Mauris auctor aliquam condimentum</p>
+                                        </div>
+                                        <a href="#" class="big-menu__btn">See a demo</a>
+                                    </div>
+                                    <div class="big-menu__row">
+                                        <a href="#"
+                                           class="big-menu__link big-menu__link--bold big-menu__link--circle big-menu__link--circle-orange">Starter</a>
+                                        <a href="#"
+                                           class="big-menu__link big-menu__link--bold big-menu__link--circle big-menu__link--circle-blue">SMB</a>
+                                        <a href="#"
+                                           class="big-menu__link big-menu__link--bold big-menu__link--circle big-menu__link--circle-black">Mid
+                                            Market / Enterprise</a>
+                                    </div>
+                                    <div class="big-menu__row big-menu__row--two-column">
+                                        <a href="#" class="big-menu__link big-menu__link--icon big-menu__link--house">Residential</a>
+                                        <a href="#"
+                                           class="big-menu__link big-menu__link--icon big-menu__link--marina">Marina</a>
+                                        <a href="#" class="big-menu__link big-menu__link--icon big-menu__link--commercial">Commercial</a>
+                                        <a href="#" class="big-menu__link big-menu__link--icon big-menu__link--associations">Associations</a>
+                                        <a href="#" class="big-menu__link big-menu__link--icon big-menu__link--storage">Self-Storage</a>
+                                    </div>
+                                    <div class="big-menu__row big-menu__row--two-column">
+                                        <a href="#" class="big-menu__link">Owners</a>
+                                        <a href="#" class="big-menu__link">Support</a>
+                                        <a href="#" class="big-menu__link">Tenants & Leasing</a>
+                                        <a href="#" class="big-menu__link">Residential Portal</a>
+                                        <a href="#" class="big-menu__link">Accounting & Reporting</a>
+                                        <a href="#" class="big-menu__link">Owner Portal</a>
+                                        <a href="#" class="big-menu__link">Maintenance</a>
+                                        <a href="#" class="big-menu__link">Customer Website</a>
+                                        <a href="#" class="big-menu__link">File Storage</a>
+                                        <a href="#" class="big-menu__link">On/Offline Rent Payment</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+        
+                    <li class="h-main-menu__item">
+                        <a href="#" id="partner" data-toggle="dropdown" class="h-main-menu__link dropdown">
+                            <span>Partner</span>
+                            <i class="dropdown__icon"></i>
+                        </a>
+                        <div class="dropdown-menu" data-dropdown="partner"> <!-- add .open -->
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Partner dropdown link1</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Partner dropdown link2</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Partner dropdown link3</a>
+                                </li>
+                                <li class="dropdown__item dropdown__item_btn-inside">
+                                    <a href="#" class="btn">Partners button</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+        
+                    <li class="h-main-menu__item">
+                        <a href="pages/pricing.html" class="h-main-menu__link">Pricing</a>
+                    </li>
+        
+                    <li class="h-main-menu__item">
+                        <a href="pages/blog.html" class="h-main-menu__link">Blog</a>
+                    </li>
+        
+                </ul>
+            </nav>
+        
+            <!-- lang menu -->
+            <div class="h-lang-switcher-box">
+                <ul class="h-lang-switcher unstyled">
+                    <li class="h-lang-switcher__item">
+                        <a href="#" id="langs" data-toggle="dropdown" class="h-lang-switcher__link dropdown">
+                            <span class="lang lang_en">English</span>
+                            <i class="dropdown__icon"></i>
+                        </a>
+                        <div class="dropdown-menu" data-dropdown="langs"> <!-- add .open -->
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link"><span class="lang lang_en">English</span></a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link"><span class="lang lang_de">Deutsche</span></a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link"><span class="lang lang_es">Español</span></a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link"><span class="lang lang_fr">Français</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        
+            <!-- auth menu -->
+            <div class="h-auth-menu-box">
+                <div class="h-auth-menu">
+                    <a href="#" class="btn btn--link">Login</a>
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+            </div>
+        
+        </div>
+        
+        <!-- menu open/close button-->
+        <div class="h-menu-toggle-box">
+            <a href="#" class="h-menu-toggle"> <!-- add .open -->
+                <i class="h-menu-toggle__inner">Menu toggle</i>
+            </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="section section_header section_v2 section_b-delimiter">
+    <div class="container">
+      <h1 class="section-title-sec">Customer Story</h1>
+      <h2 class="section-title-prim">Property Managers Inc</h2>
+    </div>
+  </section>
+
+  <section class="section section_customer-stories">
+    <div class="container">
+      
+      <div class="customer-story customer-story_detailed">
+        <div class="customer-story-info">
+          <a href="#" class="link link_go-back customer-story__back-link">Go back to all customer stories</a>
+          <div class="customer-story-info__pics">
+            <div class="customer-story-info__pic-content">
+              <img src="../images/temporary_1.jpg" alt="">
+            </div>
+            <div class="customer-story-info__pic-customer">
+              <img src="../images/temporary_5.jpg" alt="">
+            </div>
+          </div>
+
+          <!-- variant for no WYSWYG content -->
+          <!-- <div class="customer-story-info__text">
+            <div class="customer-story-info__txt-node">
+              <h4 class="customer-story__subtitle">Company Name:</h4>
+              <p>Property Managers Inc</p>
+            </div>
+            <div class="customer-story-info__txt-node">
+              <h4 class="customer-story__subtitle">Where:</h4>
+              <p>3959 Glendale Avenue, Northridge, CA, 91324, United States</p>
+            </div>
+            <div class="customer-story-info__txt-node">
+              <h4 class="customer-story__subtitle">Year Established:</h4>
+              <p>2017</p>
+            </div>
+            <div class="customer-story-info__txt-node">
+              <h4 class="customer-story__subtitle">Units Managed:</h4>
+              <p>4000+ units</p>
+            </div>
+            <div class="customer-story-info__txt-node">
+              <h4 class="customer-story__subtitle">User Type:</h4>
+              <p>Property Manager</p>
+            </div>
+            <div class="customer-story-info__txt-node customer-story-info__links">
+              <h4 class="customer-story__subtitle">Favorite Features:</h4>
+              <a href="#" class="link">Accounting</a>
+              <a href="#" class="link">Reports to Rental Owners</a>
+              <a href="#" class="link">Property document management</a>
+            </div>
+          </div> -->
+
+          <!-- variant for WYSWYG content -->
+          <div class="customer-story-info__text">
+              <h4 class="customer-story__subtitle">Company Name:</h4>
+              <p>Property Managers Inc</p>
+            
+              <h4 class="customer-story__subtitle">Where:</h4>
+              <p>3959 Glendale Avenue, Northridge, CA, 91324, United States</p>
+            
+              <h4 class="customer-story__subtitle">Year Established:</h4>
+              <p>2017</p>
+            
+              <h4 class="customer-story__subtitle">Units Managed:</h4>
+              <p>4000+ units</p>
+            
+              <h4 class="customer-story__subtitle">User Type:</h4>
+              <p>Property Manager</p>
+            
+              <h4 class="customer-story__subtitle">Favorite Features:</h4>
+              <p>
+                <a href="#">Accounting</a>
+                <a href="#">Reports to Rental Owners</a>
+                <a href="#">Property document management</a>
+              </p>            
+          </div>
+        </div>
+
+        <div class="customer-story-content">
+          <!-- content -->
+          <h2>Challenge Overview</h2>
+          <ul>
+            <li>Looking to switch from previous property management software, Appfolio</li>
+            <li>Growing the amount of units under managed while increase productivity</li>
+            <li>Wanted a solution that is more communicative with their rental owners and tenants</li>
+          </ul>
+          <br>
+          <h2>Solution</h2>
+          <p>All features including accounting, discussion & files.</p>
+          <br>
+          <h2>Key Outcome</h2>
+          <p>With ManageCasa, it takes less then 5 minutes to onboard a new tenant.<br> Save an average of 1 hour of phone calls with clients using ManageCasa’s discussion interface</p>
+          <hr>          
+          <h2>Conquering the complicated </h2>
+          <p>U.S. student debt affects over 44 million borrowers and exceeds $1.2 trillion in total debt. Founded in 2012, Student Loan Hero is on a mission to help those millions of borrowers. By combining financial education with easy-to-use tools and calculators, Student Loan Hero helps people master their financial life.</p>
+          <p>"It’s rewarding to work on problem that affects so many people,” explains Amneet, a Finance Manager at Student Loan Hero. “Most people have been in the situation where they are in a mountain of student debt and are not sure what to do. ‘How could I possibly get married with all my loans?’ Student Loan Hero is here to help those borrowers navigate those questions on their financial journey." </p>
+          <br>   
+          <h2>A scalable solution that saves time </h2>
+          <p>With aggressive hiring goals to expand their service, Student Loan Hero more than tripled their team over the past 18 months. The financial education company was searching for a payroll and HR platform that could support their rapidly growing team, a team that’s spread across more than 20 states as a 100% remote company.</p>
+          <p>Amneet, the primary admin of Gusto, reflects back on when she was first hired. “We were growing like crazy, and I had to register a lot of new states. I was really nervous about getting fined or making mistakes. I had no previous experience with payroll or HR. With Gusto, it’s not scary and their helpful support team quickly responded to any questions I had.”</p>
+          <p>As they’ve grown, Student Loan Hero has added four more admins to Gusto to manage various payroll, benefits, and HR tasks. “I’ve been very impressed by how quickly everyone was able to get up and running with Gusto. No training is really needed. Everything is straightforward and it’s easy to learn as you go,” said Amneet.</p>
+          <p>The finance team is enjoying the time saved from running payroll with Gusto. “It now only takes 2 hours end-to-end versus a full day with another payroll provider. That is pretty significant.”</p>
+          <blockquote>“We’re really happy with ManageCasa, because it is reliable, easy-to-use, and is constantly improving so it keeps growing with us.”</blockquote>        
+          <h2>Providing benefits employees love </h2>
+          <p>“Our philosophy when it comes to benefits is that we don’t just want to match the market. We want to lead the market,” Kate Arambula, People & Culture Director, shares proudly. Student Loan Hero leverages benchmarking surveys and constantly researches the latest benefits to offer their team a unique compensation package. “We show appreciation for our team by offering benefits that employees really enjoy.”</p>
+          <p>In addition to health insurance, a fitness stipend, and an individual educational budget, Student Loan Hero offers retirement savings to their team. Amneet was happy to find that Gusto offered an integrated 401(k) solution. The automatic payroll deductions and customizable company contributions made Guideline, Gusto’s integrated partner, a no-brainer choice.</p>
+          <p>Another special benefit that Student Loan Hero offers their employees is charity-matching. Employees can take advantage of the giving feature within Gusto in which their employer matches a percentage of their individual charity donations.</p>
+          <br>
+          <img src="../images/temporary_11.jpg" alt="">
+          <hr>
+          <p>As a fully remote company, modern tools are crucial to keeping the team connected and productive. Along with Gusto, Slack and Zoom are two favorite tools that Student Loan Hero rely on.</p>
+          <p>“It’s special to work with people all over the globe,” says Amneet. “The HR team does a lot to champion a culture people love and to keep us engaged. It’s pretty remarkable how you can feel so close to people you may only see once or twice in a year with modern technology.” </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- dive-in section -->
+  <section class="section section_dive-in">
+    <div class="container">
+      <div class="row2">
+        <div class="row2__col row2__col_text row2__col_text-dive-in">
+          <h3 class="section-title-prim">Ready to dive in?</h3>
+          <p><strong>98%</strong> of customers say it’s easy to get set up</p>
+          <a href="" class="btn btn--lg">Sign Up FREE</a>
+        </div>
+        <div class="row2__col row2__col_text row2__col_text-just-get">
+          <h3 class="section-title-prim">Just getting your toes wet?</h3>
+          <div class="btn-group-dive-in">
+            <a href="" class="btn btn--lg">Request a demo</a>
+            <a href="" class="btn btn--lg btn--link">See pricing</a>          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        
+        <div class="footer-prim">
+          <!-- Product column -->
+          <div class="footer-prim-col">
+            <h4 class="footer-prim-col__title">Product</h4>
+            <a href="" class="footer__link">Product Overview</a>
+            <a href="" class="footer__link">Owners</a>
+            <a href="" class="footer__link">Tenants & Leasing</a>
+            <a href="" class="footer__link">Accounting & Reports</a>
+            <a href="" class="footer__link">Maintenance</a>
+            <a href="" class="footer__link">File Storage</a>
+            <a href="" class="footer__link">Maintenance</a>
+            <a href="" class="footer__link">Pricing</a>
+            <a href="" class="footer__link">Compare ManageCasa</a>
+            <a href="" class="footer__link">Customer Reviews</a>
+          </div>
+  
+          <!-- Resources column -->
+          <div class="footer-prim-col">
+            <h4 class="footer-prim-col__title">Resources</h4>
+            <a href="" class="footer__link">Help Center</a>
+            <a href="" class="footer__link">Articles</a>
+            <a href="" class="footer__link">FAQ</a>
+            <a href="" class="footer__link">Pricing</a>
+          </div>
+  
+          <!-- About ManageCasa column -->
+          <div class="footer-prim-col">
+            <h4 class="footer-prim-col__title">About<span class="hide-mob"> ManageCasa</span></h4>
+            <a href="" class="footer__link">About the company</a>
+            <a href="" class="footer__link footer__link_nest">Values</a>
+            <a href="" class="footer__link footer__link_nest">News & press</a>
+            <a href="" class="footer__link">Management Team</a>
+            <a href="" class="footer__link">Careers</a>
+            <a href="" class="footer__link">News & Press</a>
+            <a href="" class="footer__link">Affiliate Partners</a>
+            <a href="" class="footer__link">Referral Program</a>
+          </div>
+  
+          <!-- Contact us column -->
+          <div class="footer-prim-col">
+            <h4 class="footer-prim-col__title">Contact us</h4>
+            <address class="contact-info">
+              ManageCasa Inc.<br>
+              44 Tehama St,<br>
+              San Fransisco,<br>
+              CA 94105
+              <div class="contact-title">Talk to Sales:</div>
+              <a href="" class="footer__link">1-800-998-6627</a>
+            </address>
+  
+            <div class="contact-title">Talk to Support:</div>
+            <a href="" class="footer__link footer__link_colored">Sign in</a>
+          </div>
+  
+        </div>
+        <div class="footer-sec">
+          <p>ManageCasa mission statement… rutrum placerat mi consectetur finibus. Aliquam varius placerat lectus, id suscipit erat pharetra a. Ut at sapien eu eros euismod porttitor. Fusce tincidunt, est eu egestas tincidunt, lacus ipsum posuere ligula, non bibendum ipsum at purus.</p>
+          <!-- socials -->
+          <div class="social-box">
+            <ul class="social">
+              <li class="social__item">
+                <a target="_blank" href="" class="social__link social__link_fb" title="Facebook"></a>
+              </li>
+              <li class="social__item">
+                <a target="_blank" href="" class="social__link social__link_tw" title="Twitter"></a>
+              </li>
+              <li class="social__item">
+                <a target="_blank" href="" class="social__link social__link_in" title="LinkedIn"></a>
+              </li>
+              <li class="social__item">
+                <a target="_blank" href="" class="social__link social__link_inst" title="Instagram"></a>
+              </li>
+              <li class="social__item">
+                <a target="_blank" href="" class="social__link social__link_yt" title="Youtube"></a>
+              </li>
+            </ul>
+          </div>
+  
+  
+          <div class="add-info">
+            <div class="copyright-info">ManageCasa®© 2018</div>
+            <!-- terms, privacy, sitemap -->
+            <div class="sec-links">
+              <a href="" class="footer__link footer__link_colored">Terms</a>
+              <a href="" class="footer__link footer__link_colored">Privacy</a>
+              <a href="" class="footer__link footer__link_colored">Site Map</a>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </footer>
+        
+  <script src="../js/vendors.min.js"></script>
+  <script src="../js/script.min.js"></script>
+</body>
+</html>

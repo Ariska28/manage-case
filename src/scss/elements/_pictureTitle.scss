@@ -1,0 +1,64 @@
+.el-pictureTitle {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: -48px;
+
+  &-item {
+    margin-bottom: 48px;
+
+    &__pic {
+      position: relative;
+      width: 100%;
+      padding-bottom: 52.17%;
+      overflow: hidden;
+      margin-bottom: 24px;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__title {
+      opacity: 0.89;
+      color: $c-text-gray;
+      font-family: $font-base;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.3;
+      text-align: center;
+    }
+  }
+
+  @include media-breakpoint-up (lg) {
+    &-item {
+      width: 20.54%;
+    }
+  }
+
+  @include media-breakpoint-down (sm) {
+    display: block;
+
+    &-item {
+      width: 100%;
+      max-width: 230px;
+      @include marginLRA;
+    }
+  }
+
+  @include media-breakpoint-only (md) {
+    @include marginLRA;
+    max-width: 516px;
+    justify-content: space-between;
+
+    &-item {
+      width: 44.5%;
+    }
+  }
+}

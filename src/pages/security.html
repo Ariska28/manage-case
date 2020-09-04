@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/vendors.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+
+</head>
+<body>
+
+  <!-- header, menu -->
+  //= partials/header.html
+  
+  <section class="section section_header section_v2 section_b-delimiter">
+    <div class="container">
+      <h1 class="section-title-prim">Security at ManageCasa</h1>
+    </div>
+  </section>
+
+  <section class="section section_security-info">
+    <div class="container">
+      <div class="text">Security is one of the top priorities at ManageCasa. We’re committed to maintaining the trust of our clients.. Here are some of the ways we protect your information and data:</div>
+      <ul class="list list_security">
+        <li>We don’t share any information with 3rd party organizations for their own direct marketing puposes.</li>
+        <li>We use 256-bit AES (Advanced Encryption Standard) to protect the transmission of your data to our application.</li>
+        <li>We have on-site security engineers, that investigate and resolve to security threads as quickly as possible.</li>
+        <li>Independent third parties also assess our site for potential issues.</li>
+        <li>We host all data on AWS, the world’s leading and most secure cloud capacity service provider that helps us with physical, procedural, and technical steps to safeguard our application as well as our storage environment, to protect your personal information to comply with federal privacy and security standards. See here our also our privacy policy.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section_how-get-started section_v2">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section-title-prim">Here’s how to get started</h2>
+        <ol class="get-started-list">
+          <li>Setup your ManageCasa account</li>
+          <li>Create your properties under management</li>
+          <li>Save all your lease terms and tenants</li>
+          <li>Enter income and expense records and more.</li>
+          <li>Engage and run your reports</li>
+        </ol>
+      </div>
+      
+      <!-- sign up form -->
+      <div class="signup-form-box">
+        <div class="signup-form-header">
+          <h2 class="signup-form-title">Sign Up</h2>
+        </div>
+
+        <form action="" method="post" class="signup-form">
+          <div class="c-input-group c-input-group_half c-input-group_required">
+            <label for="cFname" class="c-label">First Name</label>
+            <input type="text" name="your-name" value="" class="c-inp" id="cFname">
+          </div>
+          <div class="c-input-group c-input-group_half c-input-group_required">
+            <label for="cLname" class="c-label">Last Name</label>
+            <input type="text" name="your-last-name" value="" size="40" class="c-inp" id="cLname">
+          </div>
+          <div class="c-input-group c-input-group_required">
+            <label for="cCompanyName" class="c-label">Company Name</label>
+            <input type="text" name="your-company" value="" size="40" class="c-inp" id="cCompanyName">
+          </div>
+          <div class="c-input-group c-input-group_required">
+            <label for="cEmail" class="c-label">Email Address</label>
+            <input type="email" name="your-email" value="" size="40" class="c-inp" id="cEmail">
+          </div>
+          <div class="c-input-group c-input-group_required c-input-group_phone-num">
+            <label for="cPhoneCode" class="c-label">Phone Number</label>
+            <div class="c-input-group__left">
+
+              <select name="your-phone-code" class="c-inp" id="cPhoneCode">
+                <option value="+1">+1</option>
+                <option value="+7">+7</option>
+                <option value="+20">+20</option>
+                <option value="+27">+27</option>
+                <option value="+30">+30</option>
+                <option value="+31">+31</option>
+                <option value="+32">+32</option>
+                <option value="+33">+33</option>
+                <option value="+34">+34</option>
+                <option value="+36">+36</option>
+                <option value="+39">+39</option>
+                <option value="+40">+40</option>
+              </select>    
+            </div>
+
+            <div class="c-input-group__right">
+              <input type="text" name="your-phone" value="" class="c-inp" placeholder="( - - - ) - - -  - - - -">
+            </div>
+          </div>
+          <div class="c-input-group c-input-group_half c-input-group_required">
+              <label for="cUnitsManaged" class="c-label">Total Units Managed</label>
+              <input type="text" name="your-units" value="" class="c-inp" id="cUnitsManaged">
+          </div>
+          <div class="c-input-group">
+            <input id="cTermsAccepted" type="checkbox" class="c-inp" required="">
+            <label for="cTermsAccepted" class="c-label checkbox-visual">I have read and accept the terms of service and privacy policy</label>
+          </div>
+          <input type="submit" value="Sign Up" class="btn btn--lg">
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  //= partials/section_dive-in.html
+
+  <!-- footer -->
+  //= partials/footer.html
+        
+  <script src="../js/vendors.min.js"></script>
+  <script src="../js/script.min.js"></script>
+</body>
+</html>

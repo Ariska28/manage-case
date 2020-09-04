@@ -1,0 +1,223 @@
+.c-planCard {
+  position: relative;
+  border: 1px solid $c-border;
+  border-radius: 2px;
+  background-color: $c-white;
+
+  &__header {
+    padding: 23px 10px 28px;
+    border-top: 4px solid $c-text-blue;
+    border-bottom: 1px solid $c-border;
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 1px;
+    color: $c-text-blue;
+    font-family: $font-base;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 41px;
+  }
+
+  &__sub-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #95938F;    
+    font-family: $font-base;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+  }
+
+  &__info {
+    position: relative;
+    padding: 28px 16px 33px;
+
+    > * {
+      opacity: 0.08;
+      transition: opacity $t-time1;
+    }
+
+    .c-planCard--active & {
+      > * {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__inactive-msg {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: rgba($c-white, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    color: $c-text-gray;
+    font-family: $font-base;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+
+    .c-planCard--active & {
+      display: none;
+    }
+  }
+
+  &__features {
+    @include listUnstyled;
+    padding-bottom: 9px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid $c-border;
+
+    &-item {
+      margin-bottom: 18px;
+      color: $c-text-gray;
+      font-family: $font-base;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+  }
+
+  &__pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    .btn {
+      padding: 7px 39px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+  }
+
+  &-price {
+    white-space: nowrap;
+
+    &__units-num {
+      font-family: $font-base;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+
+    }
+
+    &__units-text {
+      font-family: $font-base;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+
+      span {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+      }
+    }
+
+    &__val {
+      color: $c-text-blue;
+      font-family: $font-base;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      &:before {
+        //content: '$';
+        .c-planCard--free & {
+          content: normal;
+        }
+      }
+    }
+
+    &__freq {
+      //color: $c-text-gray;
+      color: $c-text-blue;
+      font-family: $font-base;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      &:before {
+        content: ' /';
+        display: inline;
+      }
+
+      .c-planCard--free & {
+        display: none;
+      }
+    }
+  }
+
+
+  &--green {
+    .c-planCard__header {
+      background-color: $c-text-blue;
+      border-bottom-color: $c-text-blue;
+    }
+
+    .c-planCard__title {
+      color: $c-white;
+    }
+
+    .c-planCard__sub-title {
+      color: #C7E7EA;
+    }
+  }
+
+  @include media-breakpoint-up (lg) {
+    max-width: 512px;
+    width: 47.71%;
+
+    &__features {
+      column-count: 2;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        opacity: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-down (sm) {
+    // max-width: 288px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &__pricing {
+      flex-wrap: wrap;
+
+      .btn {
+        padding: 7px 23px;
+      }
+    }
+
+    &-price {
+      margin-right: 3px;
+    }
+  }
+
+  @include media-breakpoint-only (md) {
+    max-width: 336px;
+    width: 45.65%;
+  }
+}

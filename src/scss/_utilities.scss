@@ -1,0 +1,7 @@
+.color-inherit {
+  color: inherit;
+}
+
+.container {
+  @include container;
+}

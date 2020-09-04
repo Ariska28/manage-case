@@ -1,0 +1,181 @@
+
+$mainWidth: 1120px;
+$gap: 32px;
+
+$s-section-offset-y: 96px;
+$s-section-offset-y--sm: 48px;
+
+$headerMobHeight: 60px;
+$heroBlockHeightDesk: 481px;
+
+$font-main: 'Avenir Next';
+$font-base: $font-main, Arial, sans-serif;
+$fs-base: 16px;
+
+$fs-title-xs: 26px;
+$fs-title-md: 32px;
+$fs-title-lg: 38px;
+
+$fs-subtitle: 16px;
+
+$fs-head: 20px;
+$fs-medium: 14px;
+$fs-small: 12px;
+
+
+
+$font-icon: 'manageCasaFont';
+
+$c-white: #fff;
+$c-black: #000;
+$c-black008: rgba(0,0,0,0.08);
+$c-black012: rgba(0,0,0,0.12);
+$c-black016: rgba(0,0,0,0.16);
+$c-black024: rgba(0,0,0,0.24);
+
+$c-bottom-transparent: rgba(255, 255, 255, 0.24);
+
+$c-text-blue: #46BBC4;
+$c-text-gray: #3F3F3F;
+$c-text: #7E7E7E;
+
+$c-brand-gray: #AAAAAA;
+
+$c-red: #F57361;
+$c-brick: #C14231;
+$c-red-light: #FDBDB4;
+$c-blue-accent: #A2E3E8;
+$c-light-blue-bg: #E8F6F8;
+$c-blue-bg: #F3FAFB;
+$c-cream-bg: #F7F7F7;
+$c-white-bg: #FAFAFA;
+$c-dark-green: #1C7F8A;
+$c-light-green: #A7DFE3;
+$c-wave: #1B4D52;
+$c-active: #21838B;
+$c-bg-transparent: rgba($c-text-gray, 0.16);
+$c-border: #D8D8D8;
+
+// additional colors
+$c-yellow: #F4BA67;
+$c-dark-yellow: #F0B766;
+
+$c-separator: #E6E6E6;
+
+$c-overlay: transparentize(#363636, 0.5);
+
+$c-gray: #99A7B0; 
+$c-gray03: rgba($c-gray, 0.3);
+$c-gray-1:#717171;
+
+//modal
+$c-modal-border:#D3EFF1;
+
+
+$valuesBg1: rgba($c-text-blue, 0.16);
+$valuesBg2: rgba(#F3BF75, 0.16);
+$valuesBg3: rgba($c-red, 0.16);
+
+// duration
+$t-time1: 0.2s;
+$t-time2: 0.25s;
+$t-time3: 0.3s;
+
+// Breakpoints
+$xsm: 320px;
+$sm: 480px;
+$md: 767px;
+$lg: 960px;
+$xl: 1080px;
+
+
+$iamTextPaddingTop: 10px;
+$iamTextPaddingBottom: 12px;
+$iamTabletUpLim: 1140px;
+
+
+$xs_min: 0;
+$xsm_min: 321px;
+$sm_min: 481px;
+$md_min: 768px;
+$lg_min: 961px;
+$xl_min: 1201px;
+$xxl_min: 1601px;
+
+$grid-breakpoints: (
+        xs:   $xs_min,
+        xsm:  $xsm-min,
+        sm:   $sm_min,
+        md:   $md_min,
+        lg:   $lg_min,
+        xl:   $xl_min,
+        xxl:  $xxl_min
+) !default;
+
+// specific breakpoints
+$xl: 1080px;
+// $teamMembersAddMobUpLim: 550px;
+
+
+// dropdown menu
+$dropDownMenuTop: 2em;
+$dropdownSeparatorCol: #EDEDED;
+$dropdownBgc: $c-white;
+$dropdownMenuBorderCol: $c-black012;
+$dropdownMenuBorderWidth: 1px;
+$dropdownMenuBorder: $dropdownMenuBorderWidth solid $dropdownMenuBorderCol;
+$dropdownMenuShadow: 0 4px 8px 0 $c-black024;
+$dropdownMenuShadowAbove: 0 -4px 8px 0 $c-black024;
+$dropdownMenuPointerSize: 13px;
+$dropdownRadius: 3px;
+$dropdownItemActiveBg: #F1FAFB;
+$dropdownItemActiveRight: #46BBC4;
+$dropdownItemLeftPadding: 17px;
+
+// dropdown I am menu
+$dropDownIamMenuTop: 55px;
+$dropDownIamMenuBorder: 1px solid $c-border;
+$dropDownIamMenuRadiusDesk: 25px;
+$dropDownIamMenuRadiusTablet: 4px;
+
+// reviews
+$reviewsBorder: 1px solid $c-border;
+$reviewsRadius: 4px;
+
+// sidemenu
+$sidemenuSeparatorCol: #F1F1F1;
+
+// contact
+$c-title: #545454;
+$contactBlockBorder: 1px solid $c-border;
+
+// features pages
+$featuresAnimBorderCol: #85D2D8;
+
+// terms privacy pages
+$termsPrivacyDelimiterCol: $c-border;
+
+// support page
+$supportBg1: #FEF4E7;
+
+// range slider
+$rangeSliderCol1: #95CE59;
+$rangeSliderCol2: #668E3B;
+
+// article content
+$blockquoteCol: #6485C2;
+$footerBorderSeparator: 1px solid $c-border;
+$footerTagBorderCol: rgba(70,187,196,0.32);
+
+// some widths
+$sectionFullWidthHeader: 751px;
+
+// top bar
+$tbBg: rgba(248,224,189,0.36);
+$tbCol: $c-black;
+$tbLinkCol: #F47563;
+$tbDelimiter: #F8DCB3;
+$tbShadowCol: $tbDelimiter;
+
+$calloutBd1: #F4BA67;
+$calloutBg1: #FEF4E7;

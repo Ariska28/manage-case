@@ -1,0 +1,21 @@
+.el-account-box {
+  padding: 24px;
+  margin-bottom: 24px;
+  background: $c-text-blue url(../images/background@2x.png) no-repeat;
+  background-size: cover;
+
+  &__title {
+    color: $c-white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    line-height: (26/20);
+    margin: 0 0 24px;
+  }
+
+  &__btn {
+    width: 100%;
+    color: $c-text-blue;
+    background-color: $c-white;
+  }
+}

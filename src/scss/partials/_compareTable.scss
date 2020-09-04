@@ -1,0 +1,191 @@
+// Unuseful
+
+.comparison-table {
+  table-layout: fixed;
+  width: 99.8%;
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+
+  &__text {
+    font-family: $font-base;
+    font-weight: 500;
+    color: $c-text;
+  }
+
+  td {
+    padding: 11px 5px;
+    border: 1px solid $c-border;
+    vertical-align: top;
+    &.comparison-table__title {
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-top-color: transparent;
+    }
+    &.comparison-table__title,
+    &.comparison-table__subtitle {
+      padding-left: 16px;
+      padding-right: 16px;
+      text-align: left;
+      &_pl {
+        padding-left: 34px;
+      }
+    }
+    &.comparison-table__content {
+      padding: 16px 5px;
+    }
+  }
+  tbody {
+    tr {
+      &:first-of-type {
+        td {
+          padding-top: 47px;
+        }
+      }
+    }
+    &:first-of-type {
+      tr {
+        &:first-of-type {
+          td {
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+.comparison-table__title {
+  color: $c-text-gray;
+  font-family: $font-base;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  &.highlight_class {
+    color: $c-red;
+  }
+}
+.comparison-table__subtitle {
+  // padding-left: 16px;
+  color: $c-text;
+  font-family: $font-base;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  background-color: $c-blue-bg;
+  .pricing-page & {
+    width: 40%;
+  }
+}
+
+.comparison-table__trunc {
+  &--with-margin {
+    margin-left: 15px;
+  }
+}
+
+.pricing-page {
+  .comparison-table {
+    thead {
+      th {
+        width: 20%;
+        &:first-of-type {
+          width: 40%;
+        }
+        // tablet
+        @media (min-width: ($md + 1)) and (max-width: $lg) {
+          width: 17.7%;
+          vertical-align: bottom;
+          &:first-of-type {
+            width: 46.9%;
+          }
+        }
+      }
+    }
+  }
+
+  .comparison-table__trunc {
+    display: block;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.compare-page {
+  .comparison-table {
+    thead {
+      th {
+        width: 18%;
+        &:first-of-type {
+          width: 28%;
+        }
+        // tablet
+        @media (min-width: ($md + 1)) and (max-width: $lg) {
+          width: 17%;
+          &:first-of-type {
+            width: 32%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.comparison-table__content {
+  text-align: center;
+}
+
+.feature-is {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  &_available {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAActJREFUSA1jZKASWPV/FfOb8xta/zP+TwAbycg0X1Tfv4aZSuYzOAawTv3P8L8AaB4PGP//b/P9xU12RmpYMPVCtBvDv387McxiZHjJhCFIosCS29F8jP/+zcGljWILPn353/ufgUEWqwWMDEsoCiKcQQO0jZGB8RE7F4cO2T4gGDSMTCnJGvM+k20BgaCZnWG4ZDco2MiyABQ0////T8EW7qCg4edhKoHJkWwBMUETo7r0E9kWEBs0ZFlAStDALGBZdbWB7c3PW03AbB4PFmRiWiDKqlofpt3wC6YIRIOC5tPnf3OAaR4rYAKmmhjVJfCggSlighpeDhSQAON//yre/Lq1YdvtXHaYIhBNatDA9DLBXQ4TAdLAFOL54Mvb9TBLyAkamHE4UxHMknnnEkXxlTX/mRhTkVMNzGAYzcQADHMYB50GWfKD8ccNPGXN7GyDpbvQ9SHzmRS5hRoYGRm3Iwsis///ZxBC5sPY6BkKJo5OM3mpTv6pwCMciM8SdE0gPqGggekBxwHJljAyEAwaFAtAHGItITZoMCwg1hJigwarBYQsAebWaYRSDcxgGI01H8CDi4GxExgkz4GKXwATQVuGgWouTCOxNABek87gwwPKpwAAAABJRU5ErkJggg==');
+  }
+  &_not_available {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXFJREFUSA2tlj1OxDAQhT0uQPvDFcJ56OAGiJ5taLYjVFDDBbgBVMt5SEUPm9VWg1+QrdgeW5OIkVaOx57v2R4ns8Rte3L47h6Y+No4I6bXxfmqpc3LEX2t8fPt6eFz30acs+ae+rubRza8jUBEH8tmdaUVAbzv9m+G+WLMIUNP1iuOBzARAQiM/EKnBMdUsK0Q8+dSiNTgnmtx5r6TtRURDRxsu3CJMO7MM7h3CCIaOJhgEzjaACQe86WEwh9sdEkGAQxoRQaI21WApQ8jOIaCADoqEUwsWQLHtEgAjtkiAlwUmCVSgBcFJolU4OCUXzSM/oNlOQBzch4qu8gEJsP9LgsikcBseEUk5EAFd6t0F3vneVkrfFaGHWjhsz4VqGj9T/eeFotodcn5qhe0bi4tyuUUOIRR6Ybd4MhK5o4LbLmi+aBk5d6NViNSr2gVuBfSiMgVTQHXiISKhurvrt8XfnheuuRo/1GE40JMwkFF+wX1oUy/vP8WugAAAABJRU5ErkJggg==');
+  }
+  &_empty {
+    height: 0;
+    & + .comparison-table__text {
+      margin-top: 0 !important;
+    }
+  }
+  & + .comparison-table__text {
+    display: inline-block;
+    margin-top: 12px;
+  }
+}
+
+// tablet + desktop
+@media (min-width: ($md + 1)) {
+
+}
+
+// desktop
+@media (min-width: ($lg + 1)) {
+
+}
+
+// mobile + tablet
+@media (max-width: $lg) {
+
+}
+
+// mobile
+@media (max-width: $md) {
+
+}
+
+// tablet
+@media (min-width: ($md + 1)) and (max-width: $lg) {
+
+}

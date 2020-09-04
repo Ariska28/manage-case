@@ -1,0 +1,148 @@
+.s-storytelling {
+  @extend %sectionStandardPadding;
+
+  &__centered {
+    @extend %contentCentered;
+  }
+
+  &__back {
+    @extend %linkBrand;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    display: inline-block;
+
+    &:before {
+      content: "\e903";
+      display: inline-block;
+      padding-right: 12px;
+      @include customFont;
+      @include inheritFontParam;
+      margin-left: auto;
+    }
+  }
+
+  &__wysiwyg {
+    color: $c-text;
+    font-family: $font-base;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    h1, h2, h3, h4 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: $c-text-gray;
+      font-family: $font-base;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    h1, h2 {
+      font-size: 20px;
+    }
+    h3, h4 {
+      font-size: 16px;
+    }
+    ul, ol {
+      padding-left: 18px;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid $c-separator;
+      margin-top: 48px;
+      margin-bottom: 48px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    blockquote {
+      padding: 74px 6.5% 48px;
+      margin: 48px 0;
+      color: $c-red;
+      font-family: $font-base;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 32px;
+      text-align: center;
+      border-top: 1px solid $c-separator;
+      border-bottom: 1px solid $c-separator;
+      p {
+        margin: 0;
+        color: inherit;
+        font-family: $font-base;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+      cite {
+        display: block;
+        margin-top: 16px;
+        color: $c-text;
+        font-family: $font-base;
+        font-style: normal;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+      }
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      @include marginLRA;
+      & + p {
+        margin-top: 16px;
+      }
+    }
+  }
+
+
+  &-grid {
+    border-top: 1px solid $c-separator;
+    margin-bottom: 48px;
+
+    &__aside {
+      margin-top: 25px;
+      //margin-top: 48px;
+    }
+    &__content {
+      margin-top: 48px;
+    }
+  }
+
+
+
+  @include media-breakpoint-up(md){
+
+    &-grid {
+      margin-bottom: 96px;
+      &__content {
+        margin-top: 25px;
+      }
+      &__aside {
+        //margin-top: 25px;
+      }
+    }
+
+  }
+
+  @include media-breakpoint-up(lg){
+
+    &-grid {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 128px;
+      &__aside {
+        width: 31.88%;
+        margin-top: 48px;
+      }
+      &__content {
+        margin-top: 48px;
+        width: 63.84%;
+      }
+    }
+
+  }
+
+}

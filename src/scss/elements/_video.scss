@@ -1,0 +1,108 @@
+$videoBtnCloseSize: 29px;
+
+.el-videoBox {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity $t-time3;
+
+  &_opened {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    opacity: 1;
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $c-overlay;
+  }
+
+  &__inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    width: 90%;
+    padding-bottom: 56.25% * 0.9;
+
+    .el-videoBox_wistia & {
+      background-color: $c-white;
+      max-height: 100%;
+      // width: 67.3%;
+      // max-width: 862px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    height: $videoBtnCloseSize;
+    width: $videoBtnCloseSize;
+    border: 1px solid $c-black016;
+    background-color: $c-white-bg;
+    box-shadow: 0 2px 4px 0 $c-black008;
+    border-radius: 50%;
+    z-index: 160;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: $videoBtnCloseSize * 0.45;
+      height: 2px;
+      border-radius: 2px;
+      background-color: $c-text-gray;
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  @media (orientation: landscape) {
+    &__inner {
+      max-width: 90vh;
+      padding-bottom: 90vh * 0.562;
+
+      .el-videoBox_wistia & {
+        // max-height: 90vh;
+        // padding-bottom: 0;
+        max-width: 90vh * (1/0.562);
+      }
+    }
+  }
+
+  @include media-breakpoint-down (sm) {
+    &__inner {
+      .el-videoBox_wistia & {
+        width: calc(100% - 20px);
+        // max-width: 608px;
+      }
+    }
+
+    &__btn-close {
+      left: calc(100% - #{$videoBtnCloseSize/2} + 10px);
+    }
+  }
+}

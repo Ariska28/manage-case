@@ -1,0 +1,37 @@
+.s-supporting {
+  padding-top: 59px;
+  padding-bottom: 55px;
+  background-color: $supportBg1;
+
+  &__container {
+    @extend %contentCentered;
+  }
+
+  &__title {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 97.57%;
+    margin-bottom: 55px;
+
+  }
+
+  @include media-breakpoint-up(md){
+    &__title {
+      max-width: 461px;
+      margin-bottom: 61px;
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    padding-top: 90px;
+    padding-bottom: 89px;
+
+    &__title {
+      max-width: 504px;
+      margin-bottom: 78px;
+    }
+
+  }
+
+}

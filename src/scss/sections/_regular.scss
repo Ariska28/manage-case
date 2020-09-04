@@ -1,0 +1,48 @@
+.s-regular {
+  @extend %sectionStandardPadding;
+
+  &--events {
+    padding-bottom: 0;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &--events &__container {
+    padding-bottom: $s-section-offset-y;
+  }
+
+  &__centered {
+    @extend %contentCentered;
+  }
+
+  &--wall-of {
+    background-color: $c-text-blue;
+    color: white;
+  }
+
+  &--no-padding-top {
+    padding-top: 0;
+  }
+
+  &--portfolioTypes {
+    .el-title {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+  }
+
+  &--allFeatures {
+    .el-title {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &--events &__container {
+      padding-bottom: $s-section-offset-y--sm;
+    }
+  }
+}

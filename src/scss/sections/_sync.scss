@@ -1,0 +1,442 @@
+.s-sync {
+  padding: 88px 0 90px;
+  background-color: $c-light-blue-bg;
+
+  &__container {
+    @include container;
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__circle {
+    margin-top: 81px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+
+    svg {
+      display: none;
+    }
+
+    &-item {
+      position: relative;
+
+      &:before {
+        transition: width $t-time1, height $t-time1, right $t-time1, left $t-time1, top $t-time1, bottom $t-time1;
+      }
+    }
+
+    &-link {
+      @include linkReset;
+      display: block;
+    }
+
+    &-head {
+      color: $c-text-gray;
+      margin-top: 0;
+      margin-bottom: 6px;
+      font-family: $font-base;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 44px;
+      transition: $t-time1 color ease-out;
+    }
+
+    &-link:focus &-head {
+      color: $c-text-blue;
+    }
+  }
+
+  @media (min-width: ($md + 1)) {
+    padding: 88px 0 90px;
+
+    &__circle {
+      &-item {
+        width: 50%;
+
+        &:nth-of-type(even) {
+          text-align: left;
+        }
+
+        &:nth-of-type(odd) {
+          text-align: right;
+        }
+
+        &:last-of-type {
+          text-align: center;
+        }
+    
+        &:before {
+          content: "";
+          position: absolute;
+          background-color: $c-text-blue;
+          width: 2px;
+          height: 2px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: ($lg + 1)) {
+    padding: 88px 0 90px;
+
+    &__circle {
+      svg {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 330px;
+        height: 330px;
+        top: 16px + 24;
+        left: 50%;
+        transform: translateX(-50%);
+
+        path {
+          cursor: pointer;
+        }
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 378px;
+        height: 378px;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: transparent;
+        background-image: url(../images/radial-sprite.png);
+        background-size: 3 * 378px 2 * 378px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+
+        @include retinaDisplay {
+          background-image: url(../images/radial-sprite@2x.png);
+        }
+      }
+
+      &::after {
+        opacity: 0;
+        transition: opacity $t-time1;
+      }
+
+      &-item {
+        min-height: 232px;
+
+        &:nth-of-type(even) {
+          padding-left: 229px;
+        }
+
+        &:nth-of-type(odd) {
+          padding-right: 229px;
+          p {
+            margin-left: auto;
+          }
+        }
+
+        &:last-of-type {
+          width: 298px;
+          min-height: 0;
+          padding-left: 0;
+          padding-right: 0;
+          margin-top: -40px;
+        }
+
+        p {
+          max-width: 298px;
+        }
+
+        &--owners {
+          &::before {
+            width: 100px;
+            transform-origin: 0 0;
+            transform: rotate(28.6deg);
+            top: 24px;
+            right: 229px - 17 - 100;
+
+            .s-sync__circle-item--owners-hover & {
+              width: 76px;
+              right: 229px - 17 - 76;
+            }
+          }
+
+          &-hover {
+            &::after {
+              background-position: -378px 0;
+              opacity: 1;
+            }
+          }
+        }
+
+        &--tenants {
+          &::before {
+            width: 100px;
+            transform-origin: 100% 0;
+            transform: rotate(-28.6deg);
+            top: 24px;
+            left: 229px - 17 - 100;
+
+            .s-sync__circle-item--tenants-hover & {
+              width: 76px;
+              left: 229px - 17 - 76;
+            }
+          }
+
+          &-hover {
+            &::after {
+              background-position: -756px 0;
+              opacity: 1;
+            }
+          }
+        }
+
+        &--accounting {
+          &::before {
+            width: 35px;
+            top: 20px;
+            right: 229px - 15 - 35;
+
+            .s-sync__circle-item--accounting-hover & {
+              width: 11px;
+              right: 229px - 15 - 11;
+            }
+          }
+
+          &-hover {
+            &::after {
+              background-position: -756px -378px;
+              opacity: 1;
+            }
+          }
+        }
+
+        &--maintenance {
+          &::before {
+            width: 35px;
+            top: 20px;
+            left: 229px - 15 - 35;
+
+            .s-sync__circle-item--maintenance-hover & {
+              width: 11px;
+              left: 229px - 15 - 11;
+            }
+          }
+
+          &-hover {
+            &::after {
+              background-position: 0px -378px;
+              opacity: 1;
+            }
+          }
+        }
+
+        &--storage {
+          &::before {
+            width: 2px;
+            height: 31px;
+            top: -31px - 6;
+            left: calc(50% - 1px);
+
+            .s-sync__circle-item--storage-hover & {
+              height: 7px;
+              top: -31px - 6 + 24;
+            }
+          }
+
+          &-hover {
+            &::after {
+              background-position: -378px -378px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $md) {
+    padding: 28px 0 56px;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__subtitle {
+      max-width: 255px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 26px;
+    }
+
+    &__circle {
+      margin-top: 0;
+
+      &::before {
+        content: "";
+        position: relative;
+        display: block;
+        width: 165px;
+        height: 165px;
+        margin-bottom: 52px;
+        background-color: transparent;
+        background-image: url(../images/illustration-sync-m@2x.png);
+        background-size: 100%;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+
+      &-head {
+        font-size: 22px;
+        line-height: 44px;
+      }
+
+      &-item {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 44px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        p {
+          max-width: 280px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        &--owners {
+          order: 1;
+        }
+
+        &--tenants {
+          order: 3;
+        }
+
+        &--accounting {
+          order: 2;
+        }
+
+        &--maintenance {
+          order: 4;
+        }
+
+        &--storage {
+          order: 5;
+        }
+      }
+    }
+  }
+
+  // tablet
+  @media (min-width: ($md + 1)) and (max-width: $lg) {
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__subtitle {
+      margin-bottom: 23px;
+    }
+
+    &__circle {
+      margin-top: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 189px;
+        height: 189px;
+        top: 76px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: transparent;
+        background-image: url(../images/logo-house.png), url(../images/radial-diagram_no-logo.png);
+        background-size: auto 40px, 3 * 189px 2 * 189px;
+        background-position: 50% 50%, 0 0;
+        background-repeat: no-repeat, no-repeat;
+      }
+
+      &-head {
+        margin-bottom: 12px;
+        font-size: 22px;
+        line-height: 26px;
+      }
+
+      &-item {
+        min-height: 214px;
+        &:nth-of-type(2n) {
+          padding-left: 163px;
+        }
+        &:nth-of-type(2n + 1) {
+          padding-right: 163px;
+        }
+        &:last-of-type {
+          width: 206px;
+          min-height: 0;
+          padding-left: 0;
+          padding-right: 0;
+          margin-top: -93px;
+        }
+
+        &--owners {
+          &::before {
+            width: 123px;
+            transform-origin: 0 0;
+            transform: rotate(46deg);
+            top: 14px;
+            right: 163px - 17 - 123;
+          }
+        }
+
+        &--tenants {
+          &::before {
+            width: 123px;
+            transform-origin: 100% 0;
+            transform: rotate(-46deg);
+            top: 16px;
+            left: 163px - 17 - 123;
+          }
+        }
+
+        &--accounting {
+          &::before {
+            width: 65px;
+            transform-origin: 0 0;
+            transform: rotate(-29deg);
+            top: 12px;
+            right: 163px - 15 - 65;
+          }
+        }
+
+        &--maintenance {
+          &::before {
+            width: 65px;
+            transform-origin: 100% 0;
+            transform: rotate(29deg);
+            top: 12px;
+            left: 163px - 15 - 65;
+          }
+        }
+
+        &--storage {
+          &::before {
+            width: 2px;
+            height: 63.5px;
+            top: -63.5px - 10;
+            left: calc(50% - 1px);
+          }
+        }
+      }
+    }
+  }
+}

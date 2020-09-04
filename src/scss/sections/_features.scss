@@ -1,0 +1,7 @@
+.s-features {
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 51px;
+  }
+}

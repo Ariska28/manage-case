@@ -1,0 +1,126 @@
+.s-gains {
+  padding-top: $s-section-offset-y;
+  margin-bottom: 20px;
+
+  &__container {
+    @include container;
+  }
+
+  &__inner {
+    max-width: 1035px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 215px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__image {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    margin: 0 auto;
+
+    &::before {
+      position: absolute;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      top: 0;
+      transform: translateX(-50%);
+      content: "";
+    }
+
+    &--house {
+      &::before {
+        background-image: url("../images/icon-1.svg");
+      }
+    }
+
+    &--owner {
+      &::before {
+        background-image: url("../images/icon-2.svg");
+      }
+    }
+
+    &--document {
+      &::before {
+        background-image: url("../images/icon-3.svg");
+      }
+    }
+
+    &--aim {
+      &::before {
+        background-image: url("../images/icon-4.svg");
+      }
+    }
+  }
+
+  &__item-title {
+    color: #3f3f3f;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    max-width: 215px;
+    margin: 0 auto;
+    margin-top: 17px;
+  }
+
+  &__title {
+    color: #3f3f3f;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto;
+    margin-bottom: 65px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 71px;
+
+    &__inner {
+      // max-width: 620px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    &__list {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 496px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: -50px;
+    }
+
+    &__item {
+      // width: 50%;
+      flex: 0 0 43%;
+      max-width: none;
+      margin-bottom: 50px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: $s-section-offset-y--sm;
+
+    &__item {
+      flex: 0 0 100%;
+    }
+  }
+}

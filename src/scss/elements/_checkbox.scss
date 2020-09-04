@@ -1,0 +1,76 @@
+// name "el-checkboxVisual" can be used at the same time with admin forms refactoring
+
+.checkbox-visual,
+.c-label.checkbox-visual { // applied to <label>
+  position: relative;
+  padding-left: 21px;
+  color: $c-text;
+  font-family: $font-base;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+input[type=checkbox] {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+
+  &+.checkbox-visual {
+    &:before,
+    &:after {
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      display: block;
+    }
+
+    &:before {
+      left: 0;
+      top: 1px;
+      width: 14px;
+      height: 14px;
+      background-color: $c-white;
+      border: 1px solid $c-border;
+      border-radius: 2px;
+    }
+
+    &:after {
+      left: 3px;
+      top: 5px;
+      width: 8px;
+      height: 5px;
+      border-left: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      transition: transform $t-time1;
+      opacity: 0;
+    }
+  }
+
+  &:checked {
+    &+.checkbox-visual {
+      &:before {
+        background-color: $c-text-blue;
+        border-color: $c-text-blue;
+      }
+
+      &:after {
+        border-radius: 2px;
+        border-color: $c-white;
+        transform: rotate(-45deg);
+        opacity: 1;
+      }
+    }
+  }
+
+  &:focus {
+    &+.checkbox-visual {
+      &:before{
+        outline: 3px solid $c-border;
+      }
+    }
+  }
+}

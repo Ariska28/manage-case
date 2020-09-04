@@ -1,0 +1,292 @@
+.s-events {
+  padding: 96px 0;
+
+  &__container {
+    @include container;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  &__switcher {
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: center;
+    color: $c-text-blue;
+
+    &-btn {
+      max-width: 178px;
+      flex-basis: 50%;
+      overflow: hidden;
+      font-size: $fs-base;
+      line-height: 1.75;
+
+      &:first-child {
+        border-radius: 25px 0 0 25px;
+
+        &:focus {
+          border-right-color: transparent;
+        }
+      }
+
+      &:last-child {
+        border-radius: 0 25px 25px 0;
+
+        &:focus {
+          border-left-color: transparent;
+        }
+      }
+
+      &.active {
+        border-color: $c-text-gray;
+        background-color: $c-text-gray;
+        color: $c-white;
+
+        &:hover,
+        &:focus {
+          border-color: $c-text-gray;
+          background-color: $c-text-gray;
+          color: $c-white;
+        }
+      }
+    }
+
+    &-small {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__empty {
+    text-align: center;
+    padding-top: 32px;
+
+    &-title {
+      margin: 0 0 21px;
+      color: $c-text-gray;
+      font-size: $fs-head;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    &-text {
+      p:only-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__month {
+    margin-bottom: 64px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.14;
+    color: $c-text-gray;
+    margin-top: 0;
+    margin-bottom: 64px;
+    text-align: center;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-media,
+    &-content {
+      flex: 0 0 47.9%;
+    }
+
+    &-media {
+      position: relative;
+    }
+
+    &-badge {
+      padding: 12px 16px;
+      background-color: $c-red;
+      font-size: $fs-head;
+      line-height: 1.3;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      display: block;
+      font-weight: 600;
+      color: $c-white;
+      border-radius: 12px;
+      border: 8px solid white;
+      margin-top: -8px;
+    }
+
+    &-picture {
+      position: relative;
+      max-width: 91%;
+      margin-left: auto;
+      margin-top: 8px;
+      border-radius: 4px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top: 49%;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: scale(1);
+      min-width: 100%;
+      min-height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center;
+      display: block;
+      border-radius: 4px;
+    }
+
+    &-content {
+      padding-top: 24px;
+    }
+
+    &-title {
+      font-size: $fs-head;
+      font-weight: 600;
+      color: $c-text-gray;
+      line-height: 1.3;
+      margin: 0 0 4px;
+    }
+
+    &-place {
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT4wNEJFRDM3Ny00ODNBLTQzOUUtODNFNC02QjA0MTgwRjg3NkI8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggc2tldGNodG9vbC48L2Rlc2M+ICAgIDxnIGlkPSJBc3NldC1BcnRib2FyZC1QYWdlIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJpY29uLS8tMTZ4MTYtLy1sb2NhdGlvbiIgZmlsbD0iIzcxNzE3MSI+ICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMi4wMDAwMDAsIDAuMDAwMDAwKSIgaWQ9IkNvbG9yIj4gICAgICAgICAgICAgICAgPHBhdGggZD0iTTgsNiBDOCw3LjEwNCA3LjEwNCw4IDYsOCBDNC44OTYsOCA0LDcuMTA0IDQsNiBDNCw0Ljg5NiA0Ljg5Niw0IDYsNCBDNy4xMDQsNCA4LDQuODk2IDgsNiBNNiwxMy41MzYgQzQuNDU5LDExLjc5OCAyLDguNDk2IDIsNiBDMiwzLjc5NCAzLjc5NCwyIDYsMiBDOC4yMDYsMiAxMCwzLjc5NCAxMCw2IEMxMCw4LjQ5NiA3LjU0MSwxMS43OTggNiwxMy41MzYgTTYsMCBDMi42OTEsMCAwLDIuNjkxIDAsNiBDMCwxMC4zNjQgNS4wNzcsMTUuNDkxIDUuMjkzLDE1LjcwNyBDNS40OCwxNS44OTUgNS43MzUsMTYgNiwxNiBDNi4yNjUsMTYgNi41MiwxNS44OTUgNi43MDcsMTUuNzA3IEM2LjkyMywxNS40OTEgMTIsMTAuMzY0IDEyLDYgQzEyLDIuNjkxIDkuMzA5LDAgNiwwIj48L3BhdGg+ICAgICAgICAgICAgPC9nPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+);
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position-y: center;
+      margin-bottom: 21px;
+    }
+
+    &-city {
+      padding-left: 24px;
+    }
+
+    &-description {
+      margin-bottom: 16px;
+    }
+
+    &-link {
+      @include ref;
+      font-size: $fs-base;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &-arrow {
+      fill: currentColor;
+      color: inherit;
+      margin-left: 8px;
+    }
+  }
+
+  &__load {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 64px 0;
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__switcher {
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      &-picture {
+        max-width: 95.3%;
+
+        &::before {
+          padding-top: 86.6%;
+        }
+      }
+    }
+
+    &__month {
+      &:last-child {
+        margin-bottom: 48px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 48px 0;
+
+    &__switcher {
+      &-big {
+        display: none;
+      }
+
+      &-small {
+        display: inline;
+      }
+    }
+
+    &__empty {
+      padding-top: 14px;
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      text-align: left;
+    }
+
+    &__item {
+      flex-direction: column;
+
+      &-badge {
+        margin-left: -16px;
+      }
+
+      &-picture {
+        max-width: 100%;
+
+        &::before {
+          padding-top: 55.6%;
+        }
+      }
+    }
+  }
+}

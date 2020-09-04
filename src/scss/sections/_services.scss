@@ -1,0 +1,30 @@
+.s-services {
+  background-color: $c-text-blue;
+  padding-top: 42px;
+  padding-bottom: 41px;
+
+  &__title {
+    margin-bottom: 27px;
+    color: $c-white;
+    text-align: center;
+  }
+
+  @include media-breakpoint-up (md) {
+    padding-top: 65px;
+    padding-bottom: 66px;
+
+    &__title {
+      margin-bottom: 41px;
+    }
+	}
+
+  @include media-breakpoint-up (lg) {
+    padding-top: 89px;
+    padding-bottom: 70px;
+
+    &__title {
+      margin-bottom: 61px;
+    }
+  }
+}
+

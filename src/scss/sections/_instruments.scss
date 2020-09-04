@@ -1,0 +1,43 @@
+.s-features-instruments {
+  padding-top: 89px;
+  padding-bottom: 157px;
+
+  &__container {
+    @include container;
+  }
+
+  &__content {
+    padding-right: 27px;
+    padding-left: 57px;
+    position: relative;
+    z-index: 15;
+    width: 76%;
+    margin-left: auto;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 96px;
+
+    &__content {
+      padding-right: 6px;
+      padding-left: 16px;
+    }
+  }
+
+  @include media-breakpoint-down (sm) {
+    margin-top: -67px;
+    padding-top: 77px;
+    padding-bottom: 64px;
+
+    &__content {
+      padding: 0;
+      position: static;
+      width: 100%;
+      margin: 0;
+    }
+
+    .el-title {
+      text-align: center;
+    }
+  }
+}

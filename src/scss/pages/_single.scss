@@ -1,0 +1,145 @@
+.categories-mobile {
+  position: relative;
+  display: block;
+  background: $c-blue-bg;
+  padding: 0;
+  margin-bottom: 16px;
+  width: 100%;
+  border-top: 1px solid $c-text-blue;
+  border-bottom: 1px solid $c-text-blue;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 19px;
+    transition: padding-bottom 0.3s ease;
+
+    &-indicator {
+      position: relative;
+      font-size: 0;
+      display: inline-block;
+      color: $c-text;
+
+      &:after {
+        @include customFont;
+        @include inheritFontParam;
+
+        color: $c-text-blue;
+        content: '\e900';
+        font-size: 24px;
+      }
+    }
+
+    &-title {
+      color: $c-text-gray;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26px;
+      margin: 0;
+    }
+
+
+    &.dropdown_open {
+   //   border-bottom: none;
+    }
+
+    &.dropdown_open &-indicator {
+      &:after {
+        font-size: 20px;
+        content: "\e901";
+      }
+    }
+
+  }
+
+  &__list {
+    @include listUnstyled;
+    display: block;
+   // max-height: 185px;
+  //  overflow: hidden;
+
+    &-item {
+
+      &:nth-child(n + 13){
+        display: none; // show fist 12
+      }
+
+      a {
+        @include linkReset;
+        font-size: 16px;
+        line-height: 32px;
+        color: $c-text-blue;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__show-all {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid $c-border ;
+    a {
+      @include linkReset;
+      font-size: 16px;
+      line-height: 24px;
+      color: $c-text-blue;
+      font-weight: 500;
+    }
+  }
+
+  &__content {
+    display: none;
+    background: $c-blue-bg;
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.16);
+    border-bottom: 1px solid $c-text-blue;
+    &.open {
+      padding: 0 19px 25px;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      display: block;
+    }
+  }
+
+
+
+
+
+  @media (max-width: $md) {
+    &__list {
+      &-item {
+        &:nth-child(n + 7){
+          display: none; // show fist 6
+        }
+      }
+    }
+  }
+
+  @media (min-width: ($md + 1)) and (max-width: $lg) {
+    &__list {
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      max-height: 210px;
+      flex-wrap: wrap;
+      &-item {
+        width: 50%;
+      }
+    }
+  }
+
+  @media (min-width: $lg + 1) {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+

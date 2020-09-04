@@ -1,0 +1,83 @@
+$lineWidth: 2px;
+$lineHeight: 82px;
+$lineHeightMob: 34px;
+// $firstElementLineHeight: 34px;
+// $vShift: $firstElementLineHeight / 2 - $firstElementLineHeight * 0.05;
+
+.linked-list {
+  @include listUnstyled;
+  &__item {
+    display: flex;
+    padding-top: 116px;
+    overflow: visible;
+    &:first-of-type {
+      padding-top: 51px;
+      overflow: hidden;
+    }
+  }
+}
+.linked-list__pic-box {
+  min-width: 276px;
+  max-width: 276px;
+  align-self: stretch;
+  position: relative;
+  text-align: center;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    margin-bottom: 17px;
+    width: $lineWidth;
+    height: $lineHeight;
+    transform: translateX(-50%);
+    background-color: $c-text-blue;
+    opacity: 0.24;
+  }
+}
+.linked-list__pic {
+  max-width: 100%;
+}
+
+// tablet + desktop
+@media (min-width: ($md + 1)) {
+  .linked-list {
+    &__item {
+      align-items: center;
+    }
+  }
+}
+
+// desktop
+@media (min-width: ($lg + 1)) {
+  .linked-list__pic-box {
+    margin-right: 64px;
+  }
+
+}
+
+// mobile + tablet
+@media (max-width: $lg) {
+
+}
+
+// mobile
+@media (max-width: $md) {
+  .linked-list {
+    &__item {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  .linked-list-info {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// tablet
+@media (min-width: ($md + 1)) and (max-width: $lg) {
+  .linked-list__pic-box {
+    margin-right: 32px;
+  }
+}

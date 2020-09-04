@@ -1,0 +1,178 @@
+.section_features-table {
+  text-align: center;
+  .link_arrow {
+    text-decoration: none;
+    &:after {
+      margin-left: 6px;
+      font-size: 10px;
+      transform: rotate(-90deg);
+    }
+    &.see-more {
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+.comparison-table-box {
+  position: relative;
+  overflow: hidden;
+  .pricing-page & {
+    margin-bottom: 43px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba($c-white, 0) 0%, $c-white 100%);
+    transition: height $t-time1;
+  }
+  &.comparison-table-box_shrink {
+    max-height: 636px;
+    &:after {
+      height: 135px;
+    }
+  }
+}
+
+// pricing faqs section
+.section_pricing-faqs {
+  .section-subtitle {
+    margin-bottom: 22px;
+  }
+  .r-part {
+    .section__header {
+      margin-bottom: 26px;
+    }
+    .section-title-prim {
+      display: inline-block;
+      margin-right: 22px;
+      margin-bottom: 0;
+    }
+    .link_arrow {
+      &:after {
+        font-size: 10px;
+      }
+    }
+  }
+}
+.price-less-services {
+    @extend .list;
+    margin-left: 14px;
+    li {
+      margin-bottom: 0;
+      line-height: 28px;
+    }
+}
+
+// tablet + desktop
+@media (min-width: ($md + 1)) {
+  // pricing faqs section
+  .section_pricing-faqs {
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+// desktop
+@media (min-width: ($lg + 1)) {
+  .section_features-table {
+    padding-top: 91px;
+    padding-bottom: 89px;
+    .section-title-prim {
+      + .text {
+        margin-bottom: 53px;
+      }
+    }
+    .section-subtitle {
+      + .text {
+        margin-bottom: 83px;
+      }
+    }
+  }
+
+  // pricing faqs section
+  .section_pricing-faqs {
+    padding-top: 90px;
+    padding-bottom: 96px;
+    .l-part {
+      width: 40.09%;
+    }
+    .r-part {
+      width: 57.05%;
+    }
+  }
+}
+
+// mobile + tablet
+@media (max-width: $lg) {
+  // pricing faqs section
+  .section_pricing-faqs {
+    .r-part {
+      .section__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width: $md) {
+  .section_features-table {
+    display: none;
+  }
+
+  // pricing faqs section
+  .section_pricing-faqs {
+    padding-top: 43px;
+    padding-bottom: 48px;
+    .l-part {
+      margin-bottom: 43px;
+    }
+  }
+}
+
+// tablet
+@media (min-width: ($md + 1)) and (max-width: $lg) {
+  .pricing-page {
+    .features-table {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  .section_features-table {
+    padding-top: 67px;
+    padding-bottom: 65px;
+    .section-title-prim {
+      margin-bottom: 11px;
+      + .text {
+        margin-bottom: 48px;
+      }
+    }
+    .section-subtitle {
+      + .text {
+        margin-bottom: 131px;
+      }
+    }
+  }
+
+  // pricing faqs section
+  .section_pricing-faqs {
+    padding: 66px 16px 65px;
+    padding-bottom: 96px;
+    .l-part {
+      width: 33.36%;
+    }
+    .r-part {
+      width: 63.78%;
+    }
+  }
+}

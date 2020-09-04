@@ -1,0 +1,99 @@
+.faqs {
+  @include listUnstyled;
+  &__item {
+    padding: 18px 24px;
+    margin-bottom: 24px;
+    border: 1px solid $c-border;
+    border-radius: 4px;
+    background-color: $c-white;
+    cursor: pointer;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__q {
+    position: relative;
+    padding-right: 40px;
+    margin-bottom: 0;
+    color: $c-text-gray;
+    font-family: $font-base;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    transition: margin $t-time1;
+    &:before {
+      @include customFont;
+      @include inheritFontParam;
+      content: '\e90a';
+      display: block;
+      // transform: rotate(90deg);
+      position: absolute;
+      right: 0;
+      top: 2px;
+      color: $c-text-blue;
+      font-size: 16px;
+      transition: transform $t-time1;
+      .faqs__item_open & {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__a {
+    max-height: 0;
+    overflow: hidden;
+    color: $c-text;
+    font-family: $font-base;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
+
+// tablet + desktop
+@media (min-width: ($md + 1)) {
+
+}
+
+// desktop
+@media (min-width: ($lg + 1)) {
+  .faqs {
+    &__item_open {
+      .faqs__q {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+// mobile + tablet
+@media (max-width: $lg) {
+
+}
+
+// mobile
+@media (max-width: $md) {
+  .faqs {
+    &__item {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    &__item_open {
+      .faqs__q {
+        margin-bottom: 10px;
+      }
+    }
+    &__q {
+      padding-right: 26px;
+    }
+  }
+}
+
+// tablet
+@media (min-width: ($md + 1)) and (max-width: $lg) {
+  &__item_open {
+    .faqs__q {
+      margin-bottom: 13px;
+    }
+  }
+}

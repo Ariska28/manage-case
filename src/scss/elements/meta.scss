@@ -1,0 +1,59 @@
+.el-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  // margin-bottom: 19px;
+
+  &__topics {
+    // display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 14px;
+  }
+
+  &__topic {
+    @include linkReset;
+    display: inline-block;
+    padding: 2px 9px 1px;
+    margin-bottom: 5px;
+    color: $c-white !important;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    background-color: $c-red;
+    border-radius: 4px;
+
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__info {
+    // display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 19px;
+    overflow: hidden;
+  }
+
+  &__name {
+    @include linkReset;
+    @include link;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding-right: 25px;
+  }
+
+  &__date {
+    color: $c-text;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-left: -25px;
+    &:before {
+      content: "•";
+      margin-left: 9px;
+      margin-right: 9px;
+    }
+  }
+}

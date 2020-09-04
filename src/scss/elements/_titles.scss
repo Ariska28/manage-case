@@ -1,0 +1,100 @@
+.el-title {
+  margin-top: 0;
+  margin-bottom: 21px;
+  color: $c-text-gray;
+  font-size: $fs-title-xs;
+  font-weight: 600;
+  line-height: 32px;
+  transition: font-size $t-time1;
+
+  &--red {
+    color: $c-red;
+  }
+
+  &--mb-0 {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(md){
+    font-size: $fs-title-md;
+    line-height: 38px;
+
+    &--md-bigger {
+      font-size: $fs-title-lg;
+      line-height: 44px;
+    }
+
+    &--maxw-none-462 {
+      max-width: 462px;
+    }
+
+    &--maxw-none-462-571 {
+      max-width: 462px;
+    }
+
+    &--maxw-none-464-559 {
+      max-width: 464px;
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    font-size: $fs-title-lg;
+    line-height: 44px;
+
+    &--maxw-none-462-571 {
+      max-width: 571px;
+    }
+
+    &--maxw-none-none-559 {
+      max-width: 559px;
+    }
+
+    &--maxw-none-464-559 {
+      max-width: 559px;
+    }
+  }
+
+  &--accent {
+    @include media-breakpoint-only(md){
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 44px;
+    }
+  }
+}
+
+.el-subtitle {
+  margin-top: 0;
+  margin-bottom: 22px;
+  color: $c-text-blue;
+  font-family: $font-base;
+  font-size: $fs-subtitle;
+  font-weight: 600;
+  line-height: 28px;
+
+  &--red {
+    color: $c-red;
+  }
+
+  @include media-breakpoint-up(lg){
+    margin-bottom: 21px;
+  }
+
+  @include media-breakpoint-up(md){
+    margin-bottom: 10px;
+  }
+
+  &--accent {
+    font-size: 20px;
+  }
+}
+
+.el-head {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $c-text-gray;
+  font-family: $font-base;
+  font-size: $fs-head;
+  font-weight: 600;
+  line-height: 34px;
+}

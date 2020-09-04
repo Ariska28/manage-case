@@ -1,0 +1,41 @@
+.el-facebook-box {
+  padding: 24px;
+  margin-bottom: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__title {
+    color: $c-white;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 0 0 24px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: $c-white;
+    background-color: transparent;
+    border: 1px solid $c-white;
+  }
+
+  &__icon {
+    display: flex;
+    margin: 0 10px 0 0;
+    font-size: 0;
+    color: $c-text;
+
+    &::after {
+      content: "\ea91";
+      @include customFont;
+      @include inheritFontParam;
+
+      color: $c-white;
+      font-size: 24px;
+    }
+  }
+}

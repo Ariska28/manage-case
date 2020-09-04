@@ -1,0 +1,45 @@
+// for stick header
+.sticky-header {
+
+  .casa-header {
+    transition: background-color $t-time3;
+    z-index: 9999;
+    position: relative;
+  }
+
+  &.is_stuck {    
+    .casa-header {
+      width: 100%;
+      top: 0;
+      z-index: 9999;
+      background-color: #fff;
+      border-bottom: 1px solid $c-black012;
+      position: fixed;
+                                
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        display: block;
+        width: 100%;
+        height: 14px;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.08) 30%,rgba(0,0,0,0) 100%);
+      }
+    }
+  }
+}
+
+// wordpress admin bar
+.admin-bar {
+  .sticky-header {
+    &.is_stuck {
+      .casa-header {
+        top: 32px;     
+        @media screen and (max-width: 782px) {
+          top: 46px;
+        }     
+      }
+    }
+  }
+}

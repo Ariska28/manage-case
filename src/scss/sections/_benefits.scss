@@ -1,0 +1,284 @@
+.s-benefits {
+  display: block;
+  padding: 87px 0 92px;
+  background-color: $c-text-blue;
+
+  &__content {
+    @include container;
+  }
+
+  &__title {
+    color: $c-white;
+  }
+
+  &__subtitle {
+    color: $c-white;
+  }
+
+  p {
+    color: $c-white;
+  }
+
+  &__btn {
+    @include btn_white_main;
+  }
+
+  &__list {
+    @include listUnstyled;
+    display: flex;
+
+    .s-benefits__btn {
+      border-radius: 25px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    .s-benefits__btn {
+      margin-bottom: 22px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__text {
+    p {
+      margin-bottom: 17px;
+      font-family: $font-base;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+
+      &:last-of-type {
+        margin-bottom: 17px;
+      }
+    }
+  }
+
+  &__subtext {
+    p {
+      margin-bottom: 17px;
+      color: $c-blue-accent;
+      font-family: $font-base;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__title {
+      min-height: 132px; // 2 * line-height
+      margin-bottom: 4px;
+    }
+
+    &__item {
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+
+  // tablet + desktop
+  @include media-breakpoint-up(md) {
+    &__item {
+      padding-left: 32px;
+      padding-right: 32px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 2px;
+        height: calc(100% - 10px);
+        opacity: 0.24;
+        background-color: $c-white;
+      }
+
+      &:first-of-type {
+        padding-left: 0;
+        &:before {
+          content: normal;
+        }
+      }
+    }
+  }
+
+  // desktop
+  @include media-breakpoint-up(md) {
+    &__subtitle {
+      margin-bottom: 52px;
+    }
+
+    &__item {
+      &:nth-of-type(1) {
+        .s-benefits__title {
+          max-width: 243px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        .s-benefits__title {
+          max-width: 330px;
+        }
+      }
+      &:nth-of-type(3) {
+        .s-benefits__title {
+          max-width: 183px;
+        }
+      }
+    }
+  }
+
+  // mobile
+  @media (max-width: $md) {
+    padding: 23px 0 28px;
+
+    &__title {
+      margin-bottom: 11px;
+    }
+
+    &__subtitle {
+      margin-bottom: 51px;
+      text-align: center;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-basis: 100%;
+      padding-top: 26px;
+      text-align: center;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 2px;
+        opacity: 0.24;
+        background-color: $c-white;
+      }
+
+      &:first-of-type {
+        padding-top: 0;
+
+        &:before {
+          content: normal;
+        }
+      }
+
+      &:nth-of-type(1) {
+        padding-bottom: 28px;
+      }
+
+      &:nth-of-type(2) {
+        padding-bottom: 32px;
+      }
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+
+      > * {
+        max-width: 274px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &__text {
+      p {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  // tablet
+  @media (min-width: ($md + 1)) and (max-width: $lg) {
+    padding: 64px 0 20px;
+
+    &__title {
+      margin-bottom: 33px;
+    }
+
+    &__subtitle {
+      margin-bottom: 53px;
+      text-align: center;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-basis: 50%;
+      padding-left: 34px;
+      padding-right: 34px;
+      padding-bottom: 44px;
+      margin-bottom: 44px;
+      border-bottom: 2px solid $c-bottom-transparent;
+
+      &::before {
+        content: none;
+      }
+
+      &:nth-child(even) {
+        &::before {
+          content: "";
+          top: 1px;
+          height: calc(100% - 49px);
+        }
+      }
+
+      &:last-child,
+      &:nth-last-child(2):nth-child(odd) {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      &:nth-child(odd) {
+        padding-left: 0;
+      }
+
+      &:first-of-type {
+        padding-left: 0;
+
+        .s-benefits__title {
+          max-width: 243px;
+        }
+      }
+
+      &:last-child {
+        .s-benefits__subtext {
+          p {
+            max-width: 100%;
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        .s-benefits__title {
+          max-width: none;
+        }
+      }
+    }
+
+    &__subtext {
+      p {
+        max-width: 243px;
+      }
+    }
+  }
+}

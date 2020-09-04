@@ -1,0 +1,305 @@
+// universal
+@mixin container($width: $mainWidth) {
+  max-width: $width + $gap;
+  padding: 0 $gap/2;
+  position: relative; // todo remove relative from container
+  margin: auto;
+}
+
+// grid with 3 columns on desktop, 2 - tablet, 1 - mobile
+@mixin grid3-2-1($gridGap: $gap) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gridGap/2;
+  margin-right: -$gridGap/2;
+  margin-bottom: -$gridGap;
+  &__item {
+    width: 100%;
+    padding-left: $gridGap/2;
+    padding-right: $gridGap/2;
+    margin-bottom: $gridGap;
+  }
+
+  // desktop
+  @media (min-width: ($lg + 1)) {
+    &__item {
+      width: 33.33%;
+    }
+  }
+
+  // tablet
+  @media (min-width: ($md + 1)) and (max-width: $lg) {
+    &__item {
+      width: 50%;
+    }
+  }
+}
+
+@mixin roundedCorn($r) {
+  border-radius: $r;
+}
+@mixin centered($pos) {
+  position: $pos;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin listUnstyled {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+@mixin ff($font) {
+  font-family: $font, Arial, sans-serif;
+}
+@mixin bg-icon {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+@mixin linkReset {
+  text-decoration: none;
+  color: #000;
+}
+
+// Mixin for
+@mixin ref {
+  @include buttons-links-reset;
+  font-size: $fs-medium;
+  line-height: 1.36;
+  color: $c-text-blue;
+  border: 1px dashed transparent;
+  transition: color $t-time1 ease-out,  border-color $t-time1 ease-out, background-color $t-time1 ease-out, text-decoration $t-time1 ease-out;
+
+  &:hover {
+    color: $c-text-gray;
+  }
+
+  &:focus {
+    outline: none;
+    color: $c-text-gray;
+    border-color: $c-text-blue;
+    background-color: rgba(70, 187, 196, 0.16);
+  }
+
+  &:active {
+    color: $c-text-blue;
+    background-color: rgba(70, 187, 196, 0.16);
+    text-decoration: underline;
+    border-color: transparent;
+  }
+}
+
+@mixin activeDefault {
+  // box-shadow: 0 0  10px 1px $c-gray;
+  // filter: brightness(1.05);
+}
+
+// Not in use anymore, oly for support legacy
+@mixin btn {
+  @include linkReset;
+  display: inline-block;
+  padding: 8px 23px;
+  text-align: center;
+  font-family: $font-base;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  background-color: $c-text-blue;
+  color: $c-white;
+  border-radius: 40px;
+  border: none;
+  transition: color $t-time1, background $t-time1;
+
+  &:hover {
+    cursor: pointer;
+    color: $c-white;
+    background-color: $c-text-gray;
+  }
+
+  &:active {
+    @include activeDefault;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Reset for links and buttons
+@mixin buttons-links-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+// Mixin for buttons and links that look like buttons
+@mixin button {
+  @include buttons-links-reset;
+  display: inline-block;
+  font-size: $fs-base;
+  font-weight: 500;
+  line-height: 1.375;
+  padding: 11px 24px;
+  text-align: center;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  transition: border-color $t-time1 ease-out, background-color $t-time1 ease-out, color $t-time1 ease-out;
+
+  &:focus {
+    background-color: $c-text-gray;
+    border-color: $c-white;
+    outline: none;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $c-white;
+  }
+
+  &[disabled],
+  &.inactive {
+    opacity: 0.7;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+@mixin btn--link {
+  background-color: transparent;
+  color: $c-text-blue;
+  padding: 0;
+
+  &:focus,
+  &:hover {
+    color: $c-text-gray;
+    background-color: transparent;
+  }
+}
+@mixin btn_white_red {
+  color: $c-red;
+  background-color: $c-white;
+  &:hover {
+    color: $c-white;
+    background-color: $c-text-gray;
+  }
+}
+@mixin btn_white_main {
+  color: $c-text-blue;
+  background-color: $c-white;
+  &:hover {
+    color: $c-white;
+    background-color: $c-text-gray;
+  }
+}
+@mixin btn_white_border {
+  color: $c-text-blue;
+  background-color: $c-white;
+  border: 1px solid $c-text-blue;
+  &:hover {
+    color: $c-white;
+    background-color: $c-text-blue;
+  }
+}
+
+@mixin link {
+  @include linkReset;
+  color: $c-text-blue;
+  font-family: $font-base;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  transition: color $t-time1, background $t-time1;
+  &:hover {
+    // text-decoration: underline;
+    color: $c-text-gray;
+  }
+}
+
+/* mixin for multiline
+.block-with-text {
+  @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 3, $bgColor: white);  
+}
+ */
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount - 0.1;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: "...";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}
+
+// special
+
+// @mixin inactiveHeaderMenuLink{
+//   opacity: 0.3;
+// }
+
+@mixin flexVCent {
+  display: flex;
+  align-items: center;
+}
+
+@mixin marginLRA {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// @mixin mobMenuItem {
+//   margin-left: 35px;
+//   margin-right: 20px;
+//   padding: 15px 5px 15px 5px;
+// }
+
+@mixin pLastMarginBottom {
+  &:last-of-type {
+    margin-bottom: 0 !important;
+  }
+}
+@mixin pInherit {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+@mixin nthOrder($start: 1, $end: 1) {
+  @for $i from $start through $end {
+    &:nth-of-type(#{$i}) {
+      order: $i * 10;
+    }
+  }
+}
+
+@mixin retinaDisplay {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}

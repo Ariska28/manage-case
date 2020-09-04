@@ -1,0 +1,92 @@
+.el-social {
+  @include listUnstyled;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  &__item {
+    margin-right: 10.6px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    @include linkReset;
+    font-size: 0;
+    display: inline-block;
+    color: $c-text-blue;
+
+    &::before {
+      @include customFont;
+      @include inheritFontParam;
+      font-size: 16px;
+    }
+
+    &:focus,
+    &:hover {
+      outline: none;
+      color: $c-text;
+    }
+
+    &--fb {
+      &::before {
+        content: "\ea91";
+      }
+    }
+
+    &--tw {
+      &::before {
+        content: "\ea96";
+      }
+    }
+
+    &--in {
+      &::before {
+        content: "\eaca";
+      }
+    }
+
+    &--inst {
+      &::before {
+        content: "\ea92";
+      }
+    }
+
+    &--yt {
+      &::before {
+        content: "\e907";
+      }
+    }
+  }
+
+  &--big {
+    justify-content: space-around;
+
+    .el-social__link::before {
+      font-size: 32px;
+    }
+  }
+
+  &--short {
+    justify-content: center;
+
+    .el-social__item {
+      &:not(:last-child) {
+        margin-right: 22px;
+      }
+    }
+    .el-social__link {
+      color: $c-text;
+
+      &:hover {
+        color: $c-text-blue;
+      }
+
+      &::before {
+        font-size: 32px;
+      }
+    }
+  }
+}

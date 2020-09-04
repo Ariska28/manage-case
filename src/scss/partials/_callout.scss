@@ -1,0 +1,119 @@
+.a-callout {
+  $parent: &;
+  padding: 25px;
+  margin: 48px 0;
+  background-repeat: no-repeat;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: $c-black;
+    font-family: $font-base;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    #{$parent}_2 & {
+      color: $c-white;
+    }
+  }
+
+  & p:not(&__text) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: $c-text;
+    font-family: $font-base;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    #{$parent}_2 & {
+      color: $c-white;
+      opacity: 0.72;
+    }
+  }
+  .btn {
+    color: $c-white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    &:hover {
+      color: $c-white;
+      background-color: $c-text-gray;
+    }
+  }
+
+  &_1 {
+    padding-top: 32px;
+    border: 1px solid $c-text-blue;
+    box-shadow: inset 0 8px 0 0 $c-text-blue;
+    background-color: $c-blue-bg;
+    background-image: url('../images/callout-bg-1-1_house.svg');
+    background-position: calc(100% - 25px) calc(100% - 25px);
+    background-size: 218px auto;
+  }
+  &_2 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 138px;
+    border: 1px solid $c-text-blue;
+    box-shadow: inset 0 8px 0 0 $c-text-blue;
+    background-color: $c-text-blue;
+    background-image: url('../images/callout-bg-2-1_glyph-white.svg'), url('../images/callout-bg-2-2-bg.svg');
+    background-position: 25px 25px, calc(100% + 60px) calc(100% - 5px);
+    background-size: 90px auto, 478px auto;
+    .btn {
+      color: $c-text-blue;
+      background-color: $c-white;
+      &:hover {
+        color: $c-white;
+        background-color: $c-text-gray;
+      }
+    }
+  }
+  &_3 {
+    padding-left: 255px;
+    border: 1px solid $calloutBd1;
+    background-color: $calloutBg1;
+    background-image: url('../images/callout-bg-3-1_house.png');
+    background-position: 41px 25px;
+    background-size: auto 155px;
+    @include retinaDisplay {
+      background-image: url('../images/callout-bg-3-1_house@2x.png');
+    }
+  }
+
+  // desktop
+  @media (min-width: ($lg + 1)) {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+
+  // mobile
+  @media (max-width: $md) {
+    text-align: center;
+    @include marginLRA;
+    max-width: 560px;
+    &_1 {
+      padding-top: 128px;
+      background-position: 50% 16px;
+      background-size: 120px auto;
+    }
+    &_2 {
+      padding-bottom: 32px;
+      padding-left: 25px;
+      background-image: url('../images/callout-bg-2-2-bg.svg');
+      background-position: 100% 100%;
+      background-size: 378px auto;
+    }
+    &_3 {
+      padding-top: 130px;
+      padding-left: 25px;
+      background-position: 50% 25px;
+      background-size: auto 85px;
+    }
+
+  }
+}

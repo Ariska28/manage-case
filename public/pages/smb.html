@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/vendors.css" /> -->
+    <link rel="stylesheet" href="../css/styles.css"/>
+
+</head>
+<body>
+
+<!-- header, menu -->
+<header class="header"><!-- add .menu-open -->
+  <!-- .header_market, .header_manage, .header_connect -->
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo-box">
+        <a href="/" class="logo-link">
+          <img src="../images/logo.svg" alt="ManageCasa" class="logo">
+        </a>
+      </div>
+      <!-- main menu -->
+      <div class="h-menu-box"><!-- add .open -->
+          <nav class="h-main-menu-box">
+              <ul class="h-main-menu unstyled">
+                  <li class="h-main-menu__item">
+                      <a href="pages/benefits.html" class="h-main-menu__link">Benefits</a>
+                  </li>
+      
+                  <li class="h-main-menu__item">
+                      <a href="#" id="features" data-toggle="dropdown" class="h-main-menu__link dropdown">
+                          <span>Features</span>
+                          <i class="dropdown__icon"></i>
+                      </a>
+                      <div class="dropdown-menu" data-dropdown="features"> <!-- add .open -->
+                          <div class="dropdown__list">
+                              <div class="big-menu">
+                                  <div class="big-menu__row big-menu__row--col">
+                                      <div class="big-menu__icon">
+                                          <a href="#" class="big-menu__link big-menu__link--no-padding big-menu__link--bold">All-in-one
+                                              Solution</a>
+                                          <p class="big-menu__description">Mauris auctor aliquam condimentum</p>
+                                      </div>
+                                      <a href="#" class="big-menu__btn">See a demo</a>
+                                  </div>
+                                  <div class="big-menu__row">
+                                      <a href="#"
+                                         class="big-menu__link big-menu__link--bold big-menu__link--circle big-menu__link--circle-orange">Starter</a>
+                                      <a href="#"
+                                         class="big-menu__link big-menu__link--bold big-menu__link--circle big-menu__link--circle-blue">SMB</a>
+                                      <a href="#"
+                                         class="big-menu__link big-menu__link--bold big-menu__link--circle big-menu__link--circle-black">Mid
+                                          Market / Enterprise</a>
+                                  </div>
+                                  <div class="big-menu__row big-menu__row--two-column">
+                                      <a href="#" class="big-menu__link big-menu__link--icon big-menu__link--house">Residential</a>
+                                      <a href="#"
+                                         class="big-menu__link big-menu__link--icon big-menu__link--marina">Marina</a>
+                                      <a href="#" class="big-menu__link big-menu__link--icon big-menu__link--commercial">Commercial</a>
+                                      <a href="#" class="big-menu__link big-menu__link--icon big-menu__link--associations">Associations</a>
+                                      <a href="#" class="big-menu__link big-menu__link--icon big-menu__link--storage">Self-Storage</a>
+                                  </div>
+                                  <div class="big-menu__row big-menu__row--two-column">
+                                      <a href="#" class="big-menu__link">Owners</a>
+                                      <a href="#" class="big-menu__link">Support</a>
+                                      <a href="#" class="big-menu__link">Tenants & Leasing</a>
+                                      <a href="#" class="big-menu__link">Residential Portal</a>
+                                      <a href="#" class="big-menu__link">Accounting & Reporting</a>
+                                      <a href="#" class="big-menu__link">Owner Portal</a>
+                                      <a href="#" class="big-menu__link">Maintenance</a>
+                                      <a href="#" class="big-menu__link">Customer Website</a>
+                                      <a href="#" class="big-menu__link">File Storage</a>
+                                      <a href="#" class="big-menu__link">On/Offline Rent Payment</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+      
+                  <li class="h-main-menu__item">
+                      <a href="#" id="partner" data-toggle="dropdown" class="h-main-menu__link dropdown">
+                          <span>Partner</span>
+                          <i class="dropdown__icon"></i>
+                      </a>
+                      <div class="dropdown-menu" data-dropdown="partner"> <!-- add .open -->
+                          <ul class="dropdown__list">
+                              <li class="dropdown__item">
+                                  <a href="#" class="dropdown__link">Partner dropdown link1</a>
+                              </li>
+                              <li class="dropdown__item">
+                                  <a href="#" class="dropdown__link">Partner dropdown link2</a>
+                              </li>
+                              <li class="dropdown__item">
+                                  <a href="#" class="dropdown__link">Partner dropdown link3</a>
+                              </li>
+                              <li class="dropdown__item dropdown__item_btn-inside">
+                                  <a href="#" class="btn">Partners button</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </li>
+      
+                  <li class="h-main-menu__item">
+                      <a href="pages/pricing.html" class="h-main-menu__link">Pricing</a>
+                  </li>
+      
+                  <li class="h-main-menu__item">
+                      <a href="pages/blog.html" class="h-main-menu__link">Blog</a>
+                  </li>
+      
+              </ul>
+          </nav>
+      
+          <!-- lang menu -->
+          <div class="h-lang-switcher-box">
+              <ul class="h-lang-switcher unstyled">
+                  <li class="h-lang-switcher__item">
+                      <a href="#" id="langs" data-toggle="dropdown" class="h-lang-switcher__link dropdown">
+                          <span class="lang lang_en">English</span>
+                          <i class="dropdown__icon"></i>
+                      </a>
+                      <div class="dropdown-menu" data-dropdown="langs"> <!-- add .open -->
+                          <ul class="dropdown__list">
+                              <li class="dropdown__item">
+                                  <a href="#" class="dropdown__link"><span class="lang lang_en">English</span></a>
+                              </li>
+                              <li class="dropdown__item">
+                                  <a href="#" class="dropdown__link"><span class="lang lang_de">Deutsche</span></a>
+                              </li>
+                              <li class="dropdown__item">
+                                  <a href="#" class="dropdown__link"><span class="lang lang_es">Español</span></a>
+                              </li>
+                              <li class="dropdown__item">
+                                  <a href="#" class="dropdown__link"><span class="lang lang_fr">Français</span></a>
+                              </li>
+                          </ul>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      
+          <!-- auth menu -->
+          <div class="h-auth-menu-box">
+              <div class="h-auth-menu">
+                  <a href="#" class="btn btn--link">Login</a>
+                  <a href="#" class="btn">Sign Up</a>
+              </div>
+          </div>
+      
+      </div>
+      
+      <!-- menu open/close button-->
+      <div class="h-menu-toggle-box">
+          <a href="#" class="h-menu-toggle"> <!-- add .open -->
+              <i class="h-menu-toggle__inner">Menu toggle</i>
+          </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section section_tenant-portal">
+    <div class="container">
+        <div class="row2">
+            <div class="row2__col row2__col_text">
+                <h5 class="section-subtitle">
+                    The complete property management platform for small businesses
+                </h5>
+                <h1 class="section-title-prim">
+                    Reach your next growth milestones faster with ManageCasa
+                </h1>
+                <p>
+                    ManageCasa offers the one tool you need to reach both owners and new residents. Manage your entire
+                    operation more efficiently, become more productive and create happier customers today.
+                </p>
+                <div class="iam-block loader" style="margin-top: 0;">
+                    <div class="loader__circle"></div>
+                    <div class="iam-info">
+                        <input type="text" class="iam-email" placeholder="Enter your email">
+                    </div>
+
+                    <form id="iam-button-form" action="#" class="iam-block__form">
+                        <button class="btn" type="submit">Get Started</button>
+                    </form>
+
+                </div>
+                <p class="small">
+                    Free trial with 3 units - Easy setup - Cancel any time
+                </p>
+
+            </div>
+            <div class="row2__col row2__col_pic">
+                <img src="../images/aim@2x.png" alt="Using ManageCasa" class="row2__pic">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="increases">
+    <div class="container">
+        <div class="increases__inner">
+            <div class="increases__item">
+                <div class="increases__value">10X</div>
+                <div class="increases__description">
+                    Company XYZ saw a 10x increase in website engagement
+                </div>
+                <div class="increases__company">
+                    <div class="increases__company-photo">
+                        <img src="../images/avatar@2x.png" alt="">
+                    </div>
+                    <div class="increases__company-name">
+                        Company XYZ
+                    </div>
+                </div>
+            </div>
+            <div class="increases__item">
+                <div class="increases__value">2.5X</div>
+                <div class="increases__description">
+                    Company ABC saw the amount of doors under management increase by 2.5x
+                </div>
+                <div class="increases__company">
+                    <div class="increases__company-photo">
+                        <img src="../images/avatar@2x.png" alt="">
+                    </div>
+                    <div class="increases__company-name">
+                        Company ABC
+                    </div>
+                </div>
+            </div>
+            <div class="increases__item">
+                <div class="increases__value">40%</div>
+                <div class="increases__description">
+                    Company DEF improved its productivity by an average of 40%
+                </div>
+                <div class="increases__company">
+                    <div class="increases__company-photo">
+                        <img src="../images/avatar@2x.png" alt="">
+                    </div>
+                    <div class="increases__company-name">
+                        Company DEF
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section-page-title section-title-prim section-page-title--pt-94">
+        Optimized for small businesses
+    </div>
+</div>
+
+<div class="advantage">
+    <div class="container">
+        <div class="advantage__inner">
+            <div class="advantage__item">
+                <div class="advantage__icon advantage__icon--clock"></div>
+                <div class="advantage__title">
+                    Set up in minutes. See results today.
+                </div>
+                <div class="advantage__text">
+                    Get up and running quickly and start managing properties, tenants, owners and bookkeeping right away.
+                </div>
+            </div>
+            <div class="advantage__item">
+                <div class="advantage__icon advantage__icon--gear"></div>
+                <div class="advantage__title">
+                    Make interactivity and automation your competitive advantage.
+                </div>
+                <div class="advantage__text">
+                    Stand out from the pack by providing a personalized end-to-end experience to your property owners and residents.
+                </div>
+            </div>
+            <div class="advantage__item">
+                <div class="advantage__icon advantage__icon--graph">
+
+                </div>
+                <div class="advantage__title">
+                    Drive growth through increased productivity and more effective engagement
+                </div>
+                <div class="advantage__text">
+                    Deliver an experience that is convincing and effective. Automate your processes and engagement in less time to achieve more with less.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="elementum elementum--mb-96">
+    <div class="container">
+        <div class="elementum__inner">
+            <div class="elementum__image"></div>
+            <div class="elementum__graph">
+                <div class="elementum__title">
+                    ManageCasa works across your customer lifecycle
+                </div>
+            </div>
+            <div class="elementum__items">
+                <div class="elementum__item">
+                    <div class="elementum__item-title elementum__circle elementum__circle-red">
+                        On your website
+                    </div>
+                    <p>
+                        Convert more prospects into new rental owners and new residents and better retain customers
+                        through engagement.
+                    </p>
+                </div>
+                <div class="elementum__item">
+                    <div class="elementum__item-title elementum__circle elementum__circle-yellow">
+                        In the application
+                    </div>
+                    <p>
+                        Streamline onboarding of new owners and tenants, automate recurring bookkeeping activities,
+                        allow tenants to pay rent online and provide real-time insights to owners.
+                    </p>
+                </div>
+                <div class="elementum__item">
+                    <div class="elementum__item-title elementum__circle elementum__circle-light-green">
+                        In moments that matter
+                    </div>
+                    <p>
+                        Self-serve your clients and increase customer retention and satisfaction with real-time sharing
+                        and messages through the portal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="half half--mb-96">
+    <div class="container">
+        <div class="half__inner">
+            <div class="half__item">
+                <h5>On your website</h5>
+                <h3>
+                    Turn visitors into new clients and new tenants
+                </h3>
+                <ul>
+                    <li>Generate more leads</li>
+                    <li>Boost your brand with a modern, fully responsive website</li>
+                    <li>Accept rental applications with a fully customizable
+                        application form
+                    </li>
+                    <li>List all available units in your portfolio</li>
+                </ul>
+                <a href="#">
+                    Learn more about customer websites »
+                </a>
+            </div>
+            <div class="half__item half__item--image half__item--image-300x260">
+                <img src="../images/tenant-illustration@2x.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="half half--reverse half--mb-71">
+    <div class="container">
+        <div class="half__inner">
+
+            <div class="half__item">
+                <h5>In the application</h5>
+                <h3>
+                    Record and automate your processes
+                </h3>
+
+                <ul>
+                    <li>
+                        Effectively convert applications into tenants with the right background check
+                    </li>
+
+                    <li>
+                        Automate bookkeeping with lease terms that create and remind you about charges and bill
+                        payments.
+                    </li>
+
+                    <li>
+                        Get real-time reports to illuminate financial insights
+                    </li>
+
+                    <li>
+                        Communicate directly with tenants easily through the application
+                    </li>
+
+                </ul>
+
+                <a href="#">
+                    Learn more about our ManageCasa’s all-in-one property
+                    management software »
+                </a>
+            </div>
+            <div class="half__item half__item--image half__item--image-220x290">
+                <img src="../images/reports-illustration-2@2x.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="half half--mb-71">
+    <div class="container">
+        <div class="half__inner">
+
+            <div class="half__item">
+                <h5>
+                    In moments that matter
+                </h5>
+                <h3>
+                    Deliver memorable engagement experiences
+                </h3>
+                <ul>
+                    <li>
+                        Share lease agreements with residents during the onboarding process
+                    </li>
+
+                    <li>
+                        Solve maintenance issues quickly from the app
+                    </li>
+
+                    <li>
+                        Run real-time reports for your owners and share instantly in-app
+                    </li>
+
+                    <li>
+                        Reach tenants and owners to discuss issues and make property-wide announcements at any time from
+                        any
+                        device at any location.
+                    </li>
+                </ul>
+
+                <a href="#">
+                    Learn more about our ManageCasa’s engagement experiences »
+                </a>
+            </div>
+            <div class="half__item half__item--image half__item--image-300x260">
+                <img src="../images/experience-illustration@2x.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quote">
+    <div class="container">
+        <div class="quote__inner">
+            <div class="quote__item">
+                <div class="quote__message">
+                    “We use ManageCasa across every part of our business. We’re a small team, but ManageCasa helps us
+                    grow our business while scaling our headcount thoughtfully.”
+                </div>
+                <div class="quote__meta">
+                    <div class="quote__image">
+                        <img src="../images/tenant-400x375.png" alt="">
+                    </div>
+                    <div class="quote__author">
+                        <span class="quote__name">Erica Schuster</span>
+                        <span class="quote__position">Landlord</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- dive-in section -->
+<section class="section section_dive-in">
+  <div class="container">
+    <div class="row2">
+      <div class="row2__col row2__col_text row2__col_text-dive-in">
+        <h3 class="section-title-prim">Ready to dive in?</h3>
+        <p><strong>98%</strong> of customers say it’s easy to get set up</p>
+        <a href="" class="btn btn--lg">Sign Up FREE</a>
+      </div>
+      <div class="row2__col row2__col_text row2__col_text-just-get">
+        <h3 class="section-title-prim">Just getting your toes wet?</h3>
+        <div class="btn-group-dive-in">
+          <a href="" class="btn btn--lg">Request a demo</a>
+          <a href="" class="btn btn--lg btn--link">See pricing</a>          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      
+      <div class="footer-prim">
+        <!-- Product column -->
+        <div class="footer-prim-col">
+          <h4 class="footer-prim-col__title">Product</h4>
+          <a href="" class="footer__link">Product Overview</a>
+          <a href="" class="footer__link">Owners</a>
+          <a href="" class="footer__link">Tenants & Leasing</a>
+          <a href="" class="footer__link">Accounting & Reports</a>
+          <a href="" class="footer__link">Maintenance</a>
+          <a href="" class="footer__link">File Storage</a>
+          <a href="" class="footer__link">Maintenance</a>
+          <a href="" class="footer__link">Pricing</a>
+          <a href="" class="footer__link">Compare ManageCasa</a>
+          <a href="" class="footer__link">Customer Reviews</a>
+        </div>
+
+        <!-- Resources column -->
+        <div class="footer-prim-col">
+          <h4 class="footer-prim-col__title">Resources</h4>
+          <a href="" class="footer__link">Help Center</a>
+          <a href="" class="footer__link">Articles</a>
+          <a href="" class="footer__link">FAQ</a>
+          <a href="" class="footer__link">Pricing</a>
+        </div>
+
+        <!-- About ManageCasa column -->
+        <div class="footer-prim-col">
+          <h4 class="footer-prim-col__title">About<span class="hide-mob"> ManageCasa</span></h4>
+          <a href="" class="footer__link">About the company</a>
+          <a href="" class="footer__link footer__link_nest">Values</a>
+          <a href="" class="footer__link footer__link_nest">News & press</a>
+          <a href="" class="footer__link">Management Team</a>
+          <a href="" class="footer__link">Careers</a>
+          <a href="" class="footer__link">News & Press</a>
+          <a href="" class="footer__link">Affiliate Partners</a>
+          <a href="" class="footer__link">Referral Program</a>
+        </div>
+
+        <!-- Contact us column -->
+        <div class="footer-prim-col">
+          <h4 class="footer-prim-col__title">Contact us</h4>
+          <address class="contact-info">
+            ManageCasa Inc.<br>
+            44 Tehama St,<br>
+            San Fransisco,<br>
+            CA 94105
+            <div class="contact-title">Talk to Sales:</div>
+            <a href="" class="footer__link">1-800-998-6627</a>
+          </address>
+
+          <div class="contact-title">Talk to Support:</div>
+          <a href="" class="footer__link footer__link_colored">Sign in</a>
+        </div>
+
+      </div>
+      <div class="footer-sec">
+        <p>ManageCasa mission statement… rutrum placerat mi consectetur finibus. Aliquam varius placerat lectus, id suscipit erat pharetra a. Ut at sapien eu eros euismod porttitor. Fusce tincidunt, est eu egestas tincidunt, lacus ipsum posuere ligula, non bibendum ipsum at purus.</p>
+        <!-- socials -->
+        <div class="social-box">
+          <ul class="social">
+            <li class="social__item">
+              <a target="_blank" href="" class="social__link social__link_fb" title="Facebook"></a>
+            </li>
+            <li class="social__item">
+              <a target="_blank" href="" class="social__link social__link_tw" title="Twitter"></a>
+            </li>
+            <li class="social__item">
+              <a target="_blank" href="" class="social__link social__link_in" title="LinkedIn"></a>
+            </li>
+            <li class="social__item">
+              <a target="_blank" href="" class="social__link social__link_inst" title="Instagram"></a>
+            </li>
+            <li class="social__item">
+              <a target="_blank" href="" class="social__link social__link_yt" title="Youtube"></a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="add-info">
+          <div class="copyright-info">ManageCasa®© 2018</div>
+          <!-- terms, privacy, sitemap -->
+          <div class="sec-links">
+            <a href="" class="footer__link footer__link_colored">Terms</a>
+            <a href="" class="footer__link footer__link_colored">Privacy</a>
+            <a href="" class="footer__link footer__link_colored">Site Map</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/vendors.min.js"></script>
+<script src="../js/script.min.js"></script>
+</body>
+</html>

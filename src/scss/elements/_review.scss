@@ -1,0 +1,75 @@
+.el-review {
+  border: $reviewsBorder;
+  border-radius: $reviewsRadius;
+  background-color: $c-white;
+  text-align: left;
+
+  &__header {
+    padding: 9px 17px;
+    border-bottom: $reviewsBorder;
+  }
+
+  &__link {
+    @include linkReset;
+    @include link;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+
+    &::after {
+      display: block;
+      @include customFont;
+      @include inheritFontParam;
+      margin-left: auto;
+
+      .el-review--tw & {
+        content: "\ea96";
+      }
+      .el-review--fb & {
+        content: "\ea91";
+      }
+      .el-review--in & {
+        content: "\eaca";
+      }
+      .el-review--inst & {
+        content: "\ea92";
+      }
+    }
+  }
+
+  &__img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin-right: auto;
+  }
+
+  &__text {
+    padding: 13px 17px 19px;
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      margin-bottom: 0;
+      color: $c-text;
+    }
+
+    a {
+      @include link;
+    }
+  }
+
+  .error {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

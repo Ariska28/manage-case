@@ -1,0 +1,309 @@
+.s-features-offer {
+  &__unit {
+    padding: 88px 0 26px;
+    position: relative;
+    overflow: hidden;
+
+    &--colored {
+      background-color: rgba(232, 246, 248, 0.5);
+    }
+
+    &--offer {
+      padding-bottom: 96px;
+
+      .s-features-offer__title {
+        margin-bottom: 21px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 526px;
+        width: 33%;
+        left: 67%;
+        top: 96px;
+        background-color: transparent;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--owners {
+      &::before {
+        background-image: url(https://managecasa.com/wp-content/themes/managecasa.com/html-layout/public/images/illustration-wwoy_owners.png?v=2019083093155);
+      }
+    }
+
+    &--tenants {
+      &::before {
+        background-image: url(https://managecasa.com/wp-content/themes/managecasa.com/html-layout/public/images/illustration-wwoy_tenants.png?v=2019083093155);
+      }
+    }
+
+    &--accounting {
+      &::before {
+        background-image: url(https://managecasa.com/wp-content/themes/managecasa.com/html-layout/public/images/illustration-wwoy_accounting.png?v=2019083093155);
+      }
+    }
+
+    &--files {
+      .s-features-offer__title {
+        margin-bottom: 21px;
+      }
+
+      .s-features-offer__text {
+        margin-bottom: 55px;
+      }
+
+      .s-features-offer__item {
+        &--pic {
+          &-second,
+          &-last {
+            order: 2;
+          }
+        }
+
+        &:nth-of-type(3) {
+          order: 3;
+        }
+      }
+    }
+
+    &--pt-0 {
+      padding-top: 0;
+    }
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__content {
+    padding-left: 57px;
+    position: relative;
+    z-index: 15;
+    width: 76%;
+    margin-left: auto;
+  }
+
+  &__title {
+    margin-bottom: 55px;
+  }
+
+  &__head {
+    margin-bottom: 21px;
+    line-height: 26px;
+  }
+
+  &__portal {
+    max-width: 50.63%;
+  }
+
+  &__tiles {
+    @include listUnstyled;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__list {
+    ul {
+      padding-left: 0;
+      margin: 0;
+      list-style-type: none;
+      margin-left: 14px;
+      margin-bottom: 27px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      color: $c-text;
+      font-family: $font-base;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 28px;
+
+      &:before {
+        content: "•";
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 70px;
+    width: 50%;
+    max-width: 374px;
+    padding-right: 10px;
+    order: 1;
+
+    &--pic {
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+      }
+      &-first {
+        order: 0;
+      }
+    }
+
+    &--big {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &-title {
+      line-height: 26px;
+      font-size: 20px;
+      font-weight: 600;
+      color: $c-text-gray;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    &-text {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__unit {
+      &--offer {
+        padding-bottom: 96px;
+
+        &::before {
+          left: 75.9%;
+        }
+      }
+
+      &--files {
+        .s-features-offer__item {
+          order: 1;
+
+          &:nth-of-type(4) {
+            order: 0;
+          }
+
+          &:nth-of-type(5) {
+            order: 2;
+          }
+
+          &:nth-of-type(2) {
+            order: 3;
+          }
+
+          &:nth-of-type(6) {
+            order: 4;
+          }
+
+          &:nth-of-type(3) {
+            order: 5;
+          }
+        }
+      }
+    }
+
+    &__portal {
+      max-width: 65.38%;
+    }
+
+    &__content {
+      padding-left: 16px;
+    }
+
+    &__item {
+      margin-bottom: 43px;
+      width: 364px;
+
+      &:nth-last-of-type(3) {
+        order: 2;
+      }
+
+      &-pic {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__unit {
+      // padding: 58px 0 65px;
+      padding: 58px 0 0;
+
+      &--colored {
+        padding-bottom: 65px;
+      }
+
+      &--pt-0 {
+        padding-top: 0;
+      }
+
+      &--offer {
+        padding-top: 432px;
+
+        &::before {
+          height: 337px;
+          width: 100%;
+          left: 16px;
+          top: 67px;
+        }
+
+        .s-features-offer__title {
+          text-align: left;
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    &__portal {
+      max-width: 100%;
+    }
+
+    &__content {
+      padding: 0;
+      position: static;
+      width: 100%;
+      margin: 0;
+    }
+
+    &__tiles {
+      justify-content: center;
+    }
+
+    &__list {
+      li {
+        line-height: 24px;
+      }
+    }
+
+    &__item {
+      width: 100%;
+      max-width: 364px;
+      margin-bottom: 27px;
+      margin-left: 0.4%;
+      margin-right: 0.4%;
+
+      &-pic {
+        margin-bottom: 12px;
+
+        &-last {
+          order: 1;
+        }
+      }
+    }
+
+    &__btn-wrap {
+      display: flex;
+    }
+
+    &__btn {
+      margin: 0 auto;
+    }
+  }
+}

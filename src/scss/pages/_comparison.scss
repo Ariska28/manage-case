@@ -1,0 +1,199 @@
+// Unuseful
+
+.compare-page {
+  .comparison-table-box {
+    margin-bottom: 20px;
+  }
+}
+.section_compare-announce {
+  text-align: center;
+  .section__header {
+    margin-bottom: 31px;
+  }
+  .section-title-prim {
+    max-width: 946px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 22px;
+  }
+}
+.section_brief-compare {
+  text-align: center;
+  background-color: $c-blue-bg;
+  .section-subtitle {
+    color: $c-red;
+  }
+}
+.section_thats-why-pricing {
+  color: $c-white;
+  background-color: $c-text-blue;
+  background-image: url(../images/white-badge.svg);
+  background-position: 50% 58%;
+  background-size: auto 250%;
+  background-repeat: no-repeat;
+  text-align: center;
+  .section__header {
+    margin-bottom: 32px;
+  }
+  .section-title-prim {
+    color: $c-white;
+  }
+  .section-subtitle {
+    color: $c-white;
+  }
+  .btn {
+    @include btn_white_main;
+  }
+}
+.section_compare-faqs {
+  .section-title-prim {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 55px;
+  }
+}
+
+// tablet + desktop
+@media (min-width: ($md + 1)) {
+  .section_compare-announce {
+    padding: 96px 0;
+  }
+  .section_thats-why-pricing {
+    .section__header {
+
+    }
+    .section-title-prim {
+      max-width: 693px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section-subtitle {
+      max-width: 585px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 26px;
+    }
+  }
+  .section_compare-faqs {
+    .section-title-prim {
+      max-width: 353px;
+    }
+  }
+}
+
+// desktop
+@media (min-width: ($lg + 1)) {
+  .compare-page {
+    .platform-features-table {
+      .note {
+        max-width: 1070px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  .section_brief-compare {
+    padding-top: 90px;
+    padding-bottom: 66px;
+    .section-title-prim {
+      margin-bottom: 22px;
+    }
+    .section__header {
+      margin-bottom: 25px;
+    }
+  }
+  .section_platform-features-table {
+    padding-top: 89px;
+    padding-bottom: 91px;
+  }
+
+  .section_thats-why-pricing {
+    padding-top: 89px;
+    padding-bottom: 86px;
+    .section-title-prim {
+      margin-bottom: 22px;
+    }
+  }
+  .section_compare-faqs {
+    padding-top: 89px;
+    padding-bottom: 96px;
+  }
+  .compare-faqs-box {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// mobile
+@media (max-width: $md) {
+  .section_compare-announce {
+    padding: 80px 0 88px;
+  }
+  .section_brief-compare {
+    display: none;
+  }
+  .section_platform-features-table {
+    display: none;
+  }
+
+  .section_thats-why-pricing {
+    padding-top: 58px;
+    padding-bottom: 64px;
+    background-position: 50% 50%;
+    background-size: auto 130%;
+    .section-title-prim {
+      margin-bottom: 28px;
+    }
+    .section-subtitle {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  .section_compare-faqs {
+    padding-top: 58px;
+    padding-bottom: 65px;
+    .section-title-prim {
+      max-width: 245px;
+    }
+  }
+}
+
+// tablet
+@media (min-width: ($md + 1)) and (max-width: $lg) {
+  .section_brief-compare {
+    padding-top: 59px;
+    padding-bottom: 57px;
+    .section-title-prim {
+      margin-bottom: 34px;
+    }
+    .section__header {
+      margin-bottom: 25px;
+    }
+  }
+  .section_platform-features-table {
+    padding-top: 89px;
+    padding-bottom: 59px;
+  }
+
+  .section_thats-why-pricing {
+    padding-top: 56px;
+    padding-bottom: 64px;
+    background-position: 50% 50%;
+    background-size: auto 300%;
+    .section__header {
+      margin-bottom: 30px;
+    }
+    .section-title-prim {
+      margin-bottom: 29px;
+    }
+  }
+  .section_compare-faqs {
+    padding-top: 58px;
+    padding-bottom: 65px;
+    .section-title-prim {
+      max-width: 299px;
+    }
+  }
+}

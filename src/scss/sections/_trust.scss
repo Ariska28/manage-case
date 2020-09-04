@@ -1,0 +1,77 @@
+.s-trust {
+  padding-top: 89px;
+  padding-bottom: 86px;
+  color: $c-white;
+  background-color: $c-text-blue;
+  background-image: url(https://managecasa.com/wp-content/themes/managecasa.com/html-layout/public/images/white-badge.svg?v=2019083093155);
+  background-position: 50% 58%;
+  background-size: auto 250%;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &__container {
+    @include container;
+  }
+
+  &__header {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    max-width: 693px;
+    margin-left: auto;
+    margin-right: auto;
+    color: inherit;
+  }
+
+  & &__text {
+    color: inherit;
+    max-width: 585px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 26px;
+    margin-top: 0;
+    margin-bottom: 11px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__btn {
+    background-color: $c-white;
+    color: $c-text-blue;
+
+    &:hover {
+      cursor: pointer;
+      color: $c-white;
+      background-color: $c-text-gray;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 56px;
+    padding-bottom: 64px;
+    background-position: 50% 50%;
+    background-size: auto 300%;
+
+    &__title {
+      margin-bottom: 29px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    background-size: auto 130%;
+
+    &__title {
+      margin: 0 0 28px;
+      max-width: none;
+    }
+
+    & &__text {
+      font-size: 16px;
+      line-height: 22px;
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+    }
+  }
+}

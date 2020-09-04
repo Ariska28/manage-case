@@ -1,0 +1,28 @@
+.s-preview {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: $c-light-blue-bg;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 80%;
+    top: 48%;
+    transform: translateY(-50%);
+  }
+
+  &__container {
+    @include container;
+    max-width: 716px;
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+}

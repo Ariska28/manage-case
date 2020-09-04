@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/vendors.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+
+</head>
+<body>
+
+  <!-- header, menu -->
+  //= partials/header.html
+  
+  <!-- menu, info -->
+  <section class="section section_contact-info">
+    <div class="container">
+      <div class="row2-asym">
+        <div class="row2-asym__col-narrow">
+          <!-- sidebar menu -->
+          //= partials/sidebarMenuAbout.html
+        </div>
+        <div class="row2-asym__col-wide">
+          <h1 class="section-title-prim">Contact us</h1>
+
+          <!-- addresses block -->
+          <div class="contact-info-wrapper">
+            <address class="contact-info" style="background-image: url('../images/temporary_badge-sf.svg');">
+              <span class="office-title">San Francisco Office</span><br>
+              44 Tehama St<br>
+              San Francisco, CA 94105
+            </address>
+            <address class="contact-info" style="background-image: url('../images/temporary_badge-berlin.svg');">
+              <span class="office-title">Berlin Office</span><br>
+              Auguststraße 69,<br>
+              10117 Berlin, Germany
+            </address>
+            <address class="contact-info" style="background-image: url('../images/temporary_badge-par.svg');">
+              <span class="office-title">Paris Office</span><br>
+              5 Avenue Anatole France,<br>
+              75007 Paris, France
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- content -->
+  <section class="section section_contact-form">
+    <div class="container">
+      <div class="row2-asym">
+        <div class="row2-asym__col-wide">
+          <div class="contact-wrapper">
+            <h2 class="section-title-prim">We’d love to hear from you</h2>
+            <!-- contact block with account -->
+            <div class="contact-block contact-block_have-acc">
+              <h3 class="contact-block-title">I am new to ManageCasa</h3>
+              <a href="" class="btn btn--lg">Sign in to contact us</a>
+            </div>
+            
+            <!-- contact block no account -->
+            <div class="contact-block contact-block_no-acc"> <!-- add class form-active || form-sent -->
+              <h3 class="contact-block-title">I am new to ManageCasa</h3>
+              <div class="contact-ways">
+                <div class="contact-way contact-way_phone">
+                  <a href="" class="link">1.877.866.2333</a>
+                  <div class="contact-way__desc">8 am - 5 pm PST Monday to Friday</div>
+                </div>
+                <div class="contact-way contact-way_msg">
+                  <a href="" class="link">Send us a message</a>
+                </div>
+              </div>
+
+              <!-- contact-form -->
+              <div class="contact-form-box">
+                <form action="#" class="contact-form">
+                  <div class="c-input-group c-input-group_half">
+                    <label for="cFname" class="c-label">First Name</label>
+                    <input id="cFname" type="text" class="c-inp" required>
+                  </div>
+                  <div class="c-input-group c-input-group_half">
+                    <label for="cLname" class="c-label">Last Name</label>
+                    <input id="cLname" type="text" class="c-inp" required>
+                  </div>
+                  
+                  <div class="c-input-group">
+                    <label for="cEmail" class="c-label">Email Address</label>
+                    <input id="cEmail" type="email" class="c-inp" required>
+                  </div>
+
+                  <div class="c-input-group">
+                    <label for="cPosition" class="c-label">I’m a...</label>
+                    <select id="cPosition" type="text" class="c-inp" required>
+                      <option></option>
+                      <option value="homeowner">homeowner</option>
+                      <option value="landlord">landlord</option>
+                      <option value="propertyManager">property manager</option>
+                      <option value="tenant">tenant</option>
+                      <option value="servicePro">service pro</option>
+                    </select>
+                  </div>
+
+                  <div class="c-input-group">
+                    <label for="cRequest" class="c-label">My Question</label>
+                    <textarea id="cRequest" type="text" class="c-inp" required></textarea>
+                  </div>
+
+                  <button class="btn btn--lg" type="submit">Submit Message</button>
+                </form>
+                <!-- message send status -->
+                <div class="msg-status-box"> <!-- add class msg-status-box_success -->
+                  <div class="msg-status msg-status_success">
+                    <div class="msg-status__title">Message Sent</div>
+                    <div class="msg-status__text">
+                      <p>Thanks for getting in touch! We’ll get back to you within 24 hours.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- socials -->
+            <div class="social-box">
+              <ul class="social">
+                <li class="social__item">
+                  <a href="" class="social__link social__link_fb" title="Facebook"></a>
+                </li>
+                <li class="social__item">
+                  <a href="" class="social__link social__link_tw" title="Twitter"></a>
+                </li>
+                <li class="social__item">
+                  <a href="" class="social__link social__link_in" title="LinkedIn"></a>
+                </li>
+                <li class="social__item">
+                  <a href="" class="social__link social__link_inst" title="Instagram"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  //= partials/section_dive-in.html
+
+  <!-- footer -->
+  //= partials/footer.html
+        
+  <script src="../js/vendors.min.js"></script>
+  <script src="../js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+.elementum {
+  padding-top: 96px;
+  padding-bottom: 72px;
+  background-color: #F7F7F7;
+  overflow: hidden;
+
+  &--mb-96 {
+    margin-bottom: 96px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  &__graph {
+    width: 30%;
+  }
+
+  &__image {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    background-image: url('../images/graph@3x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    bottom: -200px;
+  }
+
+  &__items {
+    width: 70%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    color: #3F3F3F;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+
+  &__item {
+    flex-basis: 50%;
+    padding-right: 47px;
+
+    &:nth-child(even) {
+      padding-right: 0;
+    }
+
+    p {
+      color: #7E7E7E;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-top: 16px;
+    }
+
+    &-title {
+      opacity: 0.89;
+      color: #3F3F3F;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26px;
+    }
+  }
+
+  &__circle {
+    position: relative;
+    padding-left: 32px;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      content: '';
+      border-radius: 50%;
+    }
+
+    &-red {
+      &:after {
+        background-color: #F57361;
+      }
+    }
+
+    &-yellow {
+      &:after {
+        background-color: #F4BA67;
+      }
+    }
+
+    &-light-green {
+      &:after {
+        background-color: #46BBC4;
+      }
+    }
+  }
+}
+
+
+// mobile
+@media (max-width: $md) {
+  .elementum {
+    padding-top: 48px;
+    padding-bottom: 195px;
+
+    &__image {
+      bottom: -328px;
+      right: 0;
+      max-width: 288px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__inner {
+      display: block;
+    }
+
+    &__graph {
+      width: 100%;
+    }
+
+    &__title {
+      color: #3F3F3F;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 32px;
+      text-align: center;
+    }
+
+    &__items {
+      padding-left: 0;
+      width: 100%;
+      flex-direction: column;
+      margin-top: 44px;
+    }
+
+    &__item {
+      p {
+        margin-bottom: 32px;
+      }
+    }
+
+  }
+}
+
+// tablet
+// @media (min-width: ($md + 1)) and (max-width: $lg) {
+@media (min-width: ($md + 1)) and (max-width: $iamTabletUpLim) {
+  .elementum {
+    padding-top: 64px;
+
+    &__inner {
+      display: block;
+    }
+
+    &__graph {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    &__items {
+      width: 100%;
+      padding-left: 0;
+      margin-top: 48px;
+    }
+
+    &__image {
+      right: 15px;
+    }
+  }
+}

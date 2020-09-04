@@ -1,0 +1,152 @@
+.s-plan {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 48px;
+
+  &__container {
+    @include container;
+  }
+
+  &__header {
+    margin-bottom: 48px;
+  }
+
+  &__btn {
+    margin-bottom: 31px;
+  }
+
+  &__form {
+    margin-bottom: 41px;
+
+    &-label {
+      display: block;
+      color: $c-text;
+      font-family: $font-base;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+
+    &-input {
+      width: 108px;
+      padding: 13px 24px 9px;
+      border-radius: 2px;
+      border: 1px solid $c-border;
+      color: $c-text-blue;
+      font-family: $font-base;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+
+      &:focus {
+        background-color: #F1FAFB;
+        border-color: $c-text-blue;
+        color: $c-text-gray;
+      }
+
+      &--big {
+        width: 200px;
+        text-align: center;
+      }
+    }
+
+    &--separated &-label {
+      margin-bottom: 28px;
+      color: $c-text;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+    padding-top: 2px;
+  }
+
+  &--pricing &__title {
+    margin-bottom: 28px;
+  }
+
+  &--tight {
+    padding-bottom: 32px;
+  }
+
+  &--tight &__title {
+    margin-bottom: 16px;
+  }
+
+  &--tight &__form {
+    margin-bottom: 7px;
+
+    &-label {
+      margin-bottom: 21px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__form {
+      &--pricing &-label {
+        margin-bottom: 17px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    &--tight {
+      padding-bottom: 32px;
+    }
+
+    &--tight &__title {
+      margin-bottom: 21px;
+    }
+
+    &--tight &__form {
+      &-label {
+        margin-bottom: 24px;
+      }
+    }
+    &--pricing &__title {
+      margin-bottom: 32px;
+    }
+
+    &--pricing &__btn {
+      margin-bottom: 94px;
+    }
+
+    &__form {
+      margin-bottom: 55px;
+
+      &--pricing {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 67px;
+      }
+
+      &--pricing &-label {
+        max-width: 427px;
+        margin-right: 20px;
+        text-align: left;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__form {
+      margin-bottom: 71px;
+    }
+
+    &--separated {
+      padding-top: 28px;
+      padding-bottom: 91px;
+    }
+
+    &--pricing &__title {
+      margin-bottom: 26px;
+    }
+  }
+}

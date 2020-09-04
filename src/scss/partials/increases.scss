@@ -1,0 +1,133 @@
+.increases {
+  margin-top: 35px;
+  margin-bottom: 94px;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 193px;
+    width: 33%;
+    max-width: 342px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.12);
+    padding: 17px;
+
+
+  }
+
+  &__company-photo {
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__value {
+    color: #46BBC4;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    position: relative;
+
+    &:after {
+      display: inline-block;
+      width: 16px;
+      height: 10px;
+      top: 50%;
+      padding-left: 10px;
+      transform: translateY(-50%);
+      right: -10px;
+      background: url('../images/caret-up@2x.png') no-repeat center center;
+      background-size: contain;
+      content: " ";
+    }
+  }
+
+  &__description {
+    margin-top: 16px;
+    color: #7E7E7E;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__company {
+    border-top: 1px solid #E6E6E6;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+
+    &-name {
+      color: #545454;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      padding-left: 8px;
+    }
+
+    &-photo {
+      min-width: 32px;
+      min-height: 32px;
+      max-width: 32px;
+      max-height: 32px;
+      background: #dadada;
+      border-radius: 50%;
+    }
+  }
+}
+
+// mobile
+@media (max-width: $md) {
+  .increases {
+    &__inner {
+      max-width: 737px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      height: auto;
+      max-width: 290px;
+      width: 100%;
+      margin-bottom: 22px;
+    }
+
+    margin-bottom: 26px;
+  }
+}
+
+// tablet
+// @media (min-width: ($md + 1)) and (max-width: $lg) {
+@media (min-width: ($md + 1)) and (max-width: $iamTabletUpLim) {
+  .increases {
+    margin-bottom: 63px;
+    margin-top: 0;
+
+    &__inner {
+      max-width: 737px;
+      margin: 0 auto;
+    }
+
+    &__item {
+      min-height: 241px;
+      max-width: 231px;
+    }
+  }
+}

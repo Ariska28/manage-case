@@ -1,0 +1,101 @@
+.s-advantages {
+  padding: 20px 0;
+
+  &__container {
+    @extend %contentCentered;
+  }
+
+  &__list {
+    max-width: 288px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  &-item {
+    margin: 40px auto;
+    max-width: 100%;
+    text-align: center;
+
+    &__media {
+      max-width: 365px;
+      
+      &-image {
+        max-width: 162.5px;
+        margin: 0 auto 10px;
+        display: block;
+      }
+    }
+
+    &__info {
+
+    }
+
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 30px 0;
+
+
+    &__list {
+      max-width: 736px;
+
+    }
+
+    &-item {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      flex-direction: row;
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      &__media {
+        flex: 0 0 365px;
+        width: 365px;
+        align-self: center;
+
+        &-image {
+          margin-bottom: 0;
+          max-width: 100%;
+          margin-left: 0;
+        }
+
+      }
+
+      &__info {
+        width: 326px;
+        flex: 0 0 326px;
+      }
+
+
+    }
+
+  }
+  @include media-breakpoint-up(lg) {
+
+    padding: 58px 0;
+
+    &__list {
+      max-width: 795px;
+    }
+
+    &-item {
+      padding-top: 116px * 0.5;
+      padding-bottom: 116px * 0.5;
+
+      &__info {
+        width: 366px;
+        flex: 0 0 366px;
+      }
+    }
+
+  }
+
+}

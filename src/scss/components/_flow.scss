@@ -1,0 +1,140 @@
+.c-flow {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 12.5%;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-top: 116px;
+    overflow: visible;
+
+    &:first-child {
+      padding-top: 51px;
+      overflow: hidden;
+    }
+  }
+
+  &__picture {
+    margin-right: 64px;
+    flex: 0 0 276px;
+    align-self: stretch;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 100%;
+      margin-bottom: 17px;
+      width: 2px;
+      height: 82px;
+      transform: translateX(-50%);
+      background-color: #46bbc4;
+      opacity: 0.24;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    color: $c-text-gray;
+  }
+
+  &__text {
+    margin-bottom: 21px;
+  }
+
+  &__subtext {
+    color: $c-brand-gray;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 13px;
+  }
+
+  &__subtitle {
+    margin-bottom: 21px;
+    font-weight: 600;
+    color: $c-text-gray;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+
+    &__picture {
+      margin-right: 32px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__item {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &:first-child {
+        .c-flow__picture {
+          margin-bottom: 11px;
+        }
+      }
+
+      &:nth-child(2) {
+        .c-flow__picture {
+          margin-bottom: 17px;
+        }
+      }
+
+      &:nth-child(3) {
+        .c-flow__picture {
+          margin-bottom: 24px;
+        }
+      }
+
+      &:nth-child(4) {
+        .c-flow__picture {
+          margin-bottom: 19px;
+        }
+      }
+    }
+
+    &__text {
+      margin-bottom: 13px;
+      text-align: center;
+    }
+
+    &__subtext {
+      text-align: center;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__subtitle {
+      text-align: center;
+    }
+
+    &__picture {
+      margin: 0;
+      margin-bottom: 11px;
+    }
+
+    &__btn-wrap {
+      display: flex;
+    }
+
+    &__btn {
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.s-stories {
+  @extend %sectionStandardPadding;
+
+  &__centered {
+    @extend %contentCentered;
+  }
+
+  &-list {
+    $gridGap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: - $gridGap/2;
+    margin-right: - $gridGap/2;
+    margin-bottom: - $gridGap;
+    padding-top: $s-section-offset-y--sm;
+
+    &__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-left: $gridGap/2;
+      padding-right: $gridGap/2;
+      margin-bottom: $gridGap;
+      display: flex;
+      align-items: stretch;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &-list {
+      padding-top: $s-section-offset-y;
+      &__item {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    &-list {
+      &__item {
+        flex-basis: 33.33%;
+        max-width: 33.33%;
+      }
+    }
+  }
+}

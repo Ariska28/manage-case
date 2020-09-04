@@ -1,0 +1,68 @@
+$dotRadius: 6px;
+$lineWidth: 2px;
+// external dependency for center vertical align with first element in the list item
+$firstElementLineHeight: 34px;
+$vShift: $firstElementLineHeight / 2; // - $firstElementLineHeight * 0.05;
+
+.c-stepper {
+  @include listUnstyled;
+
+  &__item {
+    position: relative;
+    padding-left: 30px + $dotRadius * 2;
+    padding-bottom: 30px;
+    overflow: visible;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $c-text-blue;
+    }
+
+    &::before {
+      width: $dotRadius * 2;
+      height: $dotRadius * 2;
+      border-radius: 50%;
+      left: 0;
+      top: $vShift - $dotRadius;
+    }
+
+    &::after {
+      opacity: 0.24;
+      width: $lineWidth;
+      height: 100%;
+      left: $dotRadius - $lineWidth / 2;
+      top: $vShift;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+
+      &:after {
+        content: normal;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 4px;
+
+    p {
+      margin-bottom: 4px;
+      @include pLastMarginBottom;
+    }
+  }
+
+  &__subtext {
+    color: $c-brand-gray;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 13px;
+
+    p {
+      margin-bottom: 4px;
+      @include pLastMarginBottom;
+    }
+  }
+}

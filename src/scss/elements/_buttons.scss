@@ -1,0 +1,114 @@
+.button {
+  &--dark,
+  &--blue,
+  &--on-red,
+  &--on-teal,
+  &--transparent {
+    @include button;
+  }
+
+  &[disabled],
+  &.inactive {
+    border-width: 1px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  &--dark {
+    background-color: $c-text-gray;
+    color: $c-white;
+
+    &:hover {
+      background-color: $c-red;
+    }
+
+    &:active {
+      background-color: $c-brick;
+    }
+  }
+
+  &--blue {
+    background-color: $c-text-blue;
+    color: $c-white;
+
+    &:hover {
+      background-color: $c-active;
+    }
+
+    &:focus {
+      background-color: $c-text-blue;
+      border-color: $c-active;
+    }
+
+    &:active {
+      background-color: $c-wave;
+    }
+
+    &[disabled],
+    &.inactive {
+      background-color: $c-cream-bg;
+      color: $c-text-gray;
+      border-color: $c-separator;
+    }
+  }
+
+  &--on-red {
+    background-color: $c-white;
+    color: $c-red;
+
+    &:hover {
+      background-color: $c-text-gray;
+    }
+
+    &:active {
+      background-color: $c-brick;
+    }
+  }
+
+  &--on-teal {
+    background-color: $c-white;
+    color: $c-text-blue;
+
+    &:hover {
+      background-color: $c-text-gray;
+    }
+
+    &:active {
+      background-color: $c-active;
+    }
+
+    &[disabled],
+    &.inactive {
+      background-color: rgba($c-text-blue, $alpha: 0.12);
+      border-color: rgba($c-text-blue, $alpha: 0.24);
+      color: $c-white;
+      opacity: 1;
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: $c-text-blue;
+    border: 1px solid $c-text-blue;
+    padding: 10px 23px;
+
+    &:hover {
+      color: $c-dark-green;
+      border-color: $c-light-green;
+      background-color: $dropdownItemActiveBg;
+    }
+
+    &:active {
+      color: $c-dark-green;
+      border-color: $c-light-green;
+      background-color: #d3eff1;
+    }
+
+    &:focus {
+      background-color: transparent;
+      color: $c-dark-green;
+      border: 2px solid $c-text-blue;
+      padding: 9px 22px;
+    }
+  }
+}

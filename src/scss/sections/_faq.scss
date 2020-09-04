@@ -1,0 +1,34 @@
+.s-faq {
+  padding-top: 89px;
+  padding-bottom: $s-section-offset-y;
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    max-width: 353px;
+    text-align: center;
+    margin: 0 auto 55px;
+  }
+
+  &__box {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 58px;
+    padding-bottom: 65px;
+    
+    &__title {
+      max-width: 299px;
+    }
+
+    &__box {
+      max-width: none;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.s-rivals {
+  text-align: center;
+  background-color: $c-blue-bg;
+  padding-top: 42px;
+  padding-bottom: 64px;
+
+  &__header {
+    margin-bottom: 29px;
+  }
+
+  .el-title {
+    margin-bottom: 23px;
+  }
+
+  .el-subtitle {
+    margin-bottom: 24px;
+  }
+
+	@include media-breakpoint-up(md) {
+    padding-top: 58px;
+
+    &__header {
+      margin-bottom: 57px;
+    }
+
+    .el-title {
+      margin-bottom: 17px;
+    }
+	}
+
+	@include media-breakpoint-up(lg) {
+    padding-top: 90px;
+    padding-bottom: 96px;
+
+    &__header {
+      max-width: 694px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+	}
+}

@@ -1,0 +1,45 @@
+.s-started {
+  @extend %sectionStandardPadding;
+  background-color: $c-cream-bg;
+
+  &__container {
+    @extend %contentCentered;
+
+  }
+
+  &__description {
+    max-width: 560px;
+    @include marginLRA;
+    margin-bottom: 9px;
+
+  }
+
+  &__form {
+
+  }
+
+  @include media-breakpoint-up(md){
+
+    &__description {
+      margin-bottom: 64px;
+    }
+
+  }
+
+  @include media-breakpoint-up(lg){
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__description {
+      max-width: 486px;
+      margin-top: 48px;
+      margin-right: 6.88%;
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+
+  }
+
+}

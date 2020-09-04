@@ -1,0 +1,139 @@
+.advantage {
+  margin-top: 30px;
+  margin-bottom: 96px;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: -64px;
+  }
+
+  &__item {
+    width: 33%;
+    max-width: 341px;
+    margin-bottom: 64px;
+  }
+
+  &__title {
+    opacity: 0.89;
+    color: #3F3F3F;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+
+  &__text {
+    color: #7E7E7E;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 16px;
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-bottom: 16px;
+
+    &--clock {
+      background-image: url("../images/clock@2x.png");
+    }
+
+    &--gear {
+      background-image: url("../images/gear@2x.png");
+    }
+
+    &--graph {
+      background-image: url("../images/growth@2x.png");
+    }
+
+    &--aim {
+      background-image: url("../images/engage-customers@2x.png");
+    }
+
+    &--people {
+      background-image: url("../images/acquire-customers@2x.png");
+    }
+
+    &--cloud {
+      background-image: url("../images/dedicated-support@2x.png");
+    }
+
+    &--abc {
+      background-image: url("../images/team-onboarding@2x.png");
+    }
+
+    &--lifebuoy {
+      background-image: url("../images/support-customers@2x.png");
+    }
+
+
+
+    &--maintenance {
+      background-image: url("../images/l_maintenance@2x.png");
+    }
+
+    &--folder {
+      background-image: url("../images/l_files@2x.png");
+    }
+
+    &--house-and-key {
+      background-image: url("../images/l_rental-property-owner@2x.png");
+    }
+
+    &--women-and-key {
+      background-image: url("../images/l_tenant@2x.png");
+    }
+
+    &--accounting {
+      background-image: url("../images/l_accounting@2x.png");
+    }
+
+    &--reports {
+      background-image: url("../images/l_report@2x.png");
+    }
+  }
+}
+
+
+// mobile
+@media (max-width: $md) {
+  .advantage {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+
+    &__item {
+      width: 100%;
+      margin-bottom: 48px;
+    }
+
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+// tablet
+// @media (min-width: ($md + 1)) and (max-width: $lg) {
+@media (min-width: ($md + 1)) and (max-width: $iamTabletUpLim) {
+  .advantage {
+    &__inner {
+      flex-wrap: wrap;
+      max-width: 730px;
+      margin: 0 auto;
+    }
+
+    &__item {
+      width: 50%;
+      margin-bottom: 40px;
+    }
+  }
+}

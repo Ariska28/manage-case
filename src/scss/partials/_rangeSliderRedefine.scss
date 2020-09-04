@@ -1,0 +1,134 @@
+.irs-shadow {
+    height: 2px; top: 38px;
+    background: #000;
+    opacity: 0.3;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.lt-ie9 .irs-shadow {
+    filter: alpha(opacity=30);
+}
+
+.irs-min, .irs-max {
+    color: #333;
+    font-size: 12px; line-height: 1.333;
+    text-shadow: none;
+    top: 0;
+    padding: 1px 5px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.lt-ie9 .irs-min, .lt-ie9 .irs-max {
+    background: #ccc;
+}
+
+.lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
+    background: #999;
+}
+
+.irs-grid {
+    height: 27px;
+}
+.irs-grid-pol {
+    opacity: 0.5;
+    background: #428bca;
+}
+.irs-grid-pol.small {
+    background: #999;
+}
+
+.irs-grid-text {
+    bottom: 5px;
+    color: #99a4ac;
+}
+
+.irs-bar {
+  border-color: transparent;
+  background: $rangeSliderCol1;
+}
+.irs-bar-edge {
+  border-color: transparent;
+  background: $rangeSliderCol1;
+}
+
+.irs-line {
+  border-color: transparent;
+  background: $c-border;
+}
+
+.irs-slider {
+  width: 28px;
+  height: 28px;
+  border-color: $rangeSliderCol1;
+  background: $rangeSliderCol2;
+  box-shadow: inset 0 0 0 7px $rangeSliderCol1,
+  0 0 0 2px $c-white;
+  transition: background-color $t-time1 ease-out, box-shadow $t-time1 ease-out;
+
+  &:hover {
+    background-color: $rangeSliderCol1;
+    box-shadow: inset 0 0 0 7px $rangeSliderCol2,
+    0 0 0 2px $c-white;
+  }
+}
+
+.irs-slider.irs-focused {
+  background-color: $c-white;
+}
+
+.irs-grid {
+  bottom: -8px;
+}
+.irs-grid-pol {
+  opacity: 0;
+}
+
+.irs-grid-text {
+  color: $c-text-gray;
+  font-family: $font-base;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+}
+.js-grid-text-0,
+.js-grid-text-10 {
+  opacity: 0;
+}
+.js-grid-text-5 {
+  // mobile
+  @media (max-width: $md) {
+    opacity: 0;
+  }
+}
+
+.irs-from, .irs-to, .irs-single {
+  top: -1px;
+  z-index: 2;
+  text-shadow: none;
+  padding: 4px 8px 3px;
+  color: $c-white;
+  font-family: $font-base;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: center;
+  background: $rangeSliderCol1;
+  border-radius: 3px;
+  border: 1px solid $rangeSliderCol2;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: $rangeSliderCol1;
+    border: 1px solid $rangeSliderCol2;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

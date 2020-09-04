@@ -1,0 +1,46 @@
+.s-topics {
+  margin-left: 26px;
+  padding-top: $s-section-offset-y;
+  padding-bottom: 89px;
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    margin-bottom: 52px;
+    text-align: center;
+  }
+
+  &__list {
+    @include listUnstyled;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 0 1 33%;
+    padding-right: 10px;
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    @include linkReset;
+    @include link;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  &__more {
+    text-align: center;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+
+    &__item {
+      flex: 0 1 100%;
+      text-align: center;
+    }
+  }
+}

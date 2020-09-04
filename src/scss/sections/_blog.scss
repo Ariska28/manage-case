@@ -1,0 +1,119 @@
+// REFACTOR
+
+// blog structure
+$blogArticlesGutterDesk: 48px;
+$blogArticlesGutterTabl: 54px;
+
+.s-blog {
+  display: flex;
+
+  &__content {
+    flex: 1 1 780px;
+    min-width: 0;
+  }
+
+  &__list {
+    padding-left: 0;
+    margin-top: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    margin-bottom: 41px;
+    min-width: 0;
+  }
+
+  &__load {
+    text-align: center;
+    margin-bottom: 64px;
+
+    &-btn {
+      @include btn_white_border;
+    }
+  }
+
+  &-primary {
+    margin-top: 0px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid $c-separator;
+  }
+
+  &-header {
+    border-bottom: 1px solid $c-separator;
+    padding-bottom: 20px;
+    padding-top: 48px;
+    text-align: center;
+    margin-bottom: 48px;
+
+    &__back {
+      color: $c-text-blue;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 16px;
+
+      &:hover {
+        color: $c-text-gray;
+      }
+    }
+
+    &__title {
+      margin-top: 8px;
+      color: $c-text-gray;
+      margin-bottom: 1em;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: (36/28);
+    }
+  }
+
+  // mobile
+  @include media-breakpoint-down (sm) {
+    &__item {
+      flex: 0 1 100%;
+    }
+
+    &-header {
+      margin-bottom: 32px;
+
+      &__title {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  // tablet + desktop
+  @include media-breakpoint-up (md) {
+    &__item {
+      flex: 0 1 46.3%;
+    }
+
+    &-primary {
+      margin-bottom: 48px;
+    }
+  }
+
+  // desktop
+  @include media-breakpoint-up (lg) {
+    margin-bottom: 31px;
+
+    &__content {
+      margin-right: 20px;
+    }
+
+    &__item {
+      flex: 0 1 50%;
+      max-width: 50%;
+      padding-right: 6%;
+
+      &--topic {
+        display: none;
+      }
+    }
+  }
+}
+

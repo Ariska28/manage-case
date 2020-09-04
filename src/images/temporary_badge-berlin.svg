@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="71px" height="71px" viewBox="0 0 71 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>AAE6829F-3A69-487F-A730-774725006109</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="DSL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.48" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Icons" transform="translate(-498.000000, -1123.000000)" stroke="#000000">
+            <g id="icons" transform="translate(64.000000, 324.000000)">
+                <g transform="translate(25.000000, 25.000000)" id="22">
+                    <g transform="translate(409.000000, 763.000000)">
+                        <g id="badge-berlin" transform="translate(0.000000, 11.000000)">
+                            <g id="thin" opacity="0.479999989" transform="translate(1.000000, 6.000000)" stroke-width="0.5">
+                                <path d="M34.5,31 L34.5,20" id="Stroke-22"></path>
+                                <path d="M34.5,40 L34.5,35" id="Stroke-23"></path>
+                                <path d="M38.85985,35 C38.67485,36.885 38.32535,38.59 37.84985,40 L31.14985,40 C30.67485,38.59 30.32535,36.885 30.14035,35 L38.85985,35 Z" id="Stroke-24"></path>
+                                <path d="M30.02,31 C30.205,24.84 32.14,20 34.5,20 C36.86,20 38.795,24.84 38.98,31 L30.02,31 Z" id="Stroke-25"></path>
+                                <path d="M26.03025,31 C26.39025,24.84 30.04475,20 34.49975,20 C38.95525,20 42.60975,24.84 42.96975,31 L26.03025,31 Z" id="Stroke-26"></path>
+                                <path d="M42.73485,35 C42.39035,36.885 41.72985,38.59 40.83485,40 L28.16485,40 C27.26985,38.59 26.60985,36.885 26.26535,35 L42.73485,35 Z" id="Stroke-27"></path>
+                                <path d="M32.5,5.25 L36.5,5.25" id="Stroke-28"></path>
+                                <path d="M32.5,0.25 L36.5,0.25" id="Stroke-29"></path>
+                                <path d="M0.25,22.25 L21.25,22.25" id="Stroke-30"></path>
+                                <path d="M13.25,18.25 L22.75,18.25" id="Stroke-31"></path>
+                                <path d="M55.25,7.75 L47.75,7.75" id="Stroke-32"></path>
+                                <path d="M64.95995,12.25 L52.74995,12.25" id="Stroke-33"></path>
+                                <path d="M64.9551,46.75 L47.7501,46.75" id="Stroke-34"></path>
+                                <path d="M55.25,38.75 L60.75,38.75" id="Stroke-35"></path>
+                                <path d="M23.75,53.25 L17.75,53.25" id="Stroke-36"></path>
+                                <path d="M17.25,43.25 L9.25,43.25" id="Stroke-37"></path>
+                            </g>
+                            <g id="thick">
+                                <path d="M70.5,35.5 C70.5,54.83 54.83,70.5 35.5,70.5 C16.17,70.5 0.5,54.83 0.5,35.5 C0.5,16.84 15.1,1.595 33.5,0.555 C34.16,0.52 34.83,0.5 35.5,0.5 C36.17,0.5 36.84,0.52 37.5,0.555 C55.9,1.595 70.5,16.84 70.5,35.5 Z" id="Stroke-1"></path>
+                                <path d="M47.5,38 C47.5,44.6275 42.1275,50 35.5,50 C28.8725,50 23.5,44.6275 23.5,38 C23.5,31.3725 28.8725,26 35.5,26 C42.1275,26 47.5,31.3725 47.5,38 Z" id="Stroke-3"></path>
+                                <polyline id="Stroke-5" points="42.125 28 42.5 28 42.5 24 28.5 24 28.5 28 28.875 28"></polyline>
+                                <polygon id="Stroke-7" points="32.5 24 38.5 24 38.5 18 32.5 18"></polygon>
+                                <polygon id="Stroke-9" points="30 18 41 18 41 16 30 16"></polygon>
+                                <path d="M37.5,0.5552 L37.5,16.0002 L33.5,16.0002 L33.5,0.5552 C34.16,0.5202 34.83,0.5002 35.5,0.5002 C36.17,0.5002 36.84,0.5202 37.5,0.5552 Z" id="Stroke-10"></path>
+                                <path d="M31.645,56.5 L31.455,61.5" id="Stroke-11"></path>
+                                <path d="M31.3799,63.5 L31.1249,70.23" id="Stroke-12"></path>
+                                <path d="M31.91015,49.4502 L31.72015,54.5002" id="Stroke-13"></path>
+                                <path d="M39.2798,54.5 L39.0898,49.45" id="Stroke-14"></path>
+                                <path d="M39.875,70.23 L39.62,63.5" id="Stroke-15"></path>
+                                <path d="M39.5449,61.5 L39.3549,56.5" id="Stroke-16"></path>
+                                <polygon id="Stroke-17" points="30 56.5 41 56.5 41 54.5 30 54.5"></polygon>
+                                <polygon id="Stroke-18" points="30 63.5 41 63.5 41 61.5 30 61.5"></polygon>
+                                <path d="M47.1201,41 L23.8801,41" id="Stroke-19"></path>
+                                <path d="M47.4551,37 L23.5451,37" id="Stroke-20"></path>
+                                <path d="M44.43995,46 L26.55995,46" id="Stroke-21"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

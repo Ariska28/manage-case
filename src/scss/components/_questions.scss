@@ -1,0 +1,122 @@
+.c-questions {
+  @include listUnstyled;
+
+  &__item {
+    margin-bottom: 24px;
+    border: 1px solid $c-border;
+    border-radius: 4px;
+    background-color: $c-white;
+    // cursor: pointer;
+
+    &--open {
+      padding-bottom: 18px;
+      border-color: $c-text-blue;
+
+      .c-questions__head {
+        margin-bottom: 10px; 
+        padding-bottom: 0;
+
+        &:focus {
+          border-color: transparent;
+          background-color: transparent;
+          border-bottom: 0;
+        }
+
+        &-text {
+          &::before {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__head {
+    @include buttons-links-reset;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 18px 24px;
+    color: $c-text-gray;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+    border: 2px solid transparent;
+    transition: margin $t-time1, background-color $t-time1,  padding $t-time1;
+
+    &:hover {
+      background-color: $dropdownItemActiveBg;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $c-text-blue;
+      border-radius: 4px;
+      background-color: $dropdownItemActiveBg;
+    }
+
+    &-text {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      padding-right: 46px;
+
+      &::before {
+        content: "\e90a";
+        font-family: manageCasaFont !important;
+        speak: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: inherit;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 2px;
+        color: #46bbc4;
+        font-size: 16px;
+        transition: transform $t-time1;
+      }
+    }
+  }
+
+  &__text {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 24px;
+    transition: transform $t-time1 ease-out;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__item {
+      &--open {
+        .c-questions__head {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__item {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__head {
+      padding-right: 26px;
+      padding-left: 16px;
+    }
+
+    &__text {
+      padding: 0 16px;
+    }
+  }
+}

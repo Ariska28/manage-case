@@ -1,0 +1,82 @@
+.c-masonry {
+  position: relative;
+}
+
+.c-masonry-inner {
+  @include listUnstyled;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__col {
+    border-right: 1px solid $c-separator;
+  }
+
+  &__item {
+    padding: 17px 17px 40px;
+    margin-bottom: 23px;
+    border-bottom: 1px solid $c-separator;
+
+    .c-masonry-inner_activated & { // used after js worked fine
+      &:last-child {
+        border-bottom-color: transparent;
+        margin-bottom: 0;
+        padding-bottom: 17px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up (lg) {
+    &__col {
+      width: 33.33%;
+      padding: 0 24px;
+
+      &:nth-child(3n + 1) {
+        padding-left: 0;
+      }
+
+      &:nth-child(3n + 3) {
+        padding-right: 0;
+        border-right-color: transparent;
+      }
+    }
+  }
+
+  @include media-breakpoint-down (sm) {
+    &__col {
+      width: 100%;
+      padding: 0;
+      border-right-color: transparent;
+    }
+
+    &__item {
+      padding: 24px 0;
+      margin-bottom: 0px;
+
+      .c-masonry-inner_activated & { // used after js worked fine
+        &:first-child {
+          padding-top: 0;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-only (md) {
+    &__col {
+      width: 50%;
+      padding: 0 24px;
+
+      &:nth-child(2n + 1) {
+        padding-left: 0;
+      }
+
+      &:nth-child(2n) {
+        padding-right: 0;
+        border-right-color: transparent;
+      }
+    }
+  }
+}

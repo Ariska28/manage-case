@@ -1,0 +1,36 @@
+.el-featureSynopsis {
+  &__icon {
+    height: 48px;
+    margin-bottom: 18px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    opacity: 0.89;
+    color: $c-text-gray;
+    font-family: $font-base;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+  &__list {
+    @extend .list;
+    li {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// for backward compatibility
+// can be removed only after admin excluding class .feature-synopsis__list
+.feature-synopsis__list {
+  @extend .list;
+  li {
+    margin-bottom: 0;
+  }
+}

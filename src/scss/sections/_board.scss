@@ -1,0 +1,97 @@
+.s-board {
+  padding-top: 90px;
+  padding-bottom: $s-section-offset-y;
+
+  &__container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    flex: 0 1 40.1%;
+  }
+
+  &__subtitle {
+    max-width: 287px;
+    margin-bottom: 22px;
+    margin-top: 0;
+    color: $c-text-gray;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+
+  &__list {
+    @include listUnstyled;
+    margin-left: 14px;
+  }
+
+  &__item {
+    line-height: 28px;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 0;
+    color: #7e7e7e;
+    font-size: 16px;
+    font-weight: 500;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__faq {
+    flex: 0 1 57.05%;
+  }
+
+  &__header {
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-right: 22px;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    &::after {
+      font-size: 10px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 66px 16px 96px;
+
+    &__text {
+      flex: 0 1 33.36%;
+    }
+
+    &__faq {
+      flex: 0 1 63.78%;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 43px 0 $s-section-offset-y--sm;
+
+    &__container {
+      display: block;
+    }
+
+    &__text {
+      margin-bottom: 43px;
+    }
+  }
+}

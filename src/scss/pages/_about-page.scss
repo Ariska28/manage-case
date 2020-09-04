@@ -1,0 +1,446 @@
+// MUST BE REMOVED
+
+.section_taming-chaos {
+  background-color: $c-blue-bg;
+}
+.section_taming-chaos__pic {
+  display: none;
+}
+.team-members {
+  display: flex;
+  justify-content: space-between;
+}
+.team-member {
+  margin: auto;
+  .el-social {
+    margin-top: 19px;
+    margin-bottom: 0;
+    .el-social__item {
+      font-size: 0;
+    }
+  }
+}
+.team-member-pic-box {
+  background-color: $c-bg-transparent;
+  overflow: hidden;
+}
+.team-member-pic {
+  width: 100%;
+  height: auto;
+}
+.team-member-name {
+  margin-bottom: 3px;
+  color: $c-text-gray;
+  font-family: $font-base;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.team-member-position {
+  color: $c-text;
+  font-family: $font-base;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.team-member-about__title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: $c-text-gray;
+  font-family: $font-base;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.team-member-about__text {
+  color: $c-text;
+  font-family: $font-base;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  p {
+    margin-top: 0;
+    margin-bottom: 22px;
+    @include pLastMarginBottom;
+    color: $c-text;
+    font-family: $font-base;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+}
+
+// growing team
+.team-growing {
+  .btn--link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    &:after {
+      @include customFont;
+      @include inheritFontParam;
+      content: "\e905";
+      font-size: 10px;
+      line-height: 26px;
+      font-weight: 800;
+      margin-left: 7px;
+    }
+  }
+}
+.team-growing__info {
+  p {
+    &:last-of-type {
+      margin-bottom: 12px;
+    }
+  }
+}
+.section_memberships {
+  text-align: center;
+  padding-top: 72px;
+  padding-bottom: 82px - 10;
+  .member {
+    a {
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+
+// tablet + desktop
+@media (min-width: ($md + 1)) {
+}
+
+// desktop specifically for team memebers
+@media (min-width: $xl + 1) {
+  .section_team {
+    padding-top: 89px;
+    padding-bottom: 78px - 40;
+    .section-title-prim {
+      margin-bottom: 54px;
+    }
+  }
+  .section_advisors {
+    padding-top: 89px;
+    padding-bottom: 38px;
+    .section_team + & {
+      padding-top: 0px;
+    }
+  }
+  .team-members {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .team-members__item {
+      width: 33.33%;
+      margin-bottom: 40px;
+      &:nth-of-type(3n + 1) {
+        .team-member {
+          margin-left: 0;
+        }
+      }
+      &:nth-of-type(3n) {
+        .team-member {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .team-member {
+    position: relative;
+    width: 330px;
+    .team-member-pic-box {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility $t-time3, opacity $t-time3;
+    }
+    &:hover {
+      .team-member-about {
+        // opacity: 1;
+        // z-index: 20;
+      }
+      .team-member-pic-box {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+  .team-member-pic-box {
+    position: relative;
+    margin-bottom: 19px;
+    z-index: 10;
+    width: 100%;
+    height: 430px;
+  }
+  .team-member-about {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    background-color: $c-blue-bg;
+    height: 430px;
+    padding: 18px 24px 33px;
+    overflow: auto;
+    // opacity: 0;
+    // transition: opacity $t-time3;
+  }
+
+  // growing team
+  .section_grow-team {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .team-growing {
+    display: flex;
+    .section-title-prim {
+      width: 50%;
+      // padding-right: 58px;
+      margin-bottom: 0;
+    }
+    .team-growing__info {
+      width: 50%;
+      padding-left: 27px;
+      padding-right: 34px;
+    }
+  }
+}
+
+// desktop
+@media (min-width: ($lg + 1)) {
+  .section_about {
+    margin-top: 96px;
+    margin-bottom: 88px;
+    .row2__col_pic {
+      padding-top: 105px;
+      padding-bottom: 108px;
+    }
+    .row2__col_text {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+  }
+  .section_taming-chaos {
+    .row2__col_text {
+      padding-right: 61px;
+    }
+  }
+
+  // membership
+  .section_memberships {
+    padding-top: 71px;
+    padding-bottom: 95px - 10;
+    .section__header {
+      margin-bottom: 55px;
+    }
+    .section-title-prim {
+      margin-bottom: 31px;
+    }
+  }
+}
+
+// mobile + tablet specifically for team memebers
+@media (max-width: $xl) {
+  .section_team {
+    background-color: $c-cream-bg;
+  }
+  .team-members {
+    display: block;
+    margin-bottom: 0;
+  }
+  .team-members__item {
+    margin-bottom: 48px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  .team-member {
+    width: 229px;
+  }
+  .team-member-position {
+    margin-bottom: 12px;
+  }
+  .team-member-pic-box {
+    width: 100%;
+    height: 298px;
+  }
+  .team-member-about__title {
+    display: none;
+  }
+
+  // section grow team
+  .section_grow-team {
+    background-color: $c-cream-bg;
+  }
+}
+
+// mobile
+@media (max-width: $md) {
+  .section_about {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 57px;
+    background-color: $c-cream-bg;
+    .section-title-prim {
+      margin-bottom: 23px;
+    }
+    .sidemenu {
+      margin-bottom: 37px;
+    }
+  }
+  .section_taming-chaos {
+    .row2__col_pic {
+      padding-top: 64px;
+      padding-bottom: 24px;
+    }
+    .row2__col_text {
+      padding-bottom: 49px;
+    }
+  }
+  .section_team {
+    padding-top: 48px;
+    padding-bottom: 49px;
+    .section-title-prim {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .section-title-sec {
+      text-align: center;
+    }
+  }
+  .section_advisors {
+    padding-top: 40px;
+  }
+  .team-members {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 0;
+  }
+  .team-member {
+    min-width: 288px;
+    width: 100%;
+    // width: 288px;
+  }
+  .team-member-pic-box {
+    position: relative;
+    min-height: 374px;
+    margin-bottom: 19px;
+    padding-bottom: 129.86%;
+    // width: 80%;
+    // min-width: 288px;
+    // padding-bottom: 129.86% * 0.8;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
+
+  // growing team
+  .section_grow-team {
+    padding-top: 42px;
+    padding-bottom: 49px;
+  }
+  .team-growing {
+    text-align: center;
+    .section-title-prim {
+      margin-bottom: 11px;
+    }
+  }
+
+  // membership
+  .section_memberships {
+    .section__header {
+      margin-bottom: 32px;
+    }
+    .section-title-prim {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// add mobile specifically for team memebers
+// @media (max-width: $teamMembersAddMobUpLim) {
+//   .team-members__item {
+//     margin: 0;
+//   }
+// }
+
+// tablet specifically for team memebers
+@media (min-width: ($md + 1)) and (max-width: $xl) {
+  .section_team {
+    padding-top: 56px;
+    padding-bottom: (90px - 56px);
+    .section-title-prim {
+      margin-bottom: 39px;
+    }
+    .section-title-sec {
+      margin-bottom: 21px;
+    }
+  }
+  .section_advisors {
+    padding-top: 56px;
+    padding-bottom: (90px - 56px);
+  }
+  .team-member {
+    width: 100%;
+    display: flex;
+  }
+  .team-member-pic-box {
+    width: 229px;
+    min-width: 229px;
+    height: 298px;
+  }
+  .team-member-info {
+    max-width: 480px;
+    max-height: 298px;
+    overflow: auto;
+    margin-left: 22px;
+  }
+
+  // growing team
+  .section_grow-team {
+    padding-top: 56px;
+    padding-bottom: 90px;
+  }
+  .team-growing {
+    text-align: center;
+    .section-title-prim {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+// tablet
+@media (min-width: ($md + 1)) and (max-width: $lg) {
+  .section_about {
+    margin-top: 100px;
+    margin-bottom: 92px;
+  }
+  .section_taming-chaos {
+    .row2__col_pic {
+      display: none;
+    }
+    .row2__col_text {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 58px;
+      padding-bottom: 48px;
+    }
+  }
+  .section_taming-chaos__pic {
+    display: inline;
+    float: right;
+    width: 280px;
+    margin-left: 24px;
+    margin-top: 20px;
+  }
+
+  // membership
+  .section_memberships {
+    padding-top: 58px;
+    padding-bottom: 62px - 10;
+    .section__header {
+      margin-bottom: 55px;
+    }
+    .section-title-prim {
+      margin-bottom: 19px;
+    }
+  }
+}

@@ -1,0 +1,206 @@
+.s-units {
+  &__container {
+    @include container;
+    max-width: 936px;
+    padding-top: 109px;
+    padding-bottom: 96px;
+    background-image: url("../images/sand-back.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 710px;
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__card {
+    flex: 0 1 47%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.08);
+
+    &-header {
+      padding: 40px 40px 32px;
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 2px 2px 0 0;
+    }
+
+    &-title,
+    &-desc {
+      line-height: 1.357;
+      flex: 0.5 1 40%;
+      margin: 0;
+    }
+
+    &-title {
+      font-size: $fs-base;
+      font-weight: 600;
+    }
+
+    &-desc {
+      font-size: 14px;
+      text-align: right;
+      margin-left: auto;
+    }
+
+    &-price {
+      flex: 0 1 100%;
+      font-size: $fs-title-lg;
+      font-weight: 600;
+      margin-top: 16px;
+      line-height: 1.15;
+
+      &--small {
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+
+    &-body {
+      flex: 0 1 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 41px 42px;
+      border-radius: 0 0 2px 2px;
+      -ms-flex: auto;
+    }
+
+    &-list {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    &-item {
+      font-size: 14px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      padding-left: 24px;
+      background-repeat: no-repeat;
+      background-size: 18px 16.8px; // line-height * font-size
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-img {
+      width: 16px;
+      height: 16px;
+    }
+
+    &-btn {
+      width: 100%;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    &-small {
+      font-size: 12px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    &--light {
+      border: 1px solid $c-black012;
+    }
+
+    &--light &-header {
+      background-color: $c-cream-bg;
+      border-bottom: 1px solid $c-separator;
+    }
+
+    &--light &-body {
+      background-color: $c-white;
+    }
+
+    &--light &-item {
+      background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;'  xml:space='preserve'%3E%3Cpath fill='#46BBC4' d='M5.7,14.9c-0.3,0-0.6-0.1-0.8-0.3L0.3,10c-0.4-0.4-0.4-1.2,0-1.6c0.4-0.4,1.2-0.4,1.6,0L5.6,12 L14,1.6c0.4-0.5,1.1-0.6,1.6-0.2c0.5,0.4,0.6,1.1,0.2,1.6L6.6,14.4C6.4,14.7,6.1,14.8,5.7,14.9L5.7,14.9z'/%3E%3C/svg%3E");
+    }
+
+    &--light &-desc {
+      color: #95938f;
+    }
+
+    &--light &-price {
+      color: $c-text-gray;
+    }
+
+    &--green {
+      color: $c-white;
+    }
+
+    &--green &-header {
+      background-color: $c-dark-green;
+      border: 1px solid $c-dark-green;
+    }
+
+    &--green &-desc {
+      opacity: 0.8;
+    }
+
+    &--green &-body {
+      background-color: $c-text-blue;
+      border: 1px solid $c-text-blue;
+      border-top: 0;
+    }
+
+    &--green &-item {
+      background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'  viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' fill='#ffffff' xml:space='preserve'%3E%3Cpath d='M5.7,14.9c-0.3,0-0.6-0.1-0.8-0.3L0.3,10c-0.4-0.4-0.4-1.2,0-1.6c0.4-0.4,1.2-0.4,1.6,0L5.6,12 L14,1.6c0.4-0.5,1.1-0.6,1.6-0.2c0.5,0.4,0.6,1.1,0.2,1.6L6.6,14.4C6.4,14.7,6.1,14.8,5.7,14.9L5.7,14.9z'/%3E%3C/svg%3E");
+    }
+
+    &--green &-item-text {
+      opacity: 0.8;
+    }
+  }
+
+  &__desc {
+    width: 47%;
+    margin-left: auto;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__container {
+      background: none;
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+
+    &__card {
+      flex: 0 1 100%;
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &-header {
+        padding: 40px 19px 32px;
+      }
+
+      &-body {
+        padding: 25px 19px 41px;
+      }
+    }
+
+    &__desc {
+      width: auto;
+      max-width: 218px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

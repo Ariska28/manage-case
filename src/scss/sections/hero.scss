@@ -1,0 +1,74 @@
+.s-hero {
+  @extend %sectionStandardPadding;
+  min-height: $heroBlockHeightDesk;
+  display: flex;
+  align-items: center;
+  color: $c-white;
+  background-color: $c-text-gray;
+  background-image: url('../images/temporary_header_bg.jpg'); // replace with correct bg for particular section
+  background-size: cover;
+  text-align: center;
+
+  &__container {
+    @include container;
+    width: 100%;
+  }
+
+  &__content {
+    max-width: 486px;
+    @include marginLRA;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    transition: font-size $t-time1;
+
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 38px;
+      line-height: 44px;
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 24px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  // desktop
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+
+    &__content {
+      margin-left: initial;
+      margin-right: initial;
+    }
+  }
+
+  // mobile
+  @include media-breakpoint-down(sm) {
+    min-height: 336px;
+  }
+
+  @include media-breakpoint-only(md){
+    &__title {
+      &--accent {
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 44px;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.el-wysiwyg {
+  margin-bottom: 21px;
+  color: $c-text;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    // @include pLastMarginBottom;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    @extend .ref;
+    font-size: inherit;
+  }
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &--security {
+    margin-top: $s-section-offset-y--sm;
+    padding-top: $s-section-offset-y--sm;
+    border-top: 1px solid $c-separator;
+
+    .text {
+      &:first-child {
+        margin-bottom: 48px;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-top: $s-section-offset-y;
+      padding-top: $s-section-offset-y;
+    }
+  }
+}

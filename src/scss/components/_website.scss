@@ -1,0 +1,65 @@
+.c-website {
+
+  &__item {
+    color: #3F3F3F;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 58px;
+    padding-left: 75px;
+    position: relative;
+
+    &:first-child {
+      margin-top: 34px;
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      height: 50px;
+      width: 50px;
+      transform: translateY(-50%);
+      content: "";
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--notebook {
+      &:before {
+        background-image: url('../images/list-icon-1.svg');
+      }
+    }
+
+    &--search {
+      &:before {
+        background-image: url('../images/list-icon-2.svg');
+      }
+    }
+
+    &--thumb-up {
+      &:before {
+        background-image: url('../images/list-icon-3.svg');
+      }
+    }
+
+    &--document {
+      &:before {
+        background-image: url('../images/list-icon-4.svg');
+      }
+    }
+
+    &--envelope {
+      &:before {
+        background-image: url('../images/list-icon-5.svg');
+      }
+    }
+
+    &--gear {
+      &:before {
+        background-image: url('../images/list-icon-6.svg');
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.el-inviewControlledLink {
+  @include linkReset;
+  display: block;
+  background-color: $c-text-blue;
+  box-shadow: 0 0 12px 0 $c-black024;
+  color: $c-white;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 11px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+  &:after {
+    @include customFont;
+    @include inheritFontParam;
+    content: '\e909';
+    margin-left: 12px;
+    vertical-align: middle;
+  }
+
+  // tablet + desktop
+  @include media-breakpoint-up(md) {
+    display: none !important;
+  }
+}

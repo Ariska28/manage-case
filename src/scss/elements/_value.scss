@@ -1,0 +1,107 @@
+// value
+.value {
+  position: relative;
+  height: 100%;
+
+  &_bg1 {
+    background-color: $valuesBg1;
+  }
+
+  &_bg2 {
+    background-color: $valuesBg2;
+  }
+
+  &_bg3 {
+    background-color: $valuesBg3;
+  }
+
+  &__title {
+    opacity: 0.89;
+    color: $c-text-gray;
+    font-family: $font-base;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+
+  &__text {
+    p {
+      opacity: 0.89;
+      color: $c-text;
+      font-family: $font-base;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    opacity: 0.08;
+    color: $c-text-gray;
+    font-family: $font-base;
+    font-size: 76px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+
+  &-pic-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &-pic {
+    min-height: 100%;
+    min-width: 100%;
+    // to show center of the image
+    // position: absolute;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+  }
+
+  // tablet + desktop
+  @media (min-width: ($md + 1)) {
+    & {
+      padding: 27px 31px;
+    }
+  }
+
+  // desktop
+  @media (min-width: ($lg + 1)) {
+    & {
+      padding-bottom: 92px;
+    }
+
+    &__num {
+      bottom: 32px;
+      right: 16px;
+    }
+  }
+
+  // mobile
+  @media (max-width: $md) {
+    padding: 19px 15px;
+    padding-bottom: 68px;
+
+    &__num {
+      font-size: 38px;
+      bottom: 14px;
+      right: 13px;
+    }
+  }
+
+  // tablet
+  @media (min-width: ($md + 1)) and (max-width: $lg) {
+    position: relative;
+    padding-bottom: 107px;
+
+    &__num {
+      bottom: 31px;
+      right: 27px;
+    }
+  }
+}

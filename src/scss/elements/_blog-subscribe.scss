@@ -1,0 +1,30 @@
+.el-blog-subscribe {
+  border: 1px solid $c-text-blue;
+  padding: 24px;
+  background: $c-blue-bg url("../images/email.svg") no-repeat 100% 15px;
+
+  &__title {
+    color: $c-text-gray;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 600;
+    line-height: (26/20);
+    margin: 0 0 24px;
+  }
+
+  &__form {
+    .c-input-group {
+      margin-bottom: 24px;
+    }
+    .c-inp {
+      border-color: $c-text-blue;
+    }
+    .btn {
+      width: 100%;
+    }
+    div.wpcf7 .ajax-loader {
+      text-align: center;
+      margin: 10px auto 0;
+    }
+  }
+}

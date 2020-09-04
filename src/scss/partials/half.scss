@@ -1,0 +1,308 @@
+.half {
+  margin-bottom: 90px;
+  overflow: hidden;
+
+  &--mb-96 {
+    margin-bottom: 96px;
+  }
+
+  &--mb-87 {
+    margin-bottom: 87px;
+  }
+
+  &--mb-71 {
+    margin-bottom: 71px;
+  }
+
+  &--mb-108 {
+    margin-bottom: 108px;
+  }
+
+  &--mb-148 {
+    margin-bottom: 148px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &--reverse {
+    .half__inner {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    border-radius: 25px;
+    background-color: #46BBC4;
+    padding: 11px 25px;
+    color: #FFFFFF !important;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    text-decoration: none;
+    margin-bottom: 21px;
+    align-self: flex-start;
+  }
+
+  h5 {
+    width: 100%;
+    color: #F57361;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0 0 8px;
+  }
+
+  h3 {
+    color: #3F3F3F;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 44px;
+    margin: 13px 0;
+  }
+
+  h4 {
+    opacity: 0.89;
+    color: #3F3F3F;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+
+  p {
+    margin: 8px 0;
+    color: #7E7E7E;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  ul {
+    padding-left: 38px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+
+    li {
+      color: #7E7E7E;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-top: 24px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  a {
+    color: #46BBC4;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+
+  &__item {
+    flex-basis: 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+
+    &--image {
+      align-items: center;
+    }
+
+    &--left-align {
+      align-items: flex-start;
+    }
+
+    &--image-200x400 img {
+      max-width: 200px;
+      max-height: 400px;
+    }
+
+    &--image-400x375 img {
+      max-width: 400px;
+      max-height: 375px;
+    }
+
+    &--image-400x292 img {
+      max-width: 400px;
+      max-height: 292px;
+    }
+
+    &--image-400x550 img {
+      max-width: 400px;
+      max-height: 550px;
+    }
+
+    &--image-300x260 img {
+      max-width: 300px;
+      max-height: 260px;
+    }
+
+    &--image-220x290 img {
+      max-width: 220px;
+      max-height: 290px;
+    }
+
+    &--image-400x215 img {
+      max-width: 400px;
+      max-height: 215px;
+    }
+  }
+}
+
+// mobile
+@media (max-width: $md) {
+  .half {
+    &--mb-96,
+    &--mb-148,
+    &--mb-87,
+    &--mb-71,
+    &--mb-108 {
+      margin-bottom: 26px;
+    }
+
+    &--mobile-flex-reverse {
+      .half__inner {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &--online-payments {
+      .half__item {
+        h4 {
+          margin-top: 48px;
+          margin-bottom: 16px;
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      margin-bottom: 48px;
+    }
+
+
+    &--enterprise {
+      .half__item {
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &--landlord {
+      .half__item {
+        text-align: center;
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+
+    &__item {
+      flex-basis: 100%;
+      max-width: 100%;
+
+      &--image-200x400 img,
+      &--image-400x375 img,
+      &--image-400x292 img,
+      &--image-400x550 img {
+        max-width: 100%;
+        max-height: 400px;
+      }
+
+      &--image-300x260 img {
+        max-width: 150px;
+        max-height: 130px;
+        margin-bottom: 52px;
+      }
+
+      &--image-220x290 img {
+        max-width: 108px;
+        max-height: 144px;
+        margin-bottom: 40px;
+      }
+
+      p {
+        margin-bottom: 72px;
+      }
+    }
+
+    &__inner {
+      flex-wrap: wrap;
+    }
+
+    &__btn {
+      align-self: center;
+    }
+  }
+}
+
+// tablet
+// @media (min-width: ($md + 1)) and (max-width: $lg) {
+@media (min-width: ($md + 1)) and (max-width: $iamTabletUpLim) {
+  .half {
+    h3 {
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    &__item {
+      &--image-200x400 img {
+        max-width: 200px;
+        max-height: 400px;
+      }
+
+      &--image-400x375 img {
+        max-width: 290px;
+        max-height: 270px;
+      }
+
+      &--image-400x292 img {
+        max-width: 290px;
+        max-height: 210px;
+      }
+
+      &--image-400x550 img {
+        max-width: 288px;
+        max-height: 396px;
+      }
+    }
+
+    &--mb-96 {
+      margin-bottom: 64px;
+    }
+
+    &--mb-87 {
+      margin-bottom: 106px;
+    }
+
+    &--mb-71 {
+      margin-bottom: 142px;
+    }
+
+    &--mb-108 {
+      margin-bottom: 159px;
+    }
+
+    &--mb-148 {
+      margin-bottom: 138px;
+    }
+
+    &__btn {
+      align-self: center;
+    }
+  }
+}

@@ -1,0 +1,379 @@
+// TODO
+// remove after php precise checking
+/*
+.section_features-main {
+  .row2__col {
+    &:first-of-type {
+      .features-text {
+        margin-bottom: 33px;
+      }
+    }
+  }
+  .row2 {
+    align-items: flex-start;
+  }
+  .row2__col {
+    padding-bottom: 89px;
+  }
+}
+*/
+
+// content sections
+.features-we-offer-part1 {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba($c-light-blue-bg, 0.5);
+}
+.features-we-offer-part2 {
+  .link {
+    &:after {
+      @include customFont;
+      @include inheritFontParam;
+      content: '\e905';
+      font-size: 10px;
+      line-height: 26px;
+      font-weight: 800;
+      margin-left: 4px;
+    }
+  }
+}
+.we-offer-detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.we-offer-detail__item {
+  width: 364px;
+  @include nthOrder($end: 6);
+  &_pic {
+    img {
+      width: 100%;
+    }
+    &-first {
+      order: 0 !important;
+    }
+  }
+}
+
+
+// pictures for bg in features "what we offer" sections
+.section_features-we-offer {
+  .features-we-offer-part1 {
+    .features-title {
+      line-height: 26px;
+      p {
+        @include pInherit;
+      }
+    }
+  }
+}
+.we-offer-detail__item{
+  .features-text + .link {
+    display: inline-block;
+    margin-top: 24px;
+  }
+}
+
+.features-features-diffs-part1 {
+  margin-bottom: 85px;
+}
+
+.section_features-features-diffs {
+  padding-bottom: 90px;
+}
+
+// tablet + desktop
+@media (min-width: ($md + 1)) {
+  .section_features-v-anim {
+    video {
+      width: 686px;
+      height: 466px;
+      .ie-browser & {
+        width: auto;
+        max-width: 88.64%;
+      }
+    }
+  }
+  // content sections
+  .section_features-how-it-works {
+    padding-top: 14px + 75px;
+    .features-text {
+      margin-bottom: 21px;
+    }
+    .btn {
+      margin-top: 4px;
+    }
+  }
+  .features-we-offer-part1 {
+    padding: 88px 0 96px;
+  }
+}
+
+// desktop
+@media (min-width: ($lg + 1)) {
+  // TODO
+  // remove after php precise checking
+  /*
+  .section_features-main {
+    .row2__col {
+      &:first-of-type {
+        padding-top: 96px;
+        // padding-right: 74px;
+        padding-right: 6.61%;
+        .features-text {
+          padding-right: 114px;
+        }
+      }
+      &:last-of-type {
+        padding-top: 87px;
+        // padding-left: 89px;
+        padding-left: 7.95%;
+      }
+    }
+  }
+  */
+
+  // content sections
+  .section_features-how-it-works {
+    padding-bottom: 157px;
+    .features-container-r {
+      padding-right: 27px;
+    }
+    .section-title-prim {
+      margin-bottom: 27px;
+    }
+    .features-title {
+      margin-bottom: 5px;
+    }
+    .linked-list {
+      margin-left: 12.5%;
+    }
+  }
+  .features-we-offer-part1 {
+    .features-title {
+      margin-bottom: 21px;
+    }
+  }
+
+  .we-offer-detail {
+    align-items: flex-start;
+  }
+  // detail
+  .we-offer-detail__item {
+    margin-bottom: 70px;
+    width: 50%;
+    max-width: 374px;
+    padding-right: 10px;
+
+    &--big {
+      max-width: none;
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .features-features-diffs-part1 {
+    margin-bottom: 131px;
+  }
+
+  .section_features-features-diffs {
+    padding-top: 40px + 50px;
+    padding-bottom: 138px;
+  }
+}
+
+// mobile + tablet
+@media (max-width: $lg) {
+  .we-offer-detail__item--big {
+    max-height: 420px;
+    overflow: hidden;
+
+    img {
+      max-height: 420px;
+      max-width: 100%;
+    }
+  }
+}
+
+// mobile
+@media (max-width: $md) {
+  // TODO
+  // remove after php precise checking
+  /*
+  .section_features-main {
+    .row2__col {
+      &:first-of-type {
+        padding-top: 44px;
+        padding-bottom: 35px;
+        .features-text {
+          margin-bottom: 28px;
+        }
+      }
+      &:last-of-type {
+        padding-top: 0px;
+        padding-bottom: 57px;
+      }
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+  */
+  .section_features-v-anim {
+    height: 332px;
+    video {
+      width: 88.64%;
+      max-width: 283.66px;
+      height: 59.47%;
+      background-size: 41.35px;
+      .ie-browser & {
+        width: auto;
+        max-width: 88.64%;
+      }
+    }
+  }
+
+  // content sections
+  .section_features-how-it-works {
+    margin-top: -67px;
+    padding-top: 10px + 67;
+    padding-bottom: 64px;
+    .section-title-prim {
+      text-align: center;
+      margin-bottom: 41px;
+    }
+    .features-title {
+      margin-bottom: 5px;
+    }
+    .linked-list__item {
+      &:nth-of-type(1) {
+        .linked-list__pic-box {
+          margin-bottom: 11px;
+        }
+      }
+      &:nth-of-type(2) {
+        .linked-list__pic-box {
+          margin-bottom: 17px;
+        }
+      }
+      &:nth-of-type(3) {
+        .linked-list__pic-box {
+          margin-bottom: 24px;
+        }
+      }
+      &:nth-of-type(4) {
+        .linked-list__pic-box {
+          margin-bottom: 19px;
+        }
+      }
+    }
+    .features-text {
+      margin-bottom: 13px;
+    }
+    .btn {
+      margin-top: 12px;
+    }
+  }
+  .features-we-offer-part1 {
+    padding: 58px 0 57px;
+    .section-title-prim {
+      margin-bottom: 24px;
+    }
+    .features-title {
+      margin-bottom: 25px;
+    }
+    .features-container-r {
+      text-align: center;
+      > * {
+        text-align: left;
+      }
+    }
+  }
+
+  // we-offer-detail
+  .we-offer-detail {
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .we-offer-detail__item {
+    width: 100%;
+    max-width: 364px;
+    margin-bottom: 27px;
+    margin-left: 0.4%;
+    margin-right: 0.4%;
+    &_pic {
+      margin-bottom: 12px;
+    }
+  }
+
+  .section_features-features-diffs {
+    padding-top: 65px;
+  }
+}
+
+// tablet
+@media (min-width: ($md + 1)) and (max-width: $lg) {
+  // TODO
+  // remove after php precise checking
+  /*
+  .section_features-main {
+    .row2__col {
+      &:first-of-type {
+        padding-top: 90px;
+        // padding-right: 14px;
+        padding-right: 1.9%;
+      }
+      &:last-of-type {
+        padding-top: 81px;
+      }
+    }
+    .features-text {
+      // padding-right: 30px;
+      padding-right: 4.08%;
+    }
+  }
+  */
+
+  // content sections
+  .section_features-how-it-works {
+    padding-bottom: 96px;
+    .features-container-r {
+      padding-right: 6px;
+    }
+    .section-title-prim {
+      margin-bottom: 24px;
+    }
+    .features-title {
+      margin-bottom: 5px;
+    }
+  }
+  .features-we-offer-part1 {
+    .features-title {
+      margin-bottom: 21px;
+    }
+  }
+
+  // we-offer-detail
+  .we-offer-detail {
+    align-items: flex-start;
+  }
+  .we-offer-detail__item {
+    margin-bottom: 43px;
+    &_pic {
+      margin-bottom: 24px;
+    }
+  }
+
+  .section_features-features-diffs {
+    padding-top: 43px + 40px;
+  }
+  .features-features-diffs-part2 {
+    .section-title-prim {
+      margin-bottom: 34px;
+    }
+  }
+}
