@@ -614,7 +614,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /** Example
       <div
         class="className_shrink"
-            data-expand="className"
+              data-expand="className"
       >...</div>
       <a
         href="#"
@@ -1040,39 +1040,71 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   setUnitsHeaderHeight();
-  //modal window
+  //modal wind
+  var modalForInput = function () {
+    var model = {
+      input: null,
+      modal: null,
+      close: null
+    };
+
+    var cssClass = {
+      modalActive: 'visible',
+      bodyActive: 'modal-video-open'
+    };
+
+    var closeModal = function closeModal(evt) {
+      evt.preventDefault();
+      model.modal.removeClass(cssClass.modalActive);
+      $('body').removeClass(cssClass.bodyActive);
+    };
+
+    var openModal = function openModal() {
+      model.modal.addClass(cssClass.modalActive);
+      $('body').addClass(cssClass.bodyActive);
+    };
+
+    var init = function init(input, modal) {
+      model.input = input;
+      model.modal = modal;
+      model.close = modal.find('[data-modal=close]');
+
+      model.close.on('click', closeModal);
+
+      $(document).keydown(function (evt) {
+        if (evt.keyCode === 27) {
+          evt.stopPropagation();
+          closeModal(evt);
+        }
+      });
+
+      model.modal.on('click', function (evt) {
+        if (model.modal.is(evt.target)) {
+          closeModal(evt);
+        }
+      });
+
+      model.input.on('blur', function () {
+        var value = this.value;
+        var check = /^\d+$/.test(value);
+        if (check && +value < 50) {
+          openModal();
+        }
+      });
+    };
+
+    return {
+      init: init
+    };
+  }();
+
   $(document).ready(function ($) {
-    var input = document.getElementById('myInput');
-    input.addEventListener('blur', function () {
-      var value = this.value;
-      var check = /^\d+$/.test(value);
-      if (check && +value < 50) {
-        $('.js-fade').addClass('visible');
-        $('body').addClass('modal-video-open');
-        return false;
-      }
-    });
-    //Click on the button.
-    $('.js-close').click(function () {
-      $(this).parents('.js-fade').removeClass('visible');
-      $('body').removeClass('modal-video-open');
-      return false;
-    });
-    //Click on the Esc.
-    $(document).keydown(function (e) {
-      if (e.keyCode === 27) {
-        e.stopPropagation();
-        $('.js-fade').removeClass('visible');
-        $('body').removeClass('modal-video-open');
-      }
-    });
-    // Click on the body.
-    $('.js-fade').click(function (e) {
-      if ($(e.target).closest('.js-modal').length == 0) {
-        $(this).removeClass('visible');
-        $('body').removeClass('modal-video-open');
-      }
-    });
+    var input = $('.js-myinput');
+    var modal = $('.js-fade');
+    var close = $('.js-close');
+    if (input && modal) {
+      modalForInput.init(input, modal);
+    }
   });
 
   // TODO
