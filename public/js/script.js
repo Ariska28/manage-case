@@ -614,7 +614,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /** Example
       <div
         class="className_shrink"
-            data-expand="className"
+              data-expand="className"
       >...</div>
       <a
         href="#"
@@ -752,43 +752,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   })();
-  (function () {
-    var model = {
-      tabs: 'js-tabs',
-      tab: 'js-tab',
-      tabPanel: 'js-tab-panel',
-      tabContent: 'js-tab-content'
-    };
 
-    var activePanelUpdate = function activePanelUpdate() {
-      var $activeTab = $('.' + model.tab + '.active');
-      if ($activeTab.length) {
-        $activeTab.click();
-      }
-    };
-
-    // rivals-comparison
-    $('.' + model.tabs).on('click', '.' + model.tab, function (e) {
-      // eslint-disable-line
-      var $wrapper = $(this).closest('.' + model.tabs);
-      var index = $('.' + model.tab).index(this);
-
-      $('.' + model.tab + '.active').removeClass('active');
-      $(this).addClass('active');
-
-      var $tabPanel = $wrapper.find('.' + model.tabPanel);
-      var nextActiveContent = $wrapper.find('.' + model.tabContent).eq(index);
-      var minHeight = nextActiveContent.outerHeight();
-
-      $tabPanel.animate({ minHeight: minHeight }, 150);
-      $wrapper.find('.' + model.tabContent + '.active').removeClass('active');
-      nextActiveContent.addClass('active');
-    });
-
-    activePanelUpdate();
-
-    $(window).on('resize', throttle(activePanelUpdate, 500));
-  })();
   (function () {
     $('.js-scroll-to').on('click', function () {
       // eslint-disable-line
